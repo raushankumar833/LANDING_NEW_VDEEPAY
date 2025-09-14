@@ -11,7 +11,7 @@ type BgBlurProps = {
 };
 
 export function bgBlur(props?: BgBlurProps) {
-  const color = props?.color || '#000000';
+  const color = props?.color || '#140a43';
   const blur = props?.blur || 6;
   const opacity = props?.opacity || 0.8;
   const imgUrl = props?.imgUrl;

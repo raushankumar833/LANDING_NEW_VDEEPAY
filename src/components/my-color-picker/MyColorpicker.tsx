@@ -24,7 +24,7 @@ interface ColorSelectorProps {
 function getPaletteColor(variant: string) {
   if (variant === 'dark' || variant === 'darker') {
     return '#ffffff';
-  } else return '#000000';
+  } else return '#140a53';
 }
 
 const ColorSelector: React.FC<ColorSelectorProps> = ({ colors, onColorSelect, selectedColor }) => (

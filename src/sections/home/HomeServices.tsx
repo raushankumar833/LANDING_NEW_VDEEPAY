@@ -1,63 +1,64 @@
 import { m } from 'framer-motion';
 import { alpha, styled, useTheme } from '@mui/material/styles';
-import { Grid, Button, Container, Typography, Stack } from '@mui/material';
+import { Grid, Button, Container, Typography, Stack, Box } from '@mui/material';
 import useResponsive from '../../hooks/useResponsive';
 import { bgGradient } from '../../utils/cssStyles';
 import { PATH_PAGE } from '../../routes/paths';
-import Image from '../../components/image';
 import Iconify from '../../components/iconify';
 import { MotionViewport, varFade } from '../../components/animate';
-import NextLink from 'next/link';
-import Favicon from 'src/components/logo/Favicon';
 
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    paddingTop: theme.spacing(15),
-    paddingBottom: theme.spacing(20),
-  },
-}));
-
-const StyledContent = styled('div')(({ theme }) => ({
-  ...bgGradient({
-    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0.9 : 0.98),
-    imgUrl: '/assets/background/overlay_3.jpg',
-  }),
-  padding: theme.spacing(1.5, 0),
-  borderRadius: Number(theme.shape.borderRadius) * 2,
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(2, 0),
-  },
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(2.5),
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(18),
   },
 }));
 
 const StyledDescription = styled('div')(({ theme }) => ({
   textAlign: 'center',
-  [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
-    paddingLeft: theme.spacing(5),
-    paddingTop: theme.spacing(15),
+  marginBottom: theme.spacing(6),
+}));
+
+const StyledContent = styled('div')(({ theme }) => ({
+  ...bgGradient({
+    color: alpha(theme.palette.primary.light, 0.05),
+    imgUrl: '/assets/background/overlay_3.jpg',
+  }),
+  padding: theme.spacing(6),
+  borderRadius: theme.shape.borderRadius * 2,
+}));
+
+const ServiceCard = styled(Box)(({ theme }) => ({
+  padding: theme.spacing(5),
+  width: 300,
+  minHeight: 280, // 🔹 Equal height for all cards
+  borderRadius: theme.shape.borderRadius * 3,
+  background: '#fff',
+  boxShadow: theme.shadows[8],
+  transition: 'transform 0.4s, box-shadow 0.4s',
+  textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between', // 🔹 Title & description stay balanced
+  alignItems: 'center',
+  '&:hover': {
+    transform: 'translateY(-15px)',
+    boxShadow: theme.shadows[16],
   },
 }));
 
-const StyledRow = styled('div')(({ theme }) => ({
+const IconWrapper = styled(Box)(({ theme }) => ({
+  width: 70,
+  height: 70,
+  borderRadius: '50%',
+  backgroundColor: alpha(theme.palette.primary.main, 0.15),
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  flexWrap: 'wrap',
-  '& > *': {
-    margin: theme.spacing(1.5),
-    [theme.breakpoints.up('md')]: {
-      margin: theme.spacing(2),
-    },
-    [theme.breakpoints.up('lg')]: {
-      margin: theme.spacing(2.5),
-    },
-  },
+  marginBottom: theme.spacing(2),
 }));
 
 // ----------------------------------------------------------------------
@@ -67,23 +68,70 @@ export default function HomeServices() {
 
   return (
     <StyledRoot>
-      {/*  */}
       <Container component={MotionViewport}>
-        <Grid direction={{ xs: 'column', md: 'row-reverse' }} container spacing={5}>
-          <Grid item xs={12} md={5}>
-            <Description />
-          </Grid>
+        {/* Section Title */}
+        <StyledDescription>
+          <m.div variants={varFade().inDown}>
+            <Typography
+              variant="h2"
+              fontWeight="bold"
+              sx={{
+                background: '#140a53',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              How P2PAE Can Help You?
+            </Typography>
+          </m.div>
+          {isDesktop && <Stack mt={5}>{exploreServicesButton}</Stack>}
+        </StyledDescription>
 
-          <Grid item xs={12} md={7}>
-            <Content />
-          </Grid>
+        {/* Services Grid */}
+        <StyledContent>
+          <Grid
+            container
+            spacing={5}
+            wrap="nowrap"
+            sx={{
+              overflowX: { xs: 'auto', md: 'visible' },
+              flexWrap: { xs: 'nowrap', md: 'wrap' },
+              py: 2,
+            }}
+          >
+            {services.map((service, index) => (
+              <Grid item key={index} sx={{ flex: '0 0 auto' }}>
+                <m.div variants={varFade().inUp}>
+                  <ServiceCard>
+                    <IconWrapper>
+                      <Iconify icon={service.icon} width={36} height={36} color="#6A0DAD" />
+                    </IconWrapper>
 
-          {!isDesktop && (
-            <Grid item xs={12} sx={{ textAlign: 'center' }}>
-              {exploreServicesButton}
-            </Grid>
-          )}
-        </Grid>
+                    <Box flexGrow={1} display="flex" flexDirection="column" justifyContent="center">
+                      <Typography
+                        variant="h6"
+                        fontWeight="bold"
+                        sx={{ color: '#140a53', mb: 1 }}
+                      >
+                        {service.title}
+                      </Typography>
+                      <Typography variant="body2" sx={{ color: '#140A53' }}>
+                        {service.description}
+                      </Typography>
+                    </Box>
+                  </ServiceCard>
+                </m.div>
+              </Grid>
+            ))}
+          </Grid>
+        </StyledContent>
+
+        {/* Button for Mobile */}
+        {!isDesktop && (
+          <Stack mt={5} alignItems="center">
+            {exploreServicesButton}
+          </Stack>
+        )}
       </Container>
     </StyledRoot>
   );
@@ -91,63 +139,39 @@ export default function HomeServices() {
 
 // ----------------------------------------------------------------------
 
-function Description() {
-  const isDesktop = useResponsive('up', 'md');
-  const theme = useTheme();
-  return (
-    <StyledDescription>
-      <m.div variants={varFade().inRight}>
-        <Typography variant="h2" fontWeight="normal" color={theme.palette.common.black}>
-          {process.env.REACT_APP_PROJECT_TITLE} for Retails
-        </Typography>
-      </m.div>
-
-      <m.div variants={varFade().inRight}>
-        <Typography variant="h6" fontWeight="normal" mt={2}>
-          Dive into the expansive capabilities of our neo banking platform, offering professional
-          services, robust infrastructure, unwavering support, and top-tier security – everything
-          your financial endeavors need to simplify operations, foster client relationships, and
-          achieve scalable growth.
-        </Typography>
-      </m.div>
-      <Stack marginTop={4}>{isDesktop && exploreServicesButton}</Stack>
-    </StyledDescription>
-  );
-}
-
-// ----------------------------------------------------------------------
-
-function Content() {
-  const isMobile = useResponsive('down', 'md');
-
-  return (
-    <StyledContent>
-      {/* Row 1 */}
-      <StyledRow>
-        <m.div variants={varFade().inLeft}>
-          <Image src="/assets/illustrations/illustration_home_services.jpg" alt="services" />
-          <Stack flexDirection={isMobile ? 'column' : 'row'} alignItems="center" marginTop={4}>
-            <Typography
-              variant="h4"
-              fontWeight="normal"
-              fontFamily="'Roboto Slab', serif"
-              marginTop={2}
-            >
-              Since embracing our neo banking platform, our financial management has soared,
-              witnessing an impressive 80% boost in productivity over the past year.
-            </Typography>
-            <Stack textAlign="center">
-              {!isMobile && <Favicon />}
-              <NextLink href={PATH_PAGE.about} passHref>
-                <Button endIcon={<Iconify icon="line-md:chevron-right" />}>About Us</Button>
-              </NextLink>
-            </Stack>
-          </Stack>
-        </m.div>
-      </StyledRow>
-    </StyledContent>
-  );
-}
+const services = [
+  {
+    title: 'BBPS (Bharat Bill Payment System)',
+    description: 'Pay credit card, electricity, and utility bills instantly and securely.',
+    icon: 'ic:round-receipt',
+  },
+  {
+    title: 'Domestic Money Transfer',
+    description: 'Transfer money across India with ease and reliability.',
+    icon: 'mdi:bank-transfer',
+  },
+  {
+    title: 'Mobile & FASTag Recharge',
+    description: 'Quick recharge for mobiles and FASTags anytime, anywhere.',
+    icon: 'ic:round-phone-iphone',
+  },
+  {
+    title: 'Cash Management Services (CMS)',
+    description: 'Streamlined cash collection and management solutions for businesses.',
+    icon: 'mdi:cash-multiple',
+  },
+  {
+    title: 'Travel Booking',
+    description: 'Hassle-free booking for IRCTC trains, buses, flights, and hotels.',
+    icon: 'mdi:ticket-confirmation',
+  },
+  {
+    title: 'AEPS (Aadhaar Enabled Payment System)',
+    description:
+      'Secure cash withdrawal, balance inquiry, and transactions using Aadhaar authentication.',
+    icon: 'mdi:account-key',
+  },
+];
 
 // ----------------------------------------------------------------------
 
@@ -161,10 +185,17 @@ const exploreServicesButton = (
       rel="noopener"
       href={PATH_PAGE.components}
       endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
+      sx={{
+        borderColor: '#140A53',
+        color: '#140A53',
+        fontWeight: 'bold',
+        '&:hover': {
+          backgroundColor: alpha('#140A53', 0.1),
+          borderColor: '#140A53',
+        },
+      }}
     >
       Explore All Services
     </Button>
   </m.div>
 );
-
-// ----------------------------------------------------------------------
