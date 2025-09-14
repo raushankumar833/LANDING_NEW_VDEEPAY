@@ -99,12 +99,14 @@ function Description() {
         <m.div variants={varFade().inRight}>
           <Button
             color="inherit"
+            
             size={isDesktop ? 'large' : 'small'}
             variant="contained"
             onClick={() => push(PATH_DASHBOARD.admin.root)}
             sx={{
               color: 'grey.100',
-              bgcolor: 'primary.main',
+              backgroundColor: '#731cdd',
+              
             }}
           >
             Login Now

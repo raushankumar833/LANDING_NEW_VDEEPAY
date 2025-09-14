@@ -129,7 +129,8 @@ const loginbutton = (
       size="large"
       variant="contained"
       sx={{
-        backgroundColor: (theme) => theme.palette.common.black,
+        backgroundColor: '#731cdd',
+        // backgroundColor: (theme) => theme.palette.common.black,
         borderRadius: '2px',
       }}
       endIcon={<Iconify icon="ic:round-arrow-right-alt" />}

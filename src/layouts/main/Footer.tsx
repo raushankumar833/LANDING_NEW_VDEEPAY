@@ -26,8 +26,8 @@ const LINKS = [
   {
     headline: 'Contact',
     children: [
-      { name: 'connect@biggbrains.com', href: 'mailto:connect@biggbrains.com' },
-      { name: 'Flat No. 8, Pocket 6, Sector 22, Rohini, Delhi, 110086', href: '#' },
+      { name: 'support@PSPKA.com', href: 'mailto:support@PSPKA.com' },
+      { name: 'Plot No.5 , Second Floor ,Pocket-5, Rohini Sector 24, New Delhi 110085', href: '#' },
     ],
   },
 ];

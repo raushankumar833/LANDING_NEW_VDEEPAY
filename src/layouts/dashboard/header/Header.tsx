@@ -81,16 +81,18 @@ export default function Header({ onOpenNav, onOpenNav1 }: Props) {
   const renderContent = (
     <>
       {isDesktop && isNavHorizontal && (
-        <Logo
-          sx={{
-            mr: 2.5,
-            width: isNavHorizontal && '70%',
-            ...bgBlur({
-              color: theme.palette.common.white,
-            }),
-          }}
-        />
-      )}
+  <Logo
+    sx={{
+      mr: 2.5,
+      width: { xs: 100, sm: 120, md: 150 }, // changes by breakpoint
+      height: 'auto',
+      ...bgBlur({
+        color: theme.palette.common.white,
+      }),
+    }}
+  />
+)}
+
 
       {!isDesktop && (
         <IconButton onClick={onOpenNav} sx={{ mr: 1, color: 'text.primary' }}>
