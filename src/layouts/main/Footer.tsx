@@ -39,6 +39,8 @@ const LINKS: { headline: string; children: LinkItem[] }[] = [
     headline: 'Contact',
     children: [
       { name: 'Support@p2pae.com', href: 'mailto:Support@p2pae.com' },
+        { name: '011-47537321 ,7428985999', href: 'tel:7428985999' },
+
       { name: 'PVT No.-2, B-1, KH No.900/289Ground Floor, Shalimar Village, Delhi, North West Delhi- 110088, Delhi', href: '#' },
     ],
   },
