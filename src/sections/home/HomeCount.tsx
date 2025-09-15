@@ -108,7 +108,7 @@ export default function HomeCount() {
             <m.div variants={varFade().inRight}>
               <Box sx={{ position: 'relative' }}>
                 <Image
-                  src="/assets/illustrations/illustration_home_services.jpg"
+                  src="/assets/illustrations/woman.jpg"
                   alt="services"
                   sx={{
                     borderRadius: 3,

@@ -6,12 +6,11 @@ import { MotionContainer, varFade } from '../../components/animate';
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
-
   position: 'relative',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/about/hero.jpg)',
-  padding: theme.spacing(10, 0),
+  backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/about/hero1.jpeg)',
+  padding: theme.spacing(1, 0),
   [theme.breakpoints.up('md')]: {
     height: 560,
     padding: 0,
@@ -37,7 +36,6 @@ export default function AboutHero() {
         <StyledContent>
           <Typography variant="h2" fontWeight="normal" color={theme.palette.common.white}>
             About Us
-            
           </Typography>
           <Divider
             sx={{
@@ -58,8 +56,8 @@ export default function AboutHero() {
                 mt: 2,
               }}
             >
-              Let's work together and
-              <br /> make payments easily
+              Simplify your finances and
+              <br /> grow your business effortlessly
             </Typography>
           </m.div>
         </StyledContent>

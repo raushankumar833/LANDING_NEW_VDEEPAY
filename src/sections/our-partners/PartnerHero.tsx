@@ -16,8 +16,8 @@ const StyledRoot = styled('div')(({ theme }) => ({
   padding: theme.spacing(2, 1, 0, 1),
   height: 'auto',
   // backgroundColor: '#fff3b0',
-  backgroundColor: '#ff758f',
-  // backgroundColor: '#aec3b0',
+  // backgroundColor: '#ff758f',
+  backgroundColor: '#c9a6ff ',
   // backgroundColor: '#f08080',
   // backgroundColor: '#ffb3c1',
   // backgroundColor: theme.palette.secondary.light,
@@ -68,7 +68,7 @@ function HeroFloatCard() {
         <Typography
           variant={isMobile ? 'h6' : 'h4'}
           fontWeight={isMobile ? 'normal' : 'bold'}
-          color={theme.palette.common.black}
+          color="#140a53"
           sx={{
             mb: 1,
             textTransform: 'uppercase',
@@ -79,14 +79,14 @@ function HeroFloatCard() {
         <Typography
           variant={isMobile ? 'h3' : 'h2'}
           fontWeight="bold"
-          color={theme.palette.common.black}
+          color="#140a53"
         >
           {hero?.title}
         </Typography>
         <Typography
           variant={isMobile ? 'caption' : 'h6'}
           fontWeight="normal"
-          color={theme.palette.common.black}
+          color="#140a53"
           sx={{
             width: { xs: '100%', md: '60%' },
             margin: '32px auto',

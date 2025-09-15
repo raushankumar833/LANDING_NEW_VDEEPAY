@@ -17,12 +17,17 @@ const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage:
-    'url(/assets/background/overlay_1.svg), url(/assets/images/contact/hero.jpg)',
+  backgroundImage: ' url(/assets/images/contact/hero.jpeg)',
   padding: theme.spacing(2, 1, 0, 1),
   height: 'auto',
-  [theme.breakpoints.up('md')]: { padding: theme.spacing(8, 0, 0, 0), height: `calc(100vh - 200px)` },
-  [theme.breakpoints.up('lg')]: { padding: theme.spacing(8, 0, 0, 0), height: `calc(100vh - 300px)` },
+  [theme.breakpoints.up('md')]: {
+    padding: theme.spacing(8, 0, 0, 0),
+    height: `calc(100vh - 200px)`,
+  },
+  [theme.breakpoints.up('lg')]: {
+    padding: theme.spacing(8, 0, 0, 0),
+    height: `calc(100vh - 300px)`,
+  },
 }));
 
 const StyledContent = styled(Box)(({ theme }) => ({
@@ -46,7 +51,10 @@ const StyledCard = styled(Card)(({ theme }) => ({
   background: `${theme.palette.grey[200]}`,
   border: `0px`,
   boxShadow: 'none',
-  [theme.breakpoints.up('md')]: { border: `1px solid ${theme.palette.grey[400]}`, padding: theme.spacing(4, 3) },
+  [theme.breakpoints.up('md')]: {
+    border: `1px solid ${theme.palette.grey[400]}`,
+    padding: theme.spacing(4, 3),
+  },
 }));
 
 // ---------------- Category Map ----------------
@@ -94,13 +102,17 @@ function HeroFloatCard() {
     <StyledContent>
       <Box sx={{ textAlign: 'center' }}>
         <m.div variants={varFade().inRight}>
-    <Typography variant="h2" fontWeight="normal" color={theme.palette.common.white}>
-  Searching for solutions made simple?
-</Typography>
-<Typography variant="h4" fontWeight="normal" color={theme.palette.common.white} sx={{ mt: 2 }}>
-  We're here to make it easy for you
-</Typography>
-
+          <Typography variant="h2" fontWeight="800" color={theme.palette.common.white}>
+            Searching for solutions made simple?
+          </Typography>
+          <Typography
+            variant="h4"
+            fontWeight="800"
+            color={theme.palette.common.white}
+            sx={{ mt: 2 }}
+          >
+            We're here to make it easy for you
+          </Typography>
 
           <Divider
             sx={{
@@ -139,7 +151,7 @@ function HeroFloatCard() {
                     fontWeight="bold"
                     fontFamily="'Roboto Slab', serif"
                     marginBottom={isMobile ? 1 : 2}
-                    color={"#140a53"}
+                    color={'#140a53'}
                   >
                     {item.description}
                   </Typography>

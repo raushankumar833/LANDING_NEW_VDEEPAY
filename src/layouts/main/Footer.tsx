@@ -51,7 +51,7 @@ export default function Footer() {
   const isActive = (href: string) => router.pathname === href;
 
   return (
-    <Box component="footer" sx={{ position: 'relative', bgcolor: 'background.default', overflow: 'hidden', py: 3, mt: 2 }}>
+    <Box component="footer" sx={{ position: 'relative', bgcolor: 'background.default', overflow: 'hidden', py: 2, mt: 2 }}>
       {/* Logo watermark */}
       <Box
         sx={{
@@ -163,7 +163,7 @@ export default function Footer() {
         </Grid>
 
         {/* Copyright */}
-        <Typography variant="caption" component="div" sx={{color:"#140a53", mt: 4, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.95rem' }}>
+        <Typography variant="caption" component="div" sx={{color:"#140a53", mt: 2, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.95rem' }}>
           © {date}. All rights reserved
         </Typography>
       </Container>

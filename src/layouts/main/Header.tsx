@@ -47,10 +47,10 @@ export default function Header() {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.shorter,
           }),
-          ...(isOffset && {
-            ...bgBlur({ color: theme.palette.background.default }),
-            height: { md: HEADER.H_MAIN_DESKTOP - 10 },
-          }),
+          // ...(isOffset && {
+          //   ...bgBlur({ color: theme.palette.background.default }),
+          //   height: { md: HEADER.H_MAIN_DESKTOP - 10 },
+          // }),
         }}
       >
         <Box
