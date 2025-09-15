@@ -156,7 +156,9 @@ const loginbutton = (
     <Button
       size="large"
       variant="contained"
-       onClick={() => window.location.href = 'https://p2pae.com/'}
+      rel="noopener"
+              //  href={PATH_AUTH.login}
+            onClick={() => window.location.href = 'https://app.p2pae.com/login'}
       sx={{
         backgroundColor: '#731cdd',
         // backgroundColor: (theme) => theme.palette.common.black,
