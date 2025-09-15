@@ -75,42 +75,43 @@
       "title": "P2PAE Network & Partner program",
       "intro": "Join the P2PAE Network & Expand your Distributor Business & Earn Extra Income. P2PAE has always been Vocal for the Local shopkeepers. Through P2PAE, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. P2PAE has increased retailers monthly earning as well as customer's footfall."
     },
-    "why_partner": [
+ "why_partner": [
+  {
+    "title": "Why become P2PAE Retailer ?",
+    "list": [
       {
-        "title": "Why become P2PAE Retailer ?",
-        "list": [
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "P2PAE for Retails",
-            "intro": "P2PAE has always been Vocal for the Local shopkeepers. Through P2PAE, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. P2PAE has increased retailers monthly earning as well as customer's footfall.",
-            "grid_direction": "row-reverse"
-          },
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "Become a true solution provider",
-            "intro": "Become Aatma nirbhar Dukaandar and earn Rs.16,000 extra every month. Our Platform is Easy, Fast & Secure to use.",
-            "grid_direction": "row"
-          },
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "Free of cost services",
-            "intro": "No charges to use P2PAE Service. Earn token on every transaction, which helps in boosting their earnings.",
-            "grid_direction": "row-reverse"
-          }
-        ]
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "P2PAE for Retails",
+        "intro": "P2PAE has always been Vocal for the Local shopkeepers. Through P2PAE, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. With our trusted platform, retailers not only increased their monthly earnings but also attracted more customer footfall, gaining better visibility, trust, and long-term customer loyalty in their local market.",
+        "grid_direction": "row-reverse"
       },
       {
-        "title": "Why become P2PAE Distributor ?",
-        "list": [
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "P2PAE for Distributors",
-            "intro": "We at P2PAE intend to improve our distributors earning potential by enabling them to grow their business and make the best out of their retail network. It will help you make your daily business easy and effective.",
-            "grid_direction": "row-reverse"
-          }
-        ]
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "Become a true solution provider",
+        "intro": "Become an Aatma Nirbhar Dukaandar and earn an additional Rs.16,000 every month. With P2PAE, you are not just selling services—you are providing complete solutions to your customers. Our platform is Easy, Fast & Secure to use, empowering you to deliver financial services, bill payments, and money transfers right from your shop, creating stronger customer relationships and ensuring repeat business.",
+        "grid_direction": "row"
+      },
+      {
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "Free of cost services",
+        "intro": "There are absolutely no charges to use P2PAE Services. Every transaction you complete earns you tokens, which further boost your earnings over time. These rewards motivate retailers to engage more, grow their service offerings, and stand out as trusted digital service providers in their communities—all without any hidden cost or investment.",
+        "grid_direction": "row-reverse"
       }
     ]
+  },
+  {
+    "title": "Why become P2PAE Distributor ?",
+    "list": [
+      {
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "P2PAE for Distributors",
+"intro": "At P2PAE, we empower distributors with tools, transparent reporting, and strong support to boost profits, simplify operations, and lead digital transformation while strengthening their retail network.",
+   "grid_direction": "row-reverse"
+      }
+    ]
+  }
+]
+
   },
   "ourservices": {
     "hero": {

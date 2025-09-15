@@ -60,7 +60,7 @@ export default function WhyPartner() {
                 }}
               >
                 <m.div variants={varFade().inRight}>
-                  <Typography variant="h2" fontWeight="normal" color={theme.palette.common.black}>
+                  <Typography variant="h2" fontWeight="600" color="#140a53">
                     {why_partner?.title}
                   </Typography>
                 </m.div>
@@ -103,9 +103,10 @@ function Description({ list }: { list: ListType }) {
 
       <m.div variants={varFade().inRight}>
         <Typography
-          mt={2}
+          mt={4}
           variant="h6"
           fontWeight="600"
+          color="#140a53"
           lineHeight={'2rem'}
           letterSpacing={'0.005rem'}
         >
@@ -122,7 +123,7 @@ function Content({ list }: { list: ListType }) {
   return (
     <StyledContent>
       <m.div variants={varFade().inLeft}>
-        <Image src={list.icon} alt="services" sx={{ width: '90%', height: 'auto' }} />
+        <Image src={list.icon} alt="services" sx={{ width: '100%', height: 'auto' }} />
       </m.div>
     </StyledContent>
   );
@@ -132,7 +133,7 @@ function ParaHeading({ title = `${process.env.REACT_APP_PROJECT_TITLE} for Retai
   const theme = useTheme();
   return (
     <m.div variants={varFade().inRight}>
-      <Typography variant="h3" fontWeight="normal" color={theme.palette.common.black}>
+      <Typography variant="h3" fontWeight="600" color="#140a53">
         {title}
       </Typography>
     </m.div>

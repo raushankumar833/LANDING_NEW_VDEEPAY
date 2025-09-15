@@ -156,6 +156,7 @@ const loginbutton = (
     <Button
       size="large"
       variant="contained"
+       onClick={() => window.location.href = 'https://p2pae.com/'}
       sx={{
         backgroundColor: '#731cdd',
         // backgroundColor: (theme) => theme.palette.common.black,

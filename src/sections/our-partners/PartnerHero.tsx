@@ -17,7 +17,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   height: 'auto',
   // backgroundColor: '#fff3b0',
   // backgroundColor: '#ff758f',
-  backgroundColor: '#c9a6ff ',
+      background: 'linear-gradient(135deg, #c9a6ff 0%, #ff758f 100%)',
   // backgroundColor: '#f08080',
   // backgroundColor: '#ffb3c1',
   // backgroundColor: theme.palette.secondary.light,
@@ -155,7 +155,7 @@ const contactusbutton = (
       size="large"
       variant="outlined"
       sx={{
-        color: (theme) => theme.palette.common.black,
+        color: (theme) => "#140a53",
         borderRadius: '2px',
       }}
       endIcon={<Iconify icon="ic:round-arrow-right-alt" />}

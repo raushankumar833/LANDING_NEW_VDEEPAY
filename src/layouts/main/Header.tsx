@@ -79,7 +79,7 @@ export default function Header() {
           {/* Login Button */}
           <Button
             variant="contained"
-            onClick={() => push(PATH_AUTH.login)}
+            onClick={() => window.location.href = 'https://p2pae.com/'}
             sx={{
               backgroundColor: '#731cdd',
               fontSize: isDesktop ? '14px' : '10px',
