@@ -5,7 +5,7 @@ import { varFade } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
 import useResponsive from 'src/hooks/useResponsive';
 import project_data from 'project-config.json';
-import { bgGradient } from 'src/utils/cssStyles'; 
+
 
 
 
