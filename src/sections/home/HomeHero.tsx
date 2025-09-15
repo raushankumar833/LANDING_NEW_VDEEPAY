@@ -72,7 +72,7 @@ const StyledEllipseTop = styled('div')(({ theme }) => ({
   width: 480,
   height: 480,
   top: -80,
-  right: -80,
+ 
   borderRadius: '50%',
   filter: 'blur(100px)',
   WebkitFilter: 'blur(100px)',
@@ -123,7 +123,7 @@ export default function HomeHero() {
           </Grid>
         </Box>
 
-        <StyledEllipseTop />
+        {/* <StyledEllipseTop /> */}
         <StyledEllipseBottom />
       </StyledRoot>
 

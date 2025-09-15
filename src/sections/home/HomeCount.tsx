@@ -1,180 +1,150 @@
 import { m } from 'framer-motion';
 // @mui
-import { alpha, styled, useTheme } from '@mui/material/styles';
-import { Typography, Stack, Grid, Container } from '@mui/material';
+import { alpha, styled } from '@mui/material/styles';
+import { Typography, Grid, Container, Card, Box } from '@mui/material';
 // components
 import Image from '../../components/image';
 import { MotionViewport, varFade } from '../../components/animate';
-import useResponsive from 'src/hooks/useResponsive';
 import { bgGradient } from '../../utils/cssStyles';
 import HomeUserCounter from 'src/components/home/HomeUserCounter';
 
 // ----------------------------------------------------------------------
 
-const StyledRoot = styled('div')(({ theme }) => ({
-  padding: theme.spacing(4, 0),
-  margin: theme.spacing(10, 0, 0, 0),
+const StyledRoot = styled('section')(({ theme }) => ({
   position: 'relative',
+  overflow: 'hidden',
+  padding: theme.spacing(10, 0),
   ...bgGradient({
-    color: alpha(theme.palette.primary.main, 0.7),
+    color: alpha('#5210c1', 0.95),
     imgUrl: '/assets/background/overlay_2.jpg',
   }),
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(4, 0),
-  },
 }));
 
-const StyledContent = styled('div')(({ theme }) => ({
-  padding: theme.spacing(1.5, 0),
-  borderRadius: Number(theme.shape.borderRadius) * 2,
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(2, 0),
-  },
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(2.5),
-  },
-}));
-
-const StyledDescription = styled('div')(({ theme }) => ({
+const CounterCard = styled(Card)(({ theme }) => ({
+  borderRadius: theme.shape.borderRadius * 2,
+  padding: theme.spacing(4.2, 3),
   textAlign: 'center',
-  [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
-    paddingTop: theme.spacing(15),
+  color: '#140a53',
+  backdropFilter: 'blur(14px)',
+  border: '2px solid #140a53', // fallback solid color
+  backgroundImage: `
+    linear-gradient(${alpha('#ffffff', 0.9)}, ${alpha('#ffffff', 0.9)}), 
+    linear-gradient(90deg, #ffbc87, #8b4513)
+  `,
+  backgroundOrigin: 'border-box',
+  backgroundClip: 'padding-box, border-box',
+  transition: 'all 0.4s ease',
+  '&:hover': {
+    transform: 'translateY(-8px) scale(1.03)',
+    boxShadow: '0 18px 40px rgba(20, 10, 83, 0.45)',
   },
 }));
 
-const StyledRow = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexWrap: 'wrap',
-  '& > *': {
-    margin: theme.spacing(1.5),
-    [theme.breakpoints.up('md')]: {
-      margin: theme.spacing(2),
-    },
-    [theme.breakpoints.up('lg')]: {
-      margin: theme.spacing(2.5),
-    },
-  },
-}));
+
+
+const COUNTERS = [
+  { count: 50, unit: 'K+', sub: 'Merchants' },
+  { count: 120, unit: 'L+', sub: 'Customers' },
+  { count: 800, unit: '+', sub: 'Cities' },
+  { count: 250, unit: 'L+', sub: 'Transactions' },
+];
+
 // ----------------------------------------------------------------------
 
 export default function HomeCount() {
   return (
     <StyledRoot>
       <Container component={MotionViewport}>
-        <Grid direction={{ xs: 'column', md: 'row' }} container spacing={5}>
-          <Grid item xs={12} md={6}>
-            <Description />
+        <Grid container spacing={8} alignItems="center">
+          {/* LEFT SIDE - COUNTERS + HEADINGS */}
+          <Grid item xs={12} md={7}>
+            <m.div variants={varFade().inLeft}>
+              <Typography
+                variant="h2"
+                fontWeight="bold"
+                sx={{
+                  background: 'linear-gradient(90deg,#ffbc87,#8b4513)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  mb: 2,
+                }}
+              >
+                Made in India
+              </Typography>
+
+              <Typography
+                variant="h2"
+                fontWeight="bold"
+                sx={{
+                  color: '#fff',
+                  mb: 6,
+                }}
+              >
+                Made for Businesses
+              </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inUp}>
+              <Grid container spacing={2.5}>
+                {COUNTERS.map((item, index) => (
+                  <Grid item xs={6} key={index}>
+                    <CounterCard>
+                      <HomeUserCounter
+                        countTo={item.count}
+                        duration={1500}
+                        unit={item.unit}
+                        color="#140a53"
+                        subValue={item.sub}
+                      />
+                    </CounterCard>
+                  </Grid>
+                ))}
+              </Grid>
+            </m.div>
           </Grid>
 
-          <Grid item xs={12} md={6}>
-            <Content />
+          {/* RIGHT SIDE - IMAGE + TESTIMONIAL */}
+          <Grid item xs={12} md={5}>
+            <m.div variants={varFade().inRight}>
+              <Box sx={{ position: 'relative' }}>
+                <Image
+                  src="/assets/illustrations/illustration_home_services.jpg"
+                  alt="services"
+                  sx={{
+                    borderRadius: 3,
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.45)',
+                    width: '100%',
+                    maxWidth: 540,
+                    mx: 'auto',
+                  }}
+                />
+
+                {/* Floating Glass Testimonial */}
+                <Card
+                  sx={{
+                    p: 3,
+                    mt: 2,
+                    mx: 'auto',
+                    maxWidth: 400,
+                    background: alpha('#ffffff', 0.9),
+                    backdropFilter: 'blur(18px)',
+                    borderRadius: 3,
+                    color: '#140a53',
+                    textAlign: 'center',
+                    boxShadow: '0 12px 24px rgba(0,0,0,0.4)',
+                  }}
+                >
+                  <Typography variant="h6" sx={{ fontWeight: 500 }}>
+                    “Since embracing our neo banking platform, our financial
+                    management has soared, witnessing an impressive 80% boost in
+                    productivity over the past year.”
+                  </Typography>
+                </Card>
+              </Box>
+            </m.div>
           </Grid>
         </Grid>
       </Container>
     </StyledRoot>
-  );
-}
-
-function Description() {
-  const theme = useTheme();
-  const isMobile = useResponsive('down', 'md');
-  return (
-    <StyledDescription>
-      <m.div variants={varFade().inRight}>
-        <Typography
-          variant={isMobile ? 'h3' : 'h2'}
-          fontWeight="normal"
-          color={theme.palette.common.white}
-        >
-          Made in India
-        </Typography>
-        <Typography
-          variant={isMobile ? 'h3' : 'h2'}
-          fontWeight="normal"
-          color={theme.palette.common.white}
-        >
-          Made for the Businesses
-        </Typography>
-      </m.div>
-      <m.div variants={varFade().inRight}>
-        <Stack
-          mt={6}
-          sx={{
-            px: { xs: 5, md: 0 },
-          }}
-        >
-          <Grid direction={{ xs: 'column', md: 'row' }} container spacing={isMobile ? 2 : 5}>
-            <Grid item xs={12} md={6}>
-              <HomeUserCounter
-                countTo={5}
-                duration={1000}
-                unit="K+"
-                color={theme.palette.common.white}
-                subValue="Merchants"
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <HomeUserCounter
-                countTo={10}
-                duration={1000}
-                unit="L+"
-                color={theme.palette.common.white}
-                subValue="Customers"
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <HomeUserCounter
-                countTo={5}
-                duration={1000}
-                unit="K+"
-                color={theme.palette.common.white}
-                subValue="City"
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <HomeUserCounter
-                countTo={5}
-                duration={1000}
-                unit="L+"
-                color={theme.palette.common.white}
-                subValue="Transaction"
-              />
-            </Grid>
-          </Grid>
-        </Stack>
-      </m.div>
-    </StyledDescription>
-  );
-}
-
-// ----------------------------------------------------------------------
-
-function Content() {
-  const isMobile = useResponsive('down', 'md');
-
-  return (
-    <StyledContent>
-      {/* Row 1 */}
-      <StyledRow>
-        <m.div variants={varFade().inLeft}>
-          <Image src="/assets/illustrations/illustration_home_services.jpg" alt="services" />
-          <Stack flexDirection={isMobile ? 'column' : 'row'} alignItems="center" marginTop={4}>
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              fontFamily="'Roboto Slab', serif"
-              marginTop={2}
-              color="common.black"
-            >
-              Since embracing our neo banking platform, our financial management has soared,
-              witnessing an impressive 80% boost in productivity over the past year.
-            </Typography>
-          </Stack>
-        </m.div>
-      </StyledRow>
-    </StyledContent>
   );
 }

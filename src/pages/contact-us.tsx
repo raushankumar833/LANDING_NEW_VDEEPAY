@@ -22,7 +22,7 @@ export default function ContactPage() {
       </Head>
 
       <ContactHero />
-      <ContactEngaging />
+      {/* <ContactEngaging /> */}
 
       <Container sx={{ py: 10, bgcolor: '#f8f9fb' }}>
         <Box
@@ -30,7 +30,7 @@ export default function ContactPage() {
           display="grid"
           gridTemplateColumns={{
             xs: 'repeat(1, 1fr)',
-            md: 'repeat(2, 1fr)',
+            md: 'repeat(1, 1fr)',
           }}
         >
           <ContactForm />

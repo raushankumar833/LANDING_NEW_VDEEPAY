@@ -6,113 +6,121 @@ import Iconify from 'src/components/iconify';
 import useResponsive from 'src/hooks/useResponsive';
 import project_data from 'project-config.json';
 import { useRouter } from 'next/router';
+
 interface StyledCardProps {
   theme?: SxProps;
   bgcolor?: string;
 }
+
 const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
   padding: theme.spacing(4),
   [theme.breakpoints.up('md')]: {
-    margin: theme.spacing(12, 0),
+    margin: theme.spacing(6, 0),
   },
 }));
+
 const StyledCard = styled(Card)(({ theme }) => ({
-  borderRadius: '2px',
+  borderRadius: '8px',
   padding: theme.spacing(1),
-  background: `${theme.palette.common.white}`,
-  border: `0px`,
-  transition: 'border 0.3s, transform 0.3s, cursor 0.3s',
-  boxShadow: 'none',
-  [theme.breakpoints.up('md')]: {
-    border: `1px solid ${theme.palette.grey[300]}`,
-    padding: theme.spacing(1.5),
-  },
+  background: '#fff',
+  border: '0px',
+  transition: 'all 0.3s ease',
+  boxShadow: '0 2px 6px rgba(0,0,0,0.05)',
   '&:hover': {
-    cursor: 'pointer',
-    transform: 'translateY(-3px)',
-    border: `1px solid ${theme.palette.primary.main}`,
-    boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+    transform: 'translateY(-5px)',
+    boxShadow: '0 12px 20px rgba(20, 10, 83, 0.15)',
   },
 }));
+
 const StyledInnerCard = styled(Card)<StyledCardProps>(({ theme, bgcolor }) => ({
-  borderRadius: '2px',
+  borderRadius: '8px',
   position: 'relative',
-  padding: theme.spacing(2),
-  background: bgcolor,
-  border: `0px`,
+  padding: theme.spacing(3),
+  background: bgcolor || '#f5f5f5',
+  border: '0px',
   boxShadow: 'none',
   [theme.breakpoints.up('md')]: {
-    border: `1px solid ${theme.palette.grey[300]}`,
-    padding: theme.spacing(4, 3),
+    padding: theme.spacing(4),
   },
 }));
+
 const StyledButton = styled(Button)(({ theme }) => ({
   py: 0,
   px: 1,
-  top: '0',
-  right: '0',
+  top: 8,
+  right: 8,
   fontSize: '12px',
-  borderRadius: '0',
-  fontWeight: 'normal',
+  borderRadius: '4px',
+  fontWeight: 'bold',
   position: 'absolute',
   textTransform: 'uppercase',
   background: theme.palette.primary.main,
   color: theme.palette.getContrastText(theme.palette.primary.main),
+  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
 }));
-
-// ----------------------------------------------------------------------
 
 export default function ServicesCard() {
   const isMobile = useResponsive('down', 'md');
   const { services } = project_data;
   const { push } = useRouter();
+  const textColor = '#140A53';
+
   return (
     <StyledRoot>
       {services?.length > 0 &&
         services.map((service, index) => (
-          <Grid key={index} direction={{ xs: 'column', md: 'row' }} container spacing={4} mb={8}>
+          <Grid
+            key={index}
+            direction={{ xs: 'column', md: 'row' }}
+            container
+            spacing={4}
+            mb={4}
+          >
             <Grid item xs={12}>
-              <Stack>
-                <CardTitle title={service.title} />
-              </Stack>
-              <Stack>
-                <CardSubTitle title={service.sub_title} />
+              <Stack spacing={1}>
+                <CardTitle title={service.title} color={textColor} />
+                <CardSubTitle title={service.sub_title} color={textColor} />
               </Stack>
             </Grid>
+
             {service?.list?.length > 0 &&
               service.list.map((list, index) => (
-                <Grid key={index} item xs={12} sm={12} md={6} lg={4} xl={4}>
+                <Grid key={index} item xs={12} sm={12} md={6} lg={4}>
                   <StyledCard>
                     <StyledInnerCard bgcolor={list.bgcolor}>
                       {list.extra && <StyledButton>{list.extra}</StyledButton>}
-                      <Iconify icon={list.icon} width={40} marginBottom={2} />
+
+                      <Iconify icon={list.icon} width={40} height={40} style={{ marginBottom: 16 }} />
+
                       <Typography
-                        variant={isMobile ? 'h6' : 'h4'}
+                        variant={isMobile ? 'h6' : 'h5'}
                         fontWeight="bold"
                         fontFamily="'Roboto Slab', serif"
-                        marginBottom={isMobile ? 1 : 0}
-                        // textTransform="capitalize"
+                        marginBottom={isMobile ? 1 : 2}
+                        color={textColor}
                       >
                         {list.title}
                       </Typography>
-                      <Typography variant="body1" mb={3}>
+
+                      <Typography variant="body1" mb={3} textAlign="justify" color={textColor}>
                         {list.intro}
                       </Typography>
+
                       <m.div variants={varFade().inUp}>
                         <Button
                           size="medium"
                           variant="contained"
-                          onClick={() => {
-                            push(list.link);
-                          }}
+                          onClick={() => push(list.link)}
                           sx={{
-                            backgroundColor: (theme) => theme.palette.common.black,
-                            borderRadius: '2px',
+                            backgroundColor: '#140A53',
+                            borderRadius: '6px',
+                            textTransform: 'capitalize',
+                            '&:hover': { backgroundColor: '#0f083f' },
                           }}
                           endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
                         >
-                          TRY NOW
+                          Try Now
                         </Button>
                       </m.div>
                     </StyledInnerCard>
@@ -125,21 +133,20 @@ export default function ServicesCard() {
   );
 }
 
-function CardTitle({ title = '' }) {
-  const theme = useTheme();
+function CardTitle({ title = '', color }: { title: string; color: string }) {
   return (
     <m.div variants={varFade().inRight}>
-      <Typography variant="h3" fontWeight="normal" color={theme.palette.common.black}>
+      <Typography variant="h3" fontWeight="bold" color={color}>
         {title}
       </Typography>
     </m.div>
   );
 }
-function CardSubTitle({ title = '' }) {
-  const theme = useTheme();
+
+function CardSubTitle({ title = '', color }: { title: string; color: string }) {
   return (
     <m.div variants={varFade().inRight}>
-      <Typography variant="h6" fontWeight="normal" color={theme.palette.common.black}>
+      <Typography variant="h6" fontWeight="medium" color={color}>
         {title}
       </Typography>
     </m.div>
