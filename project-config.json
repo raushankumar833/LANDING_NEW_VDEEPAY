@@ -1,6 +1,6 @@
 {
   "project": {
-    "title": "PSPKA",
+    "title": "P2PAE",
     "company_id": "4782",
     "description": "Your Trusted Partner in Digital Finance.!",
     "hero_description": "P2PAE is a trusted fintech leader with 10+ years of experience, simplifying and securing online transactions. Recognized as one of India’s fastest-growing names, we help businesses streamline payments, boost security, and scale with confidence.",
@@ -39,7 +39,7 @@
     }
   ],
   "service": {
-    "title": "PSPKA",
+    "title": "P2PAE",
     "description": "Transforming Payments, with Innovation!",
     "hero_description": "A unique and powerful software suite to transform the way you work. Designed for businesses of all sizes, built by a company that values your privacy.",
     "list": []
@@ -72,17 +72,17 @@
       "partner_main": "/assets/illustrations/partner_main-character.png",
       "partner_city": "/assets/illustrations/partner_buildings.webp",
       "sub_title": "Doing great things together!",
-      "title": "PSPKA Network & Partner program",
-      "intro": "Join the PSPKA Network & Expand your Distributor Business & Earn Extra Income. PSPKA has always been Vocal for the Local shopkeepers. Through PSPKA, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. PSPKA has increased retailers monthly earning as well as customer's footfall."
+      "title": "P2PAE Network & Partner program",
+      "intro": "Join the P2PAE Network & Expand your Distributor Business & Earn Extra Income. P2PAE has always been Vocal for the Local shopkeepers. Through P2PAE, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. P2PAE has increased retailers monthly earning as well as customer's footfall."
     },
     "why_partner": [
       {
-        "title": "Why become PSPKA Retailer ?",
+        "title": "Why become P2PAE Retailer ?",
         "list": [
           {
             "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "PSPKA for Retails",
-            "intro": "PSPKA has always been Vocal for the Local shopkeepers. Through PSPKA, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. PSPKA has increased retailers monthly earning as well as customer's footfall.",
+            "title": "P2PAE for Retails",
+            "intro": "P2PAE has always been Vocal for the Local shopkeepers. Through P2PAE, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. P2PAE has increased retailers monthly earning as well as customer's footfall.",
             "grid_direction": "row-reverse"
           },
           {
@@ -94,18 +94,18 @@
           {
             "icon": "/assets/illustrations/partner_why.jpg",
             "title": "Free of cost services",
-            "intro": "No charges to use PSPKA Service. Earn token on every transaction, which helps in boosting their earnings.",
+            "intro": "No charges to use P2PAE Service. Earn token on every transaction, which helps in boosting their earnings.",
             "grid_direction": "row-reverse"
           }
         ]
       },
       {
-        "title": "Why become PSPKA Distributor ?",
+        "title": "Why become P2PAE Distributor ?",
         "list": [
           {
             "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "PSPKA for Distributors",
-            "intro": "We at PSPKA intend to improve our distributors earning potential by enabling them to grow their business and make the best out of their retail network. It will help you make your daily business easy and effective.",
+            "title": "P2PAE for Distributors",
+            "intro": "We at P2PAE intend to improve our distributors earning potential by enabling them to grow their business and make the best out of their retail network. It will help you make your daily business easy and effective.",
             "grid_direction": "row-reverse"
           }
         ]

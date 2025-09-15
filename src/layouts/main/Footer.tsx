@@ -1,10 +1,10 @@
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { Box, Grid, Link, Stack, Container, Typography, IconButton } from '@mui/material';
 import { PATH_PAGE } from '../../routes/paths';
 import Logo from '../../components/logo';
 import Iconify from '../../components/iconify';
 
-// Social icons array with brand colors
 const _socials = [
   { name: 'Facebook', icon: 'eva:facebook-fill', href: 'https://facebook.com', color: '#4267B2' },
   { name: 'Twitter', icon: 'eva:twitter-fill', href: 'https://twitter.com', color: '#00ACEE' },
@@ -12,10 +12,16 @@ const _socials = [
   { name: 'LinkedIn', icon: 'eva:linkedin-fill', href: 'https://linkedin.com', color: '#005983' },
 ];
 
-// Footer links
-const LINKS = [
+type LinkItem = {
+  name: string;
+  href: string;
+  target?: string;
+  rel?: string;
+};
+
+const LINKS: { headline: string; children: LinkItem[] }[] = [
   {
-    headline: `${process.env.REACT_APP_PROJECT_TITLE}`,
+    headline: `P2PAE`,
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
@@ -25,33 +31,27 @@ const LINKS = [
   {
     headline: 'Legal',
     children: [
-      { name: 'Terms and Conditions', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'Terms and Condition', href: PATH_PAGE.termscondition, target: '_blank', rel: 'noopener noreferrer' },
+      { name: 'Privacy Policy', href: PATH_PAGE.privacy, target: '_blank', rel: 'noopener noreferrer' },
     ],
   },
   {
     headline: 'Contact',
     children: [
-      { name: 'support@PSPKA.com', href: 'mailto:support@PSPKA.com' },
-      { name: 'Plot No.5, Second Floor, Pocket-5, Rohini Sector 24, New Delhi 110085', href: '#' },
+      { name: 'Support@p2pae.com', href: 'mailto:Support@p2pae.com' },
+      { name: 'PVT No.-2, B-1, KH No.900/289Ground Floor, Shalimar Village, Delhi, North West Delhi- 110088, Delhi', href: '#' },
     ],
   },
 ];
 
 export default function Footer() {
   const date = new Date().getFullYear();
+  const router = useRouter();
+
+  const isActive = (href: string) => router.pathname === href;
 
   return (
-    <Box
-      component="footer"
-      sx={{
-        position: 'relative',
-        bgcolor: 'background.default',
-        overflow: 'hidden',
-        py: 3,
-        mt: 2,
-      }}
-    >
+    <Box component="footer" sx={{ position: 'relative', bgcolor: 'background.default', overflow: 'hidden', py: 3, mt: 2 }}>
       {/* Logo watermark */}
       <Box
         sx={{
@@ -69,32 +69,20 @@ export default function Footer() {
       </Box>
 
       <Container sx={{ position: 'relative', zIndex: 1 }}>
-        <Grid
-          container
-          justifyContent={{ xs: 'center', md: 'space-between' }}
-          sx={{ textAlign: { xs: 'center', md: 'left' } }}
-        >
+        <Grid container justifyContent={{ xs: 'center', md: 'space-between' }} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
           {/* Logo */}
-          <Grid item xs={12} sx={{ mb: 3 }}>
+          <Grid item xs={12} sx={{ mb: 1 }}>
             <Logo sx={{ mx: { xs: 'auto', md: 'inherit' }, zIndex: 2, position: 'relative' }} />
           </Grid>
 
           {/* Disclaimer and social icons */}
           <Grid item xs={12} md={4} sx={{ mb: { xs: 3, md: 0 } }}>
-            <Typography
-              variant="body1"
-              sx={{ pr: { md: 4 }, fontWeight: 500 }}
-            >
+            <Typography variant="body1" sx={{ pr: { md: 4 }, fontWeight: 500 }}>
               Disclaimer: Any dispute arising under these terms and conditions shall be subject to
               the jurisdiction of the courts of Delhi.
             </Typography>
 
-            <Stack
-              spacing={1}
-              direction="row"
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-              sx={{ mt: 2 }}
-            >
+            <Stack spacing={1.5} direction="row" justifyContent={{ xs: 'center', md: 'flex-start' }} sx={{ mt: 2 }}>
               {_socials.map((social) => (
                 <IconButton
                   key={social.name}
@@ -103,11 +91,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
-                    color: social.color, // use brand color as default
+                    color: social.color,
                     transition: '0.3s',
-                    '&:hover': {
-                      transform: 'scale(1.2)',
-                    },
+                    '&:hover': { transform: 'scale(1.2)' },
                   }}
                 >
                   <Iconify icon={social.icon} width={24} height={24} />
@@ -117,41 +103,67 @@ export default function Footer() {
           </Grid>
 
           {/* Links */}
-          <Grid item xs={12} md={7}>
-            <Stack spacing={7} justifyContent="space-between" direction={{ xs: 'column', md: 'row' }}>
-              {LINKS.map((list) => (
-                <Stack
-                  key={list.headline}
-                  spacing={1}
-                  alignItems={{ xs: 'center', md: 'flex-start' }}
-                >
-                  <Typography
-                    component="div"
-                    variant="subtitle1"
-                    sx={{ fontWeight: 600 }}
-                  >
-                    {list.headline}
-                  </Typography>
+    <Grid item xs={12} md={7}>
+  <Stack
+    direction={{ xs: 'column', md: 'row' }}
+    justifyContent="flex-start"
+    spacing={{ xs: 4, md: 12 }}
+    flexWrap="nowrap" // keep all columns in one row
+  >
+    {LINKS.map((list) => (
+      <Stack
+        key={list.headline}
+        spacing={1}
+        alignItems={{ xs: 'center', md: 'flex-start' }}
+        sx={{ whiteSpace: 'nowrap' }} // prevents text wrap
+      >
+        <Typography component="div" variant="subtitle1" sx={{ fontWeight: 600,whiteSpace: 'nowrap'  }}>
+          {list.headline}
+        </Typography>
 
-                  {list.children.map((link) => (
-                    <NextLink key={link.name} href={link.href} passHref>
-                      <Link color="inherit" variant="body1" sx={{ fontSize: '0.95rem' }}>
-                        {link.name}
-                      </Link>
-                    </NextLink>
-                  ))}
-                </Stack>
-              ))}
-            </Stack>
-          </Grid>
+        {list.children.map((link) =>
+          link.target ? (
+            <Link
+              key={link.name}
+              href={link.href}
+              target={link.target}
+              rel={link.rel}
+              sx={{
+                fontSize: '0.95rem',
+                color: isActive(link.href) ? '#ff6f61' : 'inherit',
+                transition: '0.3s',
+                '&:hover': { color: '#ff6f61' },
+                whiteSpace: 'nowrap', // prevents wrapping
+              }}
+            >
+              {link.name}
+            </Link>
+          ) : (
+            <NextLink key={link.name} href={link.href} passHref>
+              <Link
+                sx={{
+                  fontSize: '0.95rem',
+                  color: isActive(link.href) ? '#ff6f61' : 'inherit',
+                  fontWeight: isActive(link.href) ? 600 : 400,
+                  '&:hover': { color: '#ff6f61' },
+                  whiteSpace: 'wrap', // prevents wrapping
+                }}
+              >
+                {link.name}
+              </Link>
+            </NextLink>
+          )
+        )}
+      </Stack>
+    ))}
+  </Stack>
+</Grid>
+
+
         </Grid>
 
         {/* Copyright */}
-        <Typography
-          variant="caption"
-          component="div"
-          sx={{ mt: 4, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.85rem' }}
-        >
+        <Typography variant="caption" component="div" sx={{ mt: 4, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.85rem' }}>
           © {date}. All rights reserved
         </Typography>
       </Container>
