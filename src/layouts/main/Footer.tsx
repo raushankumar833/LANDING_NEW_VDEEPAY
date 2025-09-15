@@ -71,13 +71,13 @@ export default function Footer() {
       <Container sx={{ position: 'relative', zIndex: 1 }}>
         <Grid container justifyContent={{ xs: 'center', md: 'space-between' }} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
           {/* Logo */}
-          <Grid item xs={12} sx={{ mb: 1 }}>
+          <Grid item xs={12} sx={{ mb: 3 }}>
             <Logo sx={{ mx: { xs: 'auto', md: 'inherit' }, zIndex: 2, position: 'relative' }} />
           </Grid>
 
           {/* Disclaimer and social icons */}
-          <Grid item xs={12} md={4} sx={{ mb: { xs: 3, md: 0 } }}>
-            <Typography variant="body1" sx={{ pr: { md: 4 }, fontWeight: 500 }}>
+          <Grid item xs={12} md={4} sx={{ mb: { xs: 3, md: 1 } }}>
+            <Typography variant="body1" sx={{ pr: { md: 4 }, fontWeight: 500 ,color:"#140a53"}}>
               Disclaimer: Any dispute arising under these terms and conditions shall be subject to
               the jurisdiction of the courts of Delhi.
             </Typography>
@@ -117,7 +117,7 @@ export default function Footer() {
         alignItems={{ xs: 'center', md: 'flex-start' }}
         sx={{ whiteSpace: 'nowrap' }} // prevents text wrap
       >
-        <Typography component="div" variant="subtitle1" sx={{ fontWeight: 600,whiteSpace: 'nowrap'  }}>
+        <Typography component="div" variant="subtitle1" sx={{ fontWeight: 700,whiteSpace: 'nowrap',color:"#140a53"  }}>
           {list.headline}
         </Typography>
 
@@ -129,10 +129,10 @@ export default function Footer() {
               target={link.target}
               rel={link.rel}
               sx={{
-                fontSize: '0.95rem',
-                color: isActive(link.href) ? '#ff6f61' : 'inherit',
+                fontSize: '1rem',
+                color: isActive(link.href) ? '#140a53' : 'inherit',
                 transition: '0.3s',
-                '&:hover': { color: '#ff6f61' },
+                '&:hover': { color: '#5210c1' },
                 whiteSpace: 'nowrap', // prevents wrapping
               }}
             >
@@ -142,10 +142,10 @@ export default function Footer() {
             <NextLink key={link.name} href={link.href} passHref>
               <Link
                 sx={{
-                  fontSize: '0.95rem',
-                  color: isActive(link.href) ? '#ff6f61' : 'inherit',
+                  fontSize: '1rem',
+                  color: isActive(link.href) ? '#140a53' : 'inherit',
                   fontWeight: isActive(link.href) ? 600 : 400,
-                  '&:hover': { color: '#ff6f61' },
+                  '&:hover': { color: '#5210c1' },
                   whiteSpace: 'wrap', // prevents wrapping
                 }}
               >
@@ -163,7 +163,7 @@ export default function Footer() {
         </Grid>
 
         {/* Copyright */}
-        <Typography variant="caption" component="div" sx={{ mt: 4, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.85rem' }}>
+        <Typography variant="caption" component="div" sx={{color:"#140a53", mt: 4, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.95rem' }}>
           © {date}. All rights reserved
         </Typography>
       </Container>

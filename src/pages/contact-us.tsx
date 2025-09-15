@@ -24,7 +24,7 @@ export default function ContactPage() {
       <ContactHero />
       {/* <ContactEngaging /> */}
 
-      <Container sx={{ py: 10, bgcolor: '#f8f9fb' }}>
+      <Container sx={{ py: 6, bgcolor: '#f8f9fb' }}>
         <Box
           sx={{ bgcolor: '#f8f9fb' }}
           display="grid"

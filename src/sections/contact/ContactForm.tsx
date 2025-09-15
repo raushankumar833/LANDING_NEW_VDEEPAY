@@ -6,27 +6,28 @@ const ContactForm = () => (
   <Container
     sx={{
       py: 6,
-      mt: { xs: -5, md: -10, lg: -20 },
+      mt: { xs: -5, md: -10, lg: -12 },
       overflow: 'hidden',
     }}
   >
-    <Grid container spacing={4}>
+    <Grid container spacing={6}>
       {/* Left side: Form */}
-      <Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex' }}>
+      <Grid item xs={12} sm={6} md={6} lg={6} >
         <Stack
           component={MotionViewport}
           sx={{
             p: 3,
             maxWidth: 700,
-            flexGrow: 1,
+           
             background: 'linear-gradient(135deg, #f3e5f5, #f8f0ff)', // light purple gradient
-            borderRadius: 3,
+            borderRadius: 1,
+            border:"2px solid  rgba(155, 89, 182, 0.15)",
             boxShadow: '0 6px 14px rgba(155, 89, 182, 0.15)', // purple shadow
             ml: 0,
           }}
         >
           <m.div variants={varFade().inUp} style={{ textAlign: 'center' }}>
-           <Typography variant="h3" sx={{ color: '#4A148C', fontWeight: 'bold' }}>
+           <Typography variant="h3" sx={{ color: '#140a53', fontWeight: 'bold' }}>
   Reach out to our team.
   <br />
   Your feedback matters to us.

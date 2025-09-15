@@ -94,12 +94,14 @@ function HeroFloatCard() {
     <StyledContent>
       <Box sx={{ textAlign: 'center' }}>
         <m.div variants={varFade().inRight}>
-          <Typography variant="h2" fontWeight="normal" color={theme.palette.common.white}>
-            Looking for something in particular?
-          </Typography>
-          <Typography variant="h4" fontWeight="normal" color={theme.palette.common.white} sx={{ mt: 2 }}>
-            We're here to help.
-          </Typography>
+    <Typography variant="h2" fontWeight="normal" color={theme.palette.common.white}>
+  Searching for solutions made simple?
+</Typography>
+<Typography variant="h4" fontWeight="normal" color={theme.palette.common.white} sx={{ mt: 2 }}>
+  We're here to make it easy for you
+</Typography>
+
+
           <Divider
             sx={{
               border: `1px solid ${theme.palette.info.main}`,
