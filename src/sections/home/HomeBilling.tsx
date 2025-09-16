@@ -215,19 +215,23 @@ function Description() {
   return (
     <StyledDescription>
       <m.div variants={varFade().inLeft}>
-        <Typography variant="h6" fontWeight="500" color="#140a53">
-          Simplify Payments, Maximize Growth
-        </Typography>
-        <Typography variant="h2" fontWeight="700" color="#140a53">
-          {process.env.REACT_APP_PROJECT_TITLE}
-        </Typography>
-        <Typography variant="subtitle1" fontWeight="400" color="#140a53">
-          Combined solutions for all services
-        </Typography>
-        <Typography variant="h6" fontWeight="400" mt={2} color="#140a53">
-          Experience financial empowerment in one unified platform – where convenience meets
-          comprehensive solutions, redefining your financial journey effortlessly.
-        </Typography>
+       <Typography variant="h6" fontWeight="500" color="#140a53" mb={1}>
+  Simplify Payments, Maximize Growth
+</Typography>
+
+<Typography variant="h2" fontWeight="700" color="#140a53" mb={2}>
+  {process.env.REACT_APP_PROJECT_TITLE}
+</Typography>
+
+<Typography variant="subtitle1" fontWeight="500" color="#140a53" mb={2}>
+  Combined solutions for all services
+</Typography>
+
+<Typography variant="h6" fontWeight="400" mt={2} color="#140a53" mb={4}>
+  Experience financial empowerment in one unified platform – where convenience meets
+  comprehensive solutions, redefining your financial journey effortlessly.
+</Typography>
+
         <Button
           variant="contained"
           onClick={() => push(PATH_DASHBOARD.admin.root)}
@@ -257,8 +261,8 @@ function Statement() {
   return (
     <StyledStatement>
       <m.div variants={varFade().inRight}>
-        <Iconify icon="el:quote-alt" width={40} color="#827ca1" />
-        <Typography variant="h4" fontWeight="500" fontFamily="'Roboto Slab', serif" marginTop={2} color="#140a53">
+        <Iconify icon="el:quote-alt" width={40} color="#52c" />
+        <Typography variant="h4" fontWeight="500" marginTop={2} color="#140a53">
           Whether you're a local retailer, or a thriving enterprise, our platform is tailored to
           elevate your business operations – a seamless solution for every shop size.
         </Typography>

@@ -54,7 +54,7 @@ export default function HomeForRetailer() {
                   <Typography variant="h3" gutterBottom sx={{ mb: 3, fontWeight: 700 }}>
                     <HighlightText>Mission</HighlightText>
                   </Typography>
-                  <Typography variant="h6" sx={{ mb: 5, color: '#140a53' }}>
+                  <Typography variant="h6" sx={{ mb: 4, color: '#140a53' }}>
                     To empower businesses and individuals with secure, seamless, and innovative digital payment solutions, simplifying financial transactions while ensuring trust, accessibility, and efficiency across India.
                   </Typography>
                 </m.div>
@@ -64,7 +64,7 @@ export default function HomeForRetailer() {
                   <Typography variant="h3" gutterBottom sx={{ mb: 3, fontWeight: 700 }}>
                     <HighlightText>Vision</HighlightText>
                   </Typography>
-                  <Typography variant="h6" sx={{ mb: 5, color: '#140a53' }}>
+                  <Typography variant="h6" sx={{ mb: 4, color: '#140a53' }}>
                     To be India’s most trusted and fastest-growing digital fintech ecosystem, driving financial inclusion by making payments, banking, and essential services accessible to every corner of the country.
                   </Typography>
                 </m.div>
@@ -74,7 +74,7 @@ export default function HomeForRetailer() {
                   <Typography variant="h3" gutterBottom sx={{ mb: 3, fontWeight: 700 }}>
                     <HighlightText>Values</HighlightText>
                   </Typography>
-                  <Typography variant="h6" sx={{ mb: 5, color: '#140a53' }}>
+                  <Typography variant="h6" sx={{ mb: 4, color: '#140a53' }}>
                     Our values guide everything we do: integrity in every transaction, innovation in creating cutting-edge solutions, customer-centricity by keeping users at the heart of our services, inclusion to make financial services accessible to all, and excellence in delivering high-quality solutions consistently.
                   </Typography>
                 </m.div>
