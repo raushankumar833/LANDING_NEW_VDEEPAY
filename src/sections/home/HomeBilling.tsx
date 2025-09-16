@@ -144,13 +144,13 @@ function BillingCardComponent() {
               justifyContent: 'space-between',
             }}
           >
-            <Stack flexDirection={'row'} alignItems="center" spacing={2}>
+            <Stack flexDirection={'row'} alignItems="center" spacing={2} mr={2}>
               <Iconify icon="solar:wallet-money-bold" width={60} height={60} />
               <div>
                 <Typography variant="body1" fontWeight="bold" color="#140a53">
                   {process.env.REACT_APP_PROJECT_TITLE}
                 </Typography>
-                <Typography variant="h3" fontWeight="bold" color="#140a53">
+                <Typography variant="h4" fontWeight="bold" color="#140a53">
                   DMT
                 </Typography>
               </div>
@@ -158,17 +158,17 @@ function BillingCardComponent() {
 
             <PermissionGaurd permission={!isMobile}>
               <Divider
-                orientation="vertical"
-                sx={{
+                orientation="vertical" 
+                sx={{ 
                   height: '80px',
                   border: `1px dashed ${alpha(theme.palette.grey[900], 0.3)}`,
                 }}
               />
             </PermissionGaurd>
 
-            <Stack spacing={2} sx={{ mt: { xs: 2, md: 0 } }}>
+            <Stack spacing={2} sx={{ mt: { xs: 2, md: 0 },ml:3 }}>
               <Typography variant="h6" fontWeight="400" color="#140A53">
-                Effortless financial transactions made seamless with our streamlined payout service.
+                Effortless financial transactions made seamless with our streamlined domestic money transfer service.
               </Typography>
 
               <Button
