@@ -85,21 +85,33 @@ export default function HomeCount() {
             </m.div>
 
             <m.div variants={varFade().inUp}>
-              <Grid container spacing={2.5}>
-                {COUNTERS.map((item, index) => (
-                  <Grid item xs={6} key={index}>
-                    <CounterCard>
-                      <HomeUserCounter
-                        countTo={item.count}
-                        duration={1500}
-                        unit={item.unit}
-                        color="#140a53"
-                        subValue={item.sub}
-                      />
-                    </CounterCard>
-                  </Grid>
-                ))}
-              </Grid>
+             <Grid 
+  container 
+  spacing={1.5} 
+  sx={{ flexWrap: 'wrap' }} // ensures wrapping
+>
+  {COUNTERS.map((item, index) => (
+    <Grid 
+      item 
+      xs={12}   // full width on extra small
+      sm={6}    // half width on small
+      md={6}    // 3 per row on medium
+      lg={6}    // 4 per row on large
+      key={index}
+    >
+      <CounterCard>
+        <HomeUserCounter
+          countTo={item.count}
+          duration={1500}
+          unit={item.unit}
+          color="#140a53"
+          subValue={item.sub}
+        />
+      </CounterCard>
+    </Grid>
+  ))}
+</Grid>
+
             </m.div>
           </Grid>
 
@@ -130,11 +142,12 @@ export default function HomeCount() {
                     backdropFilter: 'blur(18px)',
                     borderRadius: 3,
                     color: '#140a53',
-                    textAlign: 'center',
+                    textAlign:"justity",
+                   
                     boxShadow: '0 12px 24px rgba(0,0,0,0.4)',
                   }}
                 >
-                  <Typography variant="h6" sx={{ fontWeight: 500 }}>
+                  <Typography variant="h6" sx={{ fontWeight: 500 ,}}>
                     “Since embracing our neo banking platform, our financial
                     management has soared, witnessing an impressive 80% boost in
                     productivity over the past year.”

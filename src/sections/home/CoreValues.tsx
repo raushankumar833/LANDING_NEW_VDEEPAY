@@ -141,8 +141,8 @@ export default function CoreValues() {
         >
           <m.div variants={varFade().inUp}>
             <Typography
-              variant="h2"
-              fontWeight="bold"
+              variant="h1"
+              fontWeight="700"
               color="common.white"
               sx={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
             >
@@ -151,10 +151,10 @@ export default function CoreValues() {
           </m.div>
           <m.div variants={varFade().inUp}>
             <Typography
-              variant="h6"
+              variant="h5"
               sx={{
                 color: alpha(theme.palette.common.white, 0.85),
-                fontWeight: 300,
+                fontWeight: 600,
               }}
             >
               The guiding principles behind everything we do
@@ -189,6 +189,7 @@ export default function CoreValues() {
                   sx={{
                     lineHeight: 1.8,
                     color: '#140A53',
+                    textAlign:"justify",
                   }}
                 >
                   {card.description}

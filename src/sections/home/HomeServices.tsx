@@ -1,5 +1,5 @@
 import { m } from 'framer-motion';
-import { alpha, styled, useTheme } from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import { Grid, Button, Container, Typography, Stack, Box } from '@mui/material';
 import useResponsive from '../../hooks/useResponsive';
 import { bgGradient } from '../../utils/cssStyles';
@@ -12,14 +12,14 @@ import { MotionViewport, varFade } from '../../components/animate';
 const StyledRoot = styled('div')(({ theme }) => ({
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    paddingTop: theme.spacing(12),
+    paddingTop: theme.spacing(14),
     paddingBottom: theme.spacing(16),
   },
 }));
 
 const StyledDescription = styled('div')(({ theme }) => ({
   textAlign: 'center',
-  marginBottom: theme.spacing(6),
+  marginBottom: theme.spacing(5),
 }));
 
 const StyledContent = styled('div')(({ theme }) => ({
@@ -32,17 +32,17 @@ const StyledContent = styled('div')(({ theme }) => ({
 }));
 
 const ServiceCard = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(5),
-  width: 300,
-  minHeight: 280, // 🔹 Equal height for all cards
-  borderRadius: theme.shape.borderRadius * 3,
+  padding: theme.spacing(4),
+  width:260,
+  height: 275, // Equal height for all cards
+  borderRadius: theme.shape.borderRadius * 2,
   background: '#fff',
-  boxShadow: theme.shadows[8],
+  boxShadow: theme.shadows[6],
   transition: 'transform 0.4s, box-shadow 0.4s',
   textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between', // 🔹 Title & description stay balanced
+  justifyContent: 'space-between', // Title & description stay balanced
   alignItems: 'center',
   '&:hover': {
     transform: 'translateY(-15px)',
@@ -51,8 +51,8 @@ const ServiceCard = styled(Box)(({ theme }) => ({
 }));
 
 const IconWrapper = styled(Box)(({ theme }) => ({
-  width: 70,
-  height: 70,
+  width: 55,
+  height: 55,
   borderRadius: '50%',
   backgroundColor: alpha(theme.palette.primary.main, 0.15),
   display: 'flex',
@@ -89,18 +89,9 @@ export default function HomeServices() {
 
         {/* Services Grid */}
         <StyledContent>
-          <Grid
-            container
-            spacing={5}
-            wrap="nowrap"
-            sx={{
-              overflowX: { xs: 'auto', md: 'visible' },
-              flexWrap: { xs: 'nowrap', md: 'wrap' },
-              py: 2,
-            }}
-          >
+          <Grid container spacing={5} sx={{ py: 2 }}>
             {services.map((service, index) => (
-              <Grid item key={index} sx={{ flex: '0 0 auto' }}>
+              <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
                 <m.div variants={varFade().inUp}>
                   <ServiceCard>
                     <IconWrapper>
@@ -115,7 +106,7 @@ export default function HomeServices() {
                       >
                         {service.title}
                       </Typography>
-                      <Typography variant="body2" sx={{ color: '#140A53' }}>
+                      <Typography variant="body1"  sx={{ color: '#140A53',textAlign:"justify" }}>
                         {service.description}
                       </Typography>
                     </Box>
@@ -166,11 +157,22 @@ const services = [
     icon: 'mdi:ticket-confirmation',
   },
   {
-    title: 'AEPS (Aadhaar Enabled Payment System)',
+    title: 'AEPS ',
     description:
       'Secure cash withdrawal, balance inquiry, and transactions using Aadhaar authentication.',
     icon: 'mdi:account-key',
   },
+    {
+    title: 'UPI Payments',
+    description: 'Seamless and instant UPI transactions for customers and businesses.',
+    icon: 'mdi:qrcode-scan',
+  },
+  {
+    title: 'Micro ATM (mATM)',
+    description: 'Enable cash withdrawal and balance inquiry using debit cards at retail points.',
+    icon: 'mdi:credit-card-swipe',
+  },
+
 ];
 
 // ----------------------------------------------------------------------

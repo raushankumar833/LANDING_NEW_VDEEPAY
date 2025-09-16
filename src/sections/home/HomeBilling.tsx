@@ -147,11 +147,11 @@ function BillingCardComponent() {
             <Stack flexDirection={'row'} alignItems="center" spacing={2}>
               <Iconify icon="solar:wallet-money-bold" width={60} height={60} />
               <div>
-                <Typography variant="body2" fontWeight="bold">
+                <Typography variant="body1" fontWeight="bold" color="#140a53">
                   {process.env.REACT_APP_PROJECT_TITLE}
                 </Typography>
-                <Typography variant="h3" fontWeight="bold">
-                  PAYOUT
+                <Typography variant="h3" fontWeight="bold" color="#140a53">
+                  DMT
                 </Typography>
               </div>
             </Stack>
@@ -167,7 +167,7 @@ function BillingCardComponent() {
             </PermissionGaurd>
 
             <Stack spacing={2} sx={{ mt: { xs: 2, md: 0 } }}>
-              <Typography variant="h6" fontWeight="400" color={theme.palette.grey[800]}>
+              <Typography variant="h6" fontWeight="400" color="#140A53">
                 Effortless financial transactions made seamless with our streamlined payout service.
               </Typography>
 
