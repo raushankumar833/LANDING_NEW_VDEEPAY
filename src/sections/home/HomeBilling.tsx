@@ -158,17 +158,18 @@ function BillingCardComponent() {
 
             <PermissionGaurd permission={!isMobile}>
               <Divider
-                orientation="vertical" 
-                sx={{ 
+                orientation="vertical"
+                sx={{
                   height: '80px',
                   border: `1px dashed ${alpha(theme.palette.grey[900], 0.3)}`,
                 }}
               />
             </PermissionGaurd>
 
-            <Stack spacing={2} sx={{ mt: { xs: 2, md: 0 },ml:3 }}>
+            <Stack spacing={2} sx={{ mt: { xs: 2, md: 0 }, ml: 3 }}>
               <Typography variant="h6" fontWeight="400" color="#140A53">
-                Effortless financial transactions made seamless with our streamlined domestic money transfer service.
+                Effortless financial transactions made seamless with our streamlined domestic money
+                transfer service.
               </Typography>
 
               <Button
@@ -215,22 +216,22 @@ function Description() {
   return (
     <StyledDescription>
       <m.div variants={varFade().inLeft}>
-       <Typography variant="h6" fontWeight="500" color="#140a53" mb={1}>
-  Simplify Payments, Maximize Growth
-</Typography>
+        <Typography variant="h6" fontWeight="500" color="#140a53" mb={1}>
+          Simplify Payments, Maximize Growth
+        </Typography>
 
-<Typography variant="h2" fontWeight="700" color="#140a53" mb={2}>
-  {process.env.REACT_APP_PROJECT_TITLE}
-</Typography>
+        <Typography variant="h2" fontWeight="700" color="#140a53" mb={2}>
+          {process.env.REACT_APP_PROJECT_TITLE}
+        </Typography>
 
-<Typography variant="subtitle1" fontWeight="500" color="#140a53" mb={2}>
-  Combined solutions for all services
-</Typography>
+        <Typography variant="subtitle1" fontWeight="500" color="#140a53" mb={2}>
+          Combined solutions for all services
+        </Typography>
 
-<Typography variant="h6" fontWeight="400" mt={2} color="#140a53" mb={4}>
-  Experience financial empowerment in one unified platform – where convenience meets
-  comprehensive solutions, redefining your financial journey effortlessly.
-</Typography>
+        <Typography variant="h6" fontWeight="400" mt={2} color="#140a53" mb={4}>
+          Experience financial empowerment in one unified platform – where convenience meets
+          comprehensive solutions, redefining your financial journey effortlessly.
+        </Typography>
 
         <Button
           variant="contained"
