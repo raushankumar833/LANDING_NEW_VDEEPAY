@@ -123,7 +123,18 @@ function Content({ list }: { list: ListType }) {
   return (
     <StyledContent>
       <m.div variants={varFade().inLeft}>
-        <Image src={list.icon} alt="services" sx={{ width: '80%', height: '65%' }} />
+        <Image src={list.icon} alt="services" sx={{
+    width: {
+      xs: '100%',
+      sm: '100%',
+      md: '80%',
+    },
+    height: {
+      xs: 'auto',
+      sm: 'auto',
+      md: '65%',
+    },
+  }}/>
       </m.div>
     </StyledContent>
   );
