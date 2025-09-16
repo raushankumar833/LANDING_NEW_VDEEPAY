@@ -55,7 +55,7 @@ export default function WhyPartner() {
                 spacing={1}
                 sx={{
                   m: '0 auto',
-                  width: { md: 600 },
+                  width: { md: 700 },
                   textAlign: 'center',
                 }}
               >
@@ -75,8 +75,8 @@ export default function WhyPartner() {
                     key={index}
                     direction={{ xs: 'column', md: list?.grid_direction as GridDirection }}
                     container
-                    spacing={5}
-                    mt={3}
+                    spacing={4}
+                    mt={2}
                   >
                     <Grid item xs={12} md={5}>
                       <Description list={list} />
@@ -123,7 +123,7 @@ function Content({ list }: { list: ListType }) {
   return (
     <StyledContent>
       <m.div variants={varFade().inLeft}>
-        <Image src={list.icon} alt="services" sx={{ width: '100%', height: 'auto' }} />
+        <Image src={list.icon} alt="services" sx={{ width: '80%', height: '65%' }} />
       </m.div>
     </StyledContent>
   );
