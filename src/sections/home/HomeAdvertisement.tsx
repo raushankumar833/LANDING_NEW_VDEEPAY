@@ -122,7 +122,7 @@ function Description() {
             color="inherit"
             size={isDesktop ? 'large' : 'medium'}
             variant="contained"
-            onClick={() => window.location.href = 'https://p2pae.com/'}
+          c
             sx={{
               color: 'grey.100',
               backgroundColor: '#731cdd',

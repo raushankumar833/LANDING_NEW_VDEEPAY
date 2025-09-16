@@ -200,7 +200,7 @@ function Description() {
             size="large"
             variant="outlined"
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
-            onClick={() => push(PATH_AUTH.login)}
+             onClick={() => window.location.href = 'https://p2pae.com/login'}
             sx={{ borderColor: '#140a43', color: '#140a43' }}
           >
             GET STARTED FOR FREE

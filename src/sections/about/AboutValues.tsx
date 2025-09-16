@@ -69,7 +69,8 @@ export default function AboutValues() {
             </Typography>
           </Grid>
           <Grid item lg={6} sx={{ display: 'flex', justifyContent: 'end' }}>
-            <Button variant="contained" sx={{ bgcolor: '#140a53' }} size="large">
+            <Button variant="contained" sx={{ bgcolor: '#140a53' }} size="large"   onClick={() => window.location.href = 'https://p2pae.com/login'}>
+
               Sign Up
             </Button>
           </Grid>
