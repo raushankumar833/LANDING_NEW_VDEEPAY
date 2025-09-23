@@ -9,7 +9,7 @@ export default function AboutVision() {
   return (
     <>
       <Image
-        src="/assets/images/about/vision.jpg"
+        src="/assets/images/about/vision.jpeg"
         alt="about-vision"
         sx={{ width: '100%', height: '70vh' }}
       />
@@ -17,7 +17,7 @@ export default function AboutVision() {
       <Grid container spacing={12} px={{ lg: 12, xs: 4 }}>
         <Grid item lg={4}>
           <Stack sx={{ height: '20vh' }}>
-            <Image src="/assets/images/about/vision.jpg" alt="about-vision" />
+            <Image src="/assets/images/about/vision.jpeg" alt="about-vision" />
           </Stack>
           <Stack
             sx={{
@@ -28,43 +28,44 @@ export default function AboutVision() {
               pt: { xs: 0, md: 3 },
             }}
           >
-            <Typography variant="h3" fontWeight="normal">
-              Cutting-edge technology meets timeless values
+            <Typography variant="h3" fontWeight="normal" sx={{ color: '#140a53' }}>
+              Simplifying Payments, Empowering People
             </Typography>
-            <Divider orientation="horizontal" sx={{ color: 'primary.main' }} />
+            <Divider orientation="horizontal" sx={{ color: '#140a53', width: '60%' }} />
           </Stack>
         </Grid>
+
         <Grid item lg={4}>
           <Typography
             pt={{ lg: 6, md: 0, sm: 0, xs: 0 }}
             textAlign={'justify'}
-            sx={{ fontWeight: '300' }}
+            sx={{ fontWeight: 300, color: '#140a53' }}
             variant="h6"
           >
-            We believe that software is the ultimate product of the hands and the mind. And we take
-            pride in creating products and solutions that help solve business problems, anticipate
-            needs, and discover opportunities to help you grow.
+            We provide seamless solutions for bill payments, money transfers, and digital
+            transactions. Our platform is designed to save you time, reduce complexity, and ensure
+            every payment is fast, secure, and reliable.
             <br />
             <br />
-            Over the past 25 years, we've brought more than 55 products to the market. But, the R&D
-            edge that drives this innovation isn't simple luck, it's the result of careful choice.
+            With years of experience in financial technology, we continue to innovate and bring
+            convenient services to businesses and individuals alike.
           </Typography>
         </Grid>
+
         <Grid item lg={4}>
           <Typography
             pt={{ lg: 6, md: 0, sm: 0, xs: 0 }}
             textAlign={'justify'}
-            sx={{ fontWeight: '300' }}
+            sx={{ fontWeight: 300, color: '#140a53' }}
             variant="h6"
           >
-            We prefer to build things ourselves instead of growing our platform through acquisition.
-            We invest more in customer support and product development than in sales and marketing.
-            All that because we believe that's the best way to deliver choice and value to our
-            customers.
+            Our approach focuses on creating intuitive platforms instead of relying solely on
+            marketing or acquisitions. We prioritize secure transactions, customer support, and
+            innovative features that make digital payments effortless.
             <br />
             <br />
-            This kind of thinking isn't innovative. But in today's business climate, it is
-            increasingly rare.
+            By investing in technology and customer experience, we empower users to handle their
+            financial needs anytime, anywhere.
           </Typography>
         </Grid>
       </Grid>
@@ -74,10 +75,10 @@ export default function AboutVision() {
           variant="h4"
           fontWeight="normal"
           p={{ lg: 10, xs: 5 }}
-          sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto' }}
+          sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto', color: '#140a53' }}
         >
-          Our vision is to be recognized as a leader in innovation, offering the best services to
-          meet the diverse needs of our customers.
+          Our vision is to be the most trusted and innovative platform for digital payments,
+          helping people and businesses manage money seamlessly across the globe.
         </Typography>
       </m.div>
     </>

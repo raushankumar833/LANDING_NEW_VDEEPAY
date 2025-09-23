@@ -25,19 +25,22 @@ export default function AboutWhat() {
               variant="h4"
               fontWeight="normal"
               px={{ lg: 12, md: 12, sm: 2, xs: 2 }}
+              sx={{ color: '#140a53' }}
             >
-              Good software is a work of art, and good art takes time. Our teams spend years
-              mastering their craft in order to deliver exceptional products that customers love.
-              Software isn't just our paycheck
+              We create software that doesn't just function, it inspires. Our dedicated teams
+              spend years honing their skills to craft solutions that delight users and elevate
+              businesses. For us, software is more than a job—it's a passion.
             </Typography>
             <Typography
               textAlign={'center'}
               pt={4}
               sx={{
-                fontSize: { xs: '32px', md: '62px' },
+                fontSize: { xs: '32px', md: '46px' },
+                fontWeight: 'bold',
+                color: '#140a53',
               }}
             >
-              It's our speciality
+              Excellence is our standard
             </Typography>
           </Grid>
         </Grid>
@@ -45,6 +48,7 @@ export default function AboutWhat() {
     </StyledRoot>
   );
 }
+
 
 // ----------------------------------------------------------------------
 

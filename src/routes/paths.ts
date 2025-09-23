@@ -35,6 +35,8 @@ export const PATH_PAGE = {
   page404: '/404',
   page500: '/500',
   components: '/components',
+    termscondition: '/terms-condition',
+  privacy: '/privacy'
 };
 
 export const PATH_DASHBOARD = {

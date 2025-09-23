@@ -55,12 +55,12 @@ export default function WhyPartner() {
                 spacing={1}
                 sx={{
                   m: '0 auto',
-                  width: { md: 600 },
+                  width: { md: 700 },
                   textAlign: 'center',
                 }}
               >
                 <m.div variants={varFade().inRight}>
-                  <Typography variant="h2" fontWeight="normal" color={theme.palette.common.black}>
+                  <Typography variant="h2" fontWeight="600" color="#140a53">
                     {why_partner?.title}
                   </Typography>
                 </m.div>
@@ -75,8 +75,8 @@ export default function WhyPartner() {
                     key={index}
                     direction={{ xs: 'column', md: list?.grid_direction as GridDirection }}
                     container
-                    spacing={5}
-                    mt={3}
+                    spacing={4}
+                    mt={2}
                   >
                     <Grid item xs={12} md={5}>
                       <Description list={list} />
@@ -103,9 +103,10 @@ function Description({ list }: { list: ListType }) {
 
       <m.div variants={varFade().inRight}>
         <Typography
-          mt={2}
+          mt={4}
           variant="h6"
           fontWeight="600"
+          color="#140a53"
           lineHeight={'2rem'}
           letterSpacing={'0.005rem'}
         >
@@ -122,7 +123,18 @@ function Content({ list }: { list: ListType }) {
   return (
     <StyledContent>
       <m.div variants={varFade().inLeft}>
-        <Image src={list.icon} alt="services" sx={{ width: '90%', height: 'auto' }} />
+        <Image src={list.icon} alt="services" sx={{
+    width: {
+      xs: '100%',
+      sm: '100%',
+      md: '80%',
+    },
+    height: {
+      xs: 'auto',
+      sm: 'auto',
+      md: '65%',
+    },
+  }}/>
       </m.div>
     </StyledContent>
   );
@@ -132,7 +144,7 @@ function ParaHeading({ title = `${process.env.REACT_APP_PROJECT_TITLE} for Retai
   const theme = useTheme();
   return (
     <m.div variants={varFade().inRight}>
-      <Typography variant="h3" fontWeight="normal" color={theme.palette.common.black}>
+      <Typography variant="h3" fontWeight="600" color="#140a53">
         {title}
       </Typography>
     </m.div>

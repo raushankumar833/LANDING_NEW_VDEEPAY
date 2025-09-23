@@ -1,10 +1,10 @@
 {
   "project": {
-    "title": "BiggPay",
+    "title": "P2PAE",
     "company_id": "4782",
-    "description": "Transforming Payments, with Innovation!",
-    "hero_description": "A unique and powerful software suite to transform the way you work. Designed for businesses of all sizes, built by a company that values your privacy.",
-    "version": "0.001"
+    "description": "Your Trusted Partner in Digital Finance.!",
+    "hero_description": "P2PAE is a trusted fintech leader with 10+ years of experience, simplifying and securing online transactions. Recognized as one of India’s fastest-growing names, we help businesses streamline payments, boost security, and scale with confidence.",
+     "version": "0.001"
   },
   "about": [
     {
@@ -39,79 +39,79 @@
     }
   ],
   "service": {
-    "title": "BiggPay",
+    "title": "P2PAE",
     "description": "Transforming Payments, with Innovation!",
     "hero_description": "A unique and powerful software suite to transform the way you work. Designed for businesses of all sizes, built by a company that values your privacy.",
     "list": []
   },
-  "contact": {
-    "hero": [
-      {
-        "icon": "flat-color-icons:online-support",
-        "description": "Looking for a demo, or have questions about our products and pricing?",
-        "link": "support@gmail.com"
-      },
-      {
-        "icon": "flat-color-icons:online-support",
-        "description": "Looking for a demo, or have questions about our products and pricing?",
-        "link": "support@gmail.com"
-      },
-      {
-        "icon": "flat-color-icons:online-support",
-        "description": "Looking for a demo, or have questions about our products and pricing?",
-        "link": "support@gmail.com"
-      },
-      {
-        "icon": "flat-color-icons:online-support",
-        "description": "Looking for a demo, or have questions about our products and pricing?",
-        "link": "support@gmail.com"
-      }
-    ]
-  },
+ "contact": {
+  "hero": [
+    {
+      "category": "Phone",
+      "icon": "flat-color-icons:phone-call",
+      "description": "Reach out to our support team for any questions or assistance.",
+      "link": "011-47537321/+917428985999"
+    },
+    {
+      "category": "Email",
+      "icon": "flat-color-icons:online-support",
+      "description": "Contact us for demos, pricing details, or product inquiries.",
+      "link": "Support@p2pae.com"
+    },
+    {
+      "category": "Office",
+      "icon": "flat-color-icons:location",
+      "description": "Visit our office to meet our team and explore solutions in person.",
+      "link": " PVT No.-2, B-1, KH No.900/289Ground Floor, Shalimar Village, Delhi, North West Delhi- 110088, Delhi"
+    }
+  ]
+},
+
   "ourpartner": {
     "hero": {
       "partner_main": "/assets/illustrations/partner_main-character.png",
       "partner_city": "/assets/illustrations/partner_buildings.webp",
       "sub_title": "Doing great things together!",
-      "title": "BiggPay Network & Partner program",
-      "intro": "Join the BiggPay Network & Expand your Distributor Business & Earn Extra Income. BiggPay has always been Vocal for the Local shopkeepers. Through BiggPay, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. BiggPay has increased retailers monthly earning as well as customer's footfall."
+      "title": "P2PAE Network & Partner program",
+      "intro": "Join the P2PAE Network & Expand your Distributor Business & Earn Extra Income. P2PAE has always been Vocal for the Local shopkeepers. Through P2PAE, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. P2PAE has increased retailers monthly earning as well as customer's footfall."
     },
-    "why_partner": [
+ "why_partner": [
+  {
+    "title": "Why become P2PAE Retailer ?",
+    "list": [
       {
-        "title": "Why become BiggPay Retailer ?",
-        "list": [
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "BiggPay for Retails",
-            "intro": "BiggPay has always been Vocal for the Local shopkeepers. Through BiggPay, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. BiggPay has increased retailers monthly earning as well as customer's footfall.",
-            "grid_direction": "row-reverse"
-          },
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "Become a true solution provider",
-            "intro": "Become Aatma nirbhar Dukaandar and earn Rs.16,000 extra every month. Our Platform is Easy, Fast & Secure to use.",
-            "grid_direction": "row"
-          },
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "Free of cost services",
-            "intro": "No charges to use BiggPay Service. Earn token on every transaction, which helps in boosting their earnings.",
-            "grid_direction": "row-reverse"
-          }
-        ]
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "P2PAE for Retails",
+        "intro": "P2PAE has always been Vocal for the Local shopkeepers. Through P2PAE, more than 4,00,000 retailers have served around 3 crore unique customers in 2,300+ cities. With our trusted platform, retailers not only increased their monthly earnings but also attracted more customer footfall, gaining better visibility, trust, and long-term customer loyalty in their local market.",
+        "grid_direction": "row-reverse"
       },
       {
-        "title": "Why become BiggPay Distributor ?",
-        "list": [
-          {
-            "icon": "/assets/illustrations/partner_why.jpg",
-            "title": "BiggPay for Distributors",
-            "intro": "We at BiggPay intend to improve our distributors earning potential by enabling them to grow their business and make the best out of their retail network. It will help you make your daily business easy and effective.",
-            "grid_direction": "row-reverse"
-          }
-        ]
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "Become a true solution provider",
+        "intro": "Become an Aatma Nirbhar Dukaandar and earn an additional Rs.16,000 every month. With P2PAE, you are not just selling services—you are providing complete solutions to your customers. Our platform is Easy, Fast & Secure to use, empowering you to deliver financial services, bill payments, and money transfers right from your shop, creating stronger customer relationships and ensuring repeat business.",
+        "grid_direction": "row"
+      },
+      {
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "Free of cost services",
+        "intro": "There are absolutely no charges to use P2PAE Services. Every transaction you complete earns you tokens, which further boost your earnings over time. These rewards motivate retailers to engage more, grow their service offerings, and stand out as trusted digital service providers in their communities—all without any hidden cost or investment.",
+        "grid_direction": "row-reverse"
       }
     ]
+  },
+  {
+    "title": "Why become P2PAE Distributor ?",
+    "list": [
+      {
+        "icon": "/assets/illustrations/partner_why.jpg",
+        "title": "P2PAE for Distributors",
+"intro": "At P2PAE, we empower distributors with tools, transparent reporting, and strong support to boost profits, simplify operations, and lead digital transformation while strengthening their retail network.",
+   "grid_direction": "row-reverse"
+      }
+    ]
+  }
+]
+
   },
   "ourservices": {
     "hero": {
@@ -123,155 +123,221 @@
     }
   },
   "services": [
+ {
+  "title": "Banking",
+  "sub_title": "Simplifying banking with secure, fast, and reliable financial solutions for money transfers, AePS, UPI, CMS, and more, ensuring convenience, accessibility, and trust for everyone.",
+  "list": [
     {
-      "title": "Banking",
-      "sub_title": "Banking lorem impsum doller Banking lorem impsum doller",
-      "list": [
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Money Transfer",
-          "intro": "Banking lorem impsum doller Banking lorem",
-          "link": "/auth/login",
-          "bgcolor": "#E9F9F2",
-          "extra": "featured"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Express Transfer",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#EFF5FA",
-          "extra": "most used"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Super Transfer",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "AePS",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Nepal Transfer",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "CMS",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "UPI",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        }
-      ]
+      "icon": "fa6-solid:money-bill-transfer",
+      "title": "Money Transfer",
+      "intro": "Send money instantly with secure, fast, and reliable transfers, ensuring convenience and trust for individuals and businesses anytime, anywhere.",
+      "link": "/auth/login",
+      "bgcolor": "#E9F9F2",
+      "extra": "featured"
     },
     {
-      "title": "Bill Payments",
-      "sub_title": "Banking lorem impsum doller Banking lorem impsum doller",
-      "list": [
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Mobile Recharge",
-          "intro": "Banking lorem impsum doller Banking lorem",
-          "link": "/auth/login",
-          "bgcolor": "#E9F9F2",
-          "extra": "featured"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "DTH Recharge",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#EFF5FA",
-          "extra": "most used"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Electricity",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Credit Card",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Gas Bill",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        }
-      ]
+      "icon": "fa6-solid:bolt",
+      "title": "Express Transfer",
+      "intro": "Experience fast, dependable financial transfers with security and ease, offering instant accessibility and convenience for personal or business needs.",
+      "link": "/auth/login",
+      "bgcolor": "#EFF5FA",
+      "extra": "most used"
     },
     {
-      "title": "BBPS",
-      "sub_title": "Banking lorem impsum doller Banking lorem impsum doller",
-      "list": [
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Electricity",
-          "intro": "Banking lorem impsum doller Banking lorem",
-          "link": "/auth/login",
-          "bgcolor": "#E9F9F2",
-          "extra": "featured"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "FASTag",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#EFF5FA",
-          "extra": "most used"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Gas Cylinder",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Mobile Postpaid",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "Mobile Prepaid",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        },
-        {
-          "icon": "fa6-solid:money-bill-transfer",
-          "title": "All",
-          "intro": "Banking lorem Banking lorem impsum doller",
-          "link": "/auth/login",
-          "bgcolor": "#F4F5E1"
-        }
-      ]
+      "icon": "fa6-solid:chart-line",
+      "title": "Super Transfer",
+      "intro": "Handle high-value transactions securely and efficiently, with trusted accuracy and safeguards for individuals and businesses needing confidence anytime.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:fingerprint",
+      "title": "AePS",
+      "intro": "Aadhaar Enabled Payment System allows withdrawals, balance checks, and transfers using biometrics, ensuring safe, inclusive banking access in rural areas.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:sack-dollar",
+      "title": "CMS",
+      "intro": "Cash Management Services streamline  payments, and liquidity with secure, efficient solutions, reducing risks and empowering enterprise financial operations.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+      {
+       "icon": "fa6-solid:wallet",
+      "title": "UPI",
+    "intro": "Unified Payments Interface enables instant, secure transfers directly from bank accounts, offers convenience & accessibility across India for everyone.",
+    "link": "/auth/login",
+    "bgcolor": "#F4F5E1"
+  }
+
+  ]
+},
+ {
+  "title": "Bill Payments",
+  "sub_title": "Easily pay mobile, DTH, electricity, credit card, gas, water, broadband, insurance, and loan bills securely anytime, anywhere with trusted digital solutions.",
+  "list": [
+    {
+      "icon": "fa6-solid:mobile-screen",
+      "title": "Mobile Recharge",
+      "intro": "Instant prepaid and postpaid mobile recharges with secure processing, fast confirmation, and convenient payments anytime, anywhere across India for all users.",
+      "link": "/auth/login",
+      "bgcolor": "#E9F9F2",
+      "extra": "featured"
+    },
+    {
+      "icon": "fa6-solid:tv",
+      "title": "DTH Recharge",
+      "intro": "Recharge your DTH connection instantly & securely with reliable digital transactions, ensuring uninterrupted entertainment, & peace of mind for every household.",
+      "link": "/auth/login",
+      "bgcolor": "#EFF5FA",
+      "extra": "most used"
+    },
+    {
+      "icon": "fa6-solid:bolt",
+      "title": "Electricity",
+      "intro": "Pay electricity bills online quickly and securely, enjoy instant confirmation, avoid delays, & maintain trusted,hassle-free service for homes & businesses .",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:credit-card",
+      "title": "Credit Card",
+      "intro": "Settle credit card bills instantly with secure online payments, timely confirmations, and convenient access anytime, ensuring reliable, trusted, and hassle-free transactions.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:fire-burner",
+      "title": "Gas Bill",
+      "intro": "Pay gas bills instantly and securely with trusted digital processing, convenient payments, and reliable service, ensuring uninterrupted utilities for households and businesses.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:water",
+      "title": "Water Bill",
+"intro": "Pay water bills online with secure and instant transactions, ensuring timely, convenient, and hassle-free access to uninterrupted water supply for homes and businesses safely.",
+"link": "/auth/login",
+      "bgcolor": "#E9F9F2"
+    },
+    {
+      "icon": "fa6-solid:wifi",
+      "title": "Broadband",
+      "intro": "Settle broadband and internet bills instantly and securely, guaranteeing uninterrupted connectivity, convenience, and trusted payment processing anytime, anywhere for users.",
+      "link": "/auth/login",
+      "bgcolor": "#EFF5FA"
+    },
+    {
+      "icon": "fa6-solid:shield-halved",
+      "title": "Insurance",
+"intro": "Pay insurance premiums quickly, securely, and reliably online, ensuring protection and continuous coverage for life, health, vehicle, and other policies without delays.",
+
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:hand-holding-dollar",
+      "title": "Loan Repayment",
+ "intro": "Make loan repayments conveniently and securely online, with instant confirmation and trusted processing, ensuring timely settlements and hassle-free management of obligations.",
+"link": "/auth/login",
+      "bgcolor": "#F4F5E1"
     }
+  ]
+},
+ {
+  "title": "BBPS",
+  "sub_title": "Pay bills seamlessly with Bharat Bill Payment System – a unified platform offering secure, fast, and reliable transactions for utilities, telecom, insurance, subscriptions, and more anytime, anywhere.",
+  "list": [
+    {
+      "icon": "fa6-solid:bolt",
+      "title": "Electricity",
+      "intro": "Pay your electricity bills instantly with BBPS. Enjoy quick, secure, and hassle-free transactions supporting all major power boards across India.",
+      "link": "/auth/login",
+      "bgcolor": "#E9F9F2",
+      "extra": "featured"
+    },
+    {
+      "icon": "fa6-solid:car",
+      "title": "FASTag",
+      "intro": "Recharge your FASTag effortlessly through BBPS. Ensure smooth highway travel with instant toll payments and avoid queues with convenient top-up options.",
+      "link": "/auth/login",
+      "bgcolor": "#EFF5FA",
+      "extra": "most used"
+    },
+    {
+      "icon": "fa6-solid:fire-flame-simple",
+      "title": "Gas Cylinder",
+      "intro": "Book and pay for LPG cylinder refills conveniently via BBPS. Secure payments accepted across all major gas providers nationwide.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:mobile-screen",
+      "title": "Mobile Postpaid",
+      "intro": "Pay your postpaid mobile bills instantly. BBPS ensures secure and fast payments for all leading telecom operators across India.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:sim-card",
+      "title": "Mobile Prepaid",
+      "intro": "Recharge prepaid mobiles instantly with BBPS. Get flexible top-up options with assured security and instant confirmations.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    },
+    {
+      "icon": "fa6-solid:tv",
+      "title": "DTH Recharge",
+      "intro": "Recharge your DTH connection anytime with BBPS. Enjoy uninterrupted entertainment with quick and secure recharges for all leading service providers.",
+      "link": "/auth/login",
+      "bgcolor": "#E9F2FA"
+    },
+    {
+      "icon": "fa6-solid:droplet",
+      "title": "Water Bill",
+      "intro": "Pay water supply bills conveniently. BBPS supports payments for various water boards, ensuring timely and secure transactions.",
+      "link": "/auth/login",
+      "bgcolor": "#F2F9E9"
+    },
+    {
+      "icon": "fa6-solid:shield-heart",
+      "title": "Insurance Premium",
+      "intro": "Easily pay insurance premiums using BBPS. Support for life, health, motor, and general insurance with instant payment confirmations.",
+      "link": "/auth/login",
+      "bgcolor": "#F9E9F9"
+    },
+    {
+      "icon": "fa6-solid:graduation-cap",
+      "title": "Education Fees",
+      "intro": "Pay school, college, and university fees seamlessly through BBPS. Ensure secure, fast, and transparent transactions for educational institutions.",
+      "link": "/auth/login",
+      "bgcolor": "#F5F0FF"
+    },
+    {
+      "icon": "fa6-solid:house",
+      "title": "Loan Repayment",
+      "intro": "Repay personal, housing, and vehicle loans easily using BBPS. Enjoy secure, real-time updates with trusted banking partners.",
+      "link": "/auth/login",
+      "bgcolor": "#FFF0E9"
+    },
+    {
+      "icon": "fa6-solid:newspaper",
+      "title": "Subscriptions",
+      "intro": "Manage and pay for digital and print subscriptions like OTT platforms, newspapers, and magazines with BBPS.",
+      "link": "/auth/login",
+      "bgcolor": "#F0FFF7"
+    },
+    {
+      "icon": "fa6-solid:rectangle-list",
+      "title": "All Services",
+      "intro": "Access all BBPS services on a single platform – electricity, gas, telecom, DTH, water, insurance, fees, loans, and more.",
+      "link": "/auth/login",
+      "bgcolor": "#F4F5E1"
+    }
+  ]
+}
+
   ]
 }

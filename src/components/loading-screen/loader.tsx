@@ -42,7 +42,7 @@ const Loader = (props: any) => {
             }}
           >
             <img
-              src="/favicon/favicon.svg"
+              src="/favicon/favicon.ico"
               style={{ cursor: 'pointer', width: 80 }}
               alt="favicon"
             />

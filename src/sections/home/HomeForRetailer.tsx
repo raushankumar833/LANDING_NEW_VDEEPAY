@@ -1,71 +1,42 @@
 import { m } from 'framer-motion';
 // @mui
-import { styled, useTheme, alpha } from '@mui/material/styles';
-import { Box, Grid, Container, Typography, BoxProps, Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Box, Grid, Container, Typography } from '@mui/material';
 // utils
-import { filterStyles, textGradient, bgGradient } from '../../utils/cssStyles';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
-// components
-import Iconify from '../../components/iconify';
+import { textGradient } from '../../utils/cssStyles';
 import { MotionViewport, varFade } from '../../components/animate';
-import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
-  '&:before': {
-    height: 2,
-    bottom: -1,
-    zIndex: 11,
-    content: '""',
-    width: '100%',
-    position: 'absolute',
-    backgroundColor: theme.palette.grey[900],
-  },
+  backgroundColor: theme.palette.grey[50],
+  overflow: 'hidden',
 }));
 
 const StyledWrap = styled('div')(({ theme }) => ({
-  overflow: 'hidden',
   position: 'relative',
-  backgroundColor: alpha(theme.palette.grey[500], 0.08),
+  paddingTop: theme.spacing(12),
+  paddingBottom: theme.spacing(12),
+  [theme.breakpoints.up('md')]: {
+    paddingTop: theme.spacing(14),
+    paddingBottom: theme.spacing(14),
+  },
 }));
 
-const StyledDescription = styled('div')(({ theme }) => ({
-  top: 0,
-  left: 0,
-  zIndex: 8,
+const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
-  height: '100%',
+  maxWidth: 600,
+  margin: 'auto',
   textAlign: 'center',
-  position: 'absolute',
-  paddingTop: theme.spacing(10),
-  ...bgGradient({
-    startColor: `${theme.palette.background.default} 25%`,
-    endColor: alpha(theme.palette.background.default, 0),
-  }),
   [theme.breakpoints.up('md')]: {
-    background: 'unset',
-    position: 'unset',
     textAlign: 'left',
-    padding: theme.spacing(25, 4, 25, 0),
+    margin: 0,
   },
 }));
 
-const StyledContent = styled(m.img)(({ theme }) => ({
-  minHeight: 560,
-  [theme.breakpoints.up('md')]: {
-    top: 1,
-    zIndex: 8,
-    minHeight: 'auto',
-    position: 'absolute',
-    boxShadow: `-40px 80px 80px ${
-      theme.palette.mode === 'light'
-        ? alpha(theme.palette.grey[500], 0.4)
-        : theme.palette.common.black
-    }`,
-  },
+const HighlightText = styled('span')(({ theme }) => ({
+  ...textGradient(`120deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`),
 }));
 
 // ----------------------------------------------------------------------
@@ -74,122 +45,72 @@ export default function HomeForRetailer() {
   return (
     <StyledRoot>
       <StyledWrap>
-        <Container component={MotionViewport} sx={{ position: 'relative' }}>
-          <Grid container>
-            <Grid item md={6}>
-              <Description />
+        <Container component={MotionViewport}>
+          <Grid container spacing={6} alignItems="center">
+            <Grid item xs={12} md={6}>
+              <StyledContent>
+                {/* Mission */}
+                <m.div variants={varFade().inLeft}>
+                  <Typography variant="h3" gutterBottom sx={{ mb: 3, fontWeight: 700 }}>
+                    <HighlightText>Mission</HighlightText>
+                  </Typography>
+                  <Typography variant="h6" sx={{ mb: 4, color: '#140a53',textAlign:"justify" }}>
+                    To empower businesses and individuals with secure, seamless, and innovative digital payment solutions, simplifying financial transactions while ensuring trust, accessibility, and efficiency across India.
+                  </Typography>
+                </m.div>
+
+                {/* Vision */}
+                <m.div variants={varFade().inLeft}>
+                  <Typography variant="h3" gutterBottom sx={{ mb: 3, fontWeight: 700 }}>
+                    <HighlightText>Vision</HighlightText>
+                  </Typography>
+                  <Typography variant="h6" sx={{ mb: 4, color: '#140a53',textAlign:"justify" }}>
+                    To be India’s most trusted and fastest-growing digital fintech ecosystem, driving financial inclusion by making payments, banking, and essential services accessible to every corner of the country.
+                  </Typography>
+                </m.div>
+
+                {/* Values as Paragraph */}
+                <m.div variants={varFade().inLeft}>
+                  <Typography variant="h3" gutterBottom sx={{ mb: 3, fontWeight: 700 }}>
+                    <HighlightText>Values</HighlightText>
+                  </Typography>
+                  <Typography variant="h6" sx={{ mb: 4, color: '#140a53',textAlign:"justify" }}>
+                    Our values guide everything we do: integrity in every transaction, innovation in creating cutting-edge solutions, customer-centricity by keeping users at the heart of our services, inclusion to make financial services accessible to all, and excellence in delivering high-quality solutions consistently.
+                  </Typography>
+                </m.div>
+              </StyledContent>
             </Grid>
 
-            <Grid item md={6}>
-              <StyledContent
-                src="/assets/images/home/for_retailers.svg"
+            <Grid item xs={12} md={6}>
+              <m.img
+                src="/assets/illustrations/mission-vision.jpg"
+                alt="Mission Vision"
+                style={{ width: '100%', maxWidth: 500, display: 'block', margin: 'auto' }}
                 variants={varFade().inRight}
               />
             </Grid>
           </Grid>
         </Container>
-
-        <TriangleShape />
-
-        <TriangleShape anchor="bottom" />
       </StyledWrap>
+      <TriangleShape anchor="bottom" />
     </StyledRoot>
   );
 }
 
 // ----------------------------------------------------------------------
 
-function Description() {
-  const theme = useTheme();
-  const { push } = useRouter();
-  return (
-    <StyledDescription>
-      <m.div variants={varFade().inLeft}>
-        <Typography variant="h6" fontWeight="normal" color={theme.palette.common.black}>
-          Consolidated Business Dashboard
-        </Typography>
-      </m.div>
-
-      <m.div variants={varFade().inLeft}>
-        <Typography
-          variant="h2"
-          sx={{
-            mt: 0,
-            mb: 3,
-            ...textGradient(
-              `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
-            ),
-          }}
-        >
-          For Retailers
-        </Typography>
-      </m.div>
-      <m.div variants={varFade().inLeft}>
-        <Typography variant="h6" fontWeight="normal">
-          Unlock actionable insights at your fingertips with our dynamic business dashboard – where
-          relevant and real-time data is seamlessly provided, empowering you to make informed
-          decisions with confidence.
-        </Typography>
-      </m.div>
-      <m.div variants={varFade().inLeft}>
-        <Button
-          color="inherit"
-          size="large"
-          variant="outlined"
-          endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
-          onClick={() => push(PATH_DASHBOARD.root)}
-          sx={{
-            mt: 3,
-            bgcolor: 'text.primary',
-            color: (theme) => (theme.palette.mode === 'light' ? 'common.white' : 'grey.800'),
-            '&:hover': {
-              bgcolor: 'text.primary',
-            },
-          }}
-        >
-          Go to Dashboard
-        </Button>
-      </m.div>
-    </StyledDescription>
-  );
-}
-
-// ----------------------------------------------------------------------
-
-interface TriangleShapeProps extends BoxProps {
-  anchor?: 'top' | 'bottom';
-}
-
-function TriangleShape({ anchor = 'top', ...other }: TriangleShapeProps) {
-  const theme = useTheme();
-
-  const isLight = theme.palette.mode === 'light';
-
+function TriangleShape({ anchor = 'top' }: { anchor?: 'top' | 'bottom' }) {
   return (
     <Box
       sx={{
-        top: 0,
-        left: 0,
-        width: 1,
         position: 'absolute',
-        color: 'background.default',
-        zIndex: { xs: 0, md: 9 },
+        width: 1,
         height: { xs: 40, md: 64 },
-        ...filterStyles(
-          `drop-shadow(320px 20px 80px ${
-            isLight ? alpha(theme.palette.grey[700], 0.4) : theme.palette.common.black
-          })`
-        ),
-        ...(anchor === 'bottom' && {
-          zIndex: 9,
-          bottom: 0,
-          top: 'unset',
-          color: 'grey.900',
-          transform: 'scale(-1)',
-          ...filterStyles('none'),
-        }),
+        bottom: anchor === 'bottom' ? 0 : 'unset',
+        top: anchor === 'top' ? 0 : 'unset',
+        color: 'background.paper',
+        zIndex: 0,
       }}
-      {...other}
     >
       <svg width="100%" height="100%" viewBox="0 0 1440 64" preserveAspectRatio="none">
         <path d="M1440 0H0L1440 64V0Z" fill="currentColor" />

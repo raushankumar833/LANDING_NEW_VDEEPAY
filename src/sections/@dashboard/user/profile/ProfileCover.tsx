@@ -81,7 +81,7 @@ export default function ProfileCover({ name, role, cover }: IUserProfileCover) {
 
       <Image
         alt="cover"
-        src={'/logo/logo_full.png'}
+        src={'/logo/logopkmc.png'}
         sx={{
           top: 0,
           left: 0,

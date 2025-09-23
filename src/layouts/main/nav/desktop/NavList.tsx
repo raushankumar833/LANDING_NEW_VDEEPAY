@@ -16,9 +16,10 @@ import { StyledSubheader, StyledPopover } from './styles';
 type NavListProps = {
   item: NavItemProps;
   isOffset: boolean;
+  color?: string; 
 };
 
-export default function NavList({ item, isOffset }: NavListProps) {
+export default function NavList({ item, isOffset,color="#fff" }: NavListProps) {
   const { pathname } = useRouter();
 
   const [openPopover, setOpenPopover] = useState<HTMLElement | null>(null);
@@ -57,6 +58,7 @@ export default function NavList({ item, isOffset }: NavListProps) {
         open={Boolean(openPopover)}
         isExternalLink={isExternalLink}
         onClick={handleClick}
+                sx={{ color }} 
       />
 
       {!!children && (
@@ -75,6 +77,7 @@ export default function NavList({ item, isOffset }: NavListProps) {
               items={list.items}
               isDashboard={list.subheader === 'Dashboard'}
               onClose={handleClosePopover}
+              color={color}
             />
           ))}
         </StyledPopover>
@@ -101,9 +104,6 @@ function NavSubList({ items, isDashboard, subheader, onClose }: NavSubListProps)
     <Stack spacing={2.5} gridColumn={isDashboard ? 'span 6' : 'span 2'} alignItems="flex-start">
       <StyledSubheader disableSticky>{subheader}</StyledSubheader>
 
-      {items.map((item) =>
-        isDashboard ? (
-          <NavItemDashboard key={item.title} item={item} onClick={onClose} />
         ) : (
           <NavItem
             subItem

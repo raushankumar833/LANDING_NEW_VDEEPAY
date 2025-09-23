@@ -1,6 +1,6 @@
 import { m } from 'framer-motion';
 import { useTheme, styled } from '@mui/material/styles';
-import { Button, Box, Container, Stack } from '@mui/material';
+import { Button, Box, Container, Stack, Typography } from '@mui/material';
 import { bgGradient } from '../../utils/cssStyles';
 import { PATH_DASHBOARD } from '../../routes/paths';
 import Image from '../../components/image';
@@ -11,13 +11,13 @@ import useResponsive from 'src/hooks/useResponsive';
 // ----------------------------------------------------------------------
 const StyledRoot = styled('div')(({ theme }) => ({
   textAlign: 'center',
-  padding: theme.spacing(10, 0),
+  padding: theme.spacing(8, 2),
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
   backgroundImage: `url('/assets/background/overlay_4.jpg')`,
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(20, 0),
+    padding: theme.spacing(16, 0),
   },
 }));
 
@@ -31,14 +31,15 @@ export default function HomeAdvertisement() {
         <Stack
           alignItems="center"
           direction={{ xs: 'column', md: 'row' }}
+          spacing={isDesktop ? 5 : 3}
           sx={{
             ...bgGradient({
               direction: '135deg',
               startColor: theme.palette.common.white,
               endColor: theme.palette.primary.lighter,
             }),
-            borderRadius: 2,
-            pb: { xs: 5, md: 0 },
+            borderRadius: 1,
+            p: { xs: 3, md: 3 },
           }}
         >
           {isDesktop && <Content />}
@@ -50,7 +51,6 @@ export default function HomeAdvertisement() {
 }
 
 // ----------------------------------------------------------------------
-
 function Description() {
   const { push } = useRouter();
   const isDesktop = useResponsive('up', 'md');
@@ -62,35 +62,56 @@ function Description() {
           xs: 'center',
           md: 'left',
         },
+        maxWidth: 500,
       }}
     >
-      <Box
+      {/* Main Heading */}
+      <Typography
         component={m.div}
         variants={varFade().inDown}
         sx={{
-          color: 'common.black',
-          mb: isDesktop ? 1 : 1,
-          mt: isDesktop ? 0 : 3,
+          color: '#140a53',
+          mb: 3,
           typography: isDesktop ? 'h2' : 'h4',
-          fontWeight: 'normal',
+          fontWeight: 700,
         }}
       >
-        Ready to earn your best?
-      </Box>
-      <Box
+        Empower Your Financial Journey
+      </Typography>
+
+      {/* Subheading */}
+      <Typography
         component={m.div}
         variants={varFade().inDown}
         sx={{
-          color: 'text.primary',
-          mb: isDesktop ? 5 : 3,
-          mt: isDesktop ? 0 : 1,
-          typography: isDesktop ? 'h3' : 'h5',
-          fontWeight: 'normal',
+          color: '#140a53',
+          mb: 2,
+          typography: isDesktop ? 'h4' : 'h6',
+          fontWeight: 400,
         }}
       >
-        Let's get you started.
-      </Box>
+        Seamless, Secure, and Smart Solutions to Grow Your Earnings.
+      </Typography>
 
+      {/* Feature Points */}
+      <Stack
+        spacing={1.5}
+        mb={isDesktop ? 5 : 3}
+        component={m.div}
+        variants={varFade().inUp}
+      >
+        <Typography variant="body1" sx={{ color: '#140a53' }}>
+          • Fast and reliable transactions anytime, anywhere.
+        </Typography>
+        <Typography variant="body1" sx={{ color: '#140a53' }}>
+          • Advanced analytics to track your progress and growth.
+        </Typography>
+        <Typography variant="body1" sx={{ color: '#140a53' }}>
+          • Personalized dashboard to manage your business efficiently.
+        </Typography>
+      </Stack>
+
+      {/* Buttons */}
       <Stack
         direction={{ xs: 'column', md: 'row' }}
         justifyContent={{ xs: 'center', md: 'flex-start' }}
@@ -99,15 +120,30 @@ function Description() {
         <m.div variants={varFade().inRight}>
           <Button
             color="inherit"
-            size={isDesktop ? 'large' : 'small'}
+            size={isDesktop ? 'large' : 'medium'}
             variant="contained"
-            onClick={() => push(PATH_DASHBOARD.admin.root)}
+          c
             sx={{
               color: 'grey.100',
-              bgcolor: 'primary.main',
+              backgroundColor: '#731cdd',
             }}
           >
-            Login Now
+            Get Started
+          </Button>
+        </m.div>
+        <m.div variants={varFade().inRight}>
+          <Button
+            color="inherit"
+            size={isDesktop ? 'large' : 'medium'}
+            variant="outlined"
+            onClick={() => push('/services')}
+            sx={{
+              color: '#731cdd',
+              borderColor: '#731cdd',
+              '&:hover': { borderColor: '#5310aa', color: '#5310aa' },
+            }}
+          >
+            Explore Services
           </Button>
         </m.div>
       </Stack>
@@ -116,7 +152,6 @@ function Description() {
 }
 
 // ----------------------------------------------------------------------
-
 function Content() {
   return (
     <Stack
@@ -136,9 +171,9 @@ function Content() {
         <Image
           visibleByDefault
           disabledEffect
-          alt="rocket"
-          src="/assets/images/home/banking_services.jpg"
-          sx={{ width: 360, height: 'auto' }}
+          alt="financial services"
+          src="/assets/images/home/person.jpg"
+          sx={{ width: 360, height: 'auto', borderRadius: 3 }}
         />
       </m.div>
     </Stack>
