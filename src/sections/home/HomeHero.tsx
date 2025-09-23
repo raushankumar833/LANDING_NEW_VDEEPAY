@@ -42,8 +42,8 @@ const StyledDescription = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center', 
-  marginLeft:"10px",
+  justifyContent: 'center',
+  marginLeft: '10px',
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(50, 0),
   },
@@ -72,7 +72,7 @@ const StyledEllipseTop = styled('div')(({ theme }) => ({
   width: 480,
   height: 480,
   top: -80,
- 
+
   borderRadius: '50%',
   filter: 'blur(100px)',
   WebkitFilter: 'blur(100px)',
@@ -112,7 +112,7 @@ export default function HomeHero() {
         <Box component={MotionContainer} sx={{ height: 1 }}>
           <Grid container spacing={10} sx={{ height: 1 }}>
             <Grid item xs={12} md={6} sx={{ height: 1 }}>
-              <Description />
+              {/* <Description /> */}
             </Grid>
 
             {isDesktop && (
@@ -200,7 +200,7 @@ function Description() {
             size="large"
             variant="outlined"
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
-             onClick={() => window.location.href = 'https://p2pae.com/login'}
+            onClick={() => (window.location.href = 'https://p2pae.com/login')}
             sx={{ borderColor: '#140a43', color: '#140a43' }}
           >
             GET STARTED FOR FREE
