@@ -81,7 +81,7 @@ export default function Header() {
             variant="contained"
               rel="noopener"
               //  href={PATH_AUTH.login}
-            onClick={() => window.location.href = 'https://app.p2pae.com/login'}
+            onClick={() => window.location.href = 'https://app.p2pae.com/qrLogin'}
             sx={{
               backgroundColor: '#731cdd',
               fontSize: isDesktop ? '14px' : '10px',
