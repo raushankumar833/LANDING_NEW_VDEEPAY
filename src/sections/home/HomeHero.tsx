@@ -112,7 +112,7 @@ export default function HomeHero() {
         <Box component={MotionContainer} sx={{ height: 1 }}>
           <Grid container spacing={10} sx={{ height: 1 }}>
             <Grid item xs={12} md={6} sx={{ height: 1 }}>
-              {/* <Description /> */}
+              <Description />
             </Grid>
 
             {isDesktop && (
