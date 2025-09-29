@@ -35,6 +35,7 @@ const LINKS: { headline: string; children: LinkItem[] }[] = [
     children: [
       { name: 'Terms and Condition', href: PATH_PAGE.termscondition, target: '_blank', rel: 'noopener noreferrer' },
       { name: 'Privacy Policy', href: PATH_PAGE.privacy, target: '_blank', rel: 'noopener noreferrer' },
+      //  { name: 'Refund policy ', href: PATH_PAGE.refund, target: '_blank', rel: 'noopener noreferrer' },
     ],
   },
   {
