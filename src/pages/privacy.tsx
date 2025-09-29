@@ -68,7 +68,7 @@ const PrivacyPolicyView = () => {
                 account with us on our Website.
               </p>
               <p className="landing-bg_para">
-                PSPKA TECHNOLOGIES reserves its right to modify, alter, and
+                PSPKA  reserves its right to modify, alter, and
                 update this Policy at any time, with or without prior notice.
                 Although, Users shall be notified of material changes through
                 their registered email address or any other mode of
@@ -194,7 +194,7 @@ const PrivacyPolicyView = () => {
                 time of creation of their Account on the Website.
               </p>
               <p className="landing-bg_para">
-                PSPKA TECHNOLOGIES presumes adequate and lawful parental consent
+                PSPKA  presumes adequate and lawful parental consent
                 in case the Personal Information or Sensitive personal data or
                 information is shared by a User under the age of 18 years.
               </p>
@@ -337,7 +337,7 @@ const PrivacyPolicyView = () => {
                 where such disclosure is (i) obligated by law, (ii) requested by
                 a lawfully authorized government authority, (iii) pursuant to a
                 judicial decree, (iv) for enforcing and protecting the legal
-                rights of PSPKA TECHNOLOGIES or others’, (v) for seeking any
+                rights of PSPKA  or others’, (v) for seeking any
                 relief, (vi) for defending any charge, (vii) for opposing any
                 claim, (viii) for enforcing this Policy or our Terms of Use,
                 (ix) for obtaining any legal advice. We also reserve our right
@@ -413,13 +413,13 @@ const PrivacyPolicyView = () => {
                 <h3 className="h5">Mailers</h3>
               </div>
               <p className="landing-bg_para">
-                PSPKA TECHNOLOGIES may send direct mailers to the User at the
+                PSPKA  may send direct mailers to the User at the
                 email address given by the User. The User has the option to
                 opt-out of this direct mailer by way of links provided at the
-                bottom of each mailer or any other means as PSPKA TECHNOLOGIES
-                deems appropriate. PSPKA TECHNOLOGIES respects every User’s
+                bottom of each mailer or any other means as PSPKA 
+                deems appropriate. PSPKA  respects every User’s
                 privacy and in the event that User chooses to not receive such
-                mailers, PSPKA TECHNOLOGIES will take all steps to remove the
+                mailers, PSPKA  will take all steps to remove the
                 User from the list. If a User wants to remove his/her/it’s
                 contact information from all mailing lists and newsletters, the
                 same can be done through “Profile” page of his/her/it’s account
@@ -448,7 +448,7 @@ const PrivacyPolicyView = () => {
                 April 6, 2018, all Users, including system participants, service
                 providers, intermediaries, payment gateways, third party vendors
                 and other entities in the payments ecosystem, who are retained
-                or engaged by PSPKA TECHNOLOGIES for providing payment services
+                or engaged by PSPKA  for providing payment services
                 shall mandatorily store entire Payment Data in systems located
                 only in India. Notwithstanding the above, for cross border
                 transaction data, consisting of a foreign component and a
@@ -482,7 +482,7 @@ const PrivacyPolicyView = () => {
                 If you seek any clarifications regarding this Policy or wish to
                 raise any issue or grievance with respect to illegal access, use
                 or disclosure of Personal Information, please e-mail at
-                help@instantpay.in
+                Support@p2pae.com
               </p>
               <p className="landing-bg_para">
                 We shall attempt to resolve any issues within a period of thirty
