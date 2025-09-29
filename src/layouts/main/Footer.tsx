@@ -22,11 +22,13 @@ type LinkItem = {
 const LINKS: { headline: string; children: LinkItem[] }[] = [
   {
     headline: `P2PAE`,
-    children: [
-      { name: 'About us', href: PATH_PAGE.about },
-      { name: 'Contact us', href: PATH_PAGE.contact },
-      { name: 'FAQs', href: PATH_PAGE.faqs },
-    ],
+   children: [
+  { name: 'About us', href: PATH_PAGE.about },
+  { name: 'Contact us', href: PATH_PAGE.contact },
+  { name: 'FAQs', href: PATH_PAGE.faqs },
+
+],
+
   },
   {
     headline: 'Legal',
