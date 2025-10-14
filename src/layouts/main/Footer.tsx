@@ -39,10 +39,14 @@ const LINKS: { headline: string; children: LinkItem[] }[] = [
     ],
   },
   {
-    headline: 'Contact',
+    headline: 'Contact ',
+  
     children: [
-      { name: 'Support@p2pae.com', href: 'mailto:Support@p2pae.com' },
-        { name: '011-47537321 ,7428985999', href: 'tel:7428985999' },
+          { name: 'PSPKA SERVICES PRIVATE LIMITED', href: '/about-us/' },
+
+      { name: 'Email: Support@p2pae.com', href: 'mailto:Support@p2pae.com' },
+  { name: 'Mobile: 9211226132', href: 'tel:9211226132' },
+
 
       { name: 'PVT No.-2, B-1, KH No.900/289Ground Floor, Shalimar Village, Delhi, North West Delhi- 110088, Delhi', href: '#' },
     ],
@@ -122,6 +126,7 @@ export default function Footer() {
         alignItems={{ xs: 'center', md: 'flex-start' }}
         sx={{ whiteSpace: 'nowrap' }} // prevents text wrap
       >
+       
         <Typography component="div" variant="subtitle1" sx={{ fontWeight: 700,whiteSpace: 'nowrap',color:"#140a53"  }}>
           {list.headline}
         </Typography>
@@ -169,6 +174,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <Typography variant="caption" component="div" sx={{color:"#140a53", mt: 2, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.95rem' }}>
+         PSPKA SERVICES PRIVATE LIMITED
           © {date}. All rights reserved
         </Typography>
       </Container>
