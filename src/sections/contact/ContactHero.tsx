@@ -17,7 +17,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/assets/images/contact/hero1.jpg)',
+  backgroundImage: 'url(/assets/background/overlay_2.svg),url(/assets/images/contact/hero1.jpg)',
   padding: theme.spacing(2, 1, 0, 1),
   height: 'auto',
   [theme.breakpoints.up('md')]: {
@@ -102,30 +102,38 @@ function HeroFloatCard() {
     <StyledContent>
       <Box sx={{ textAlign: 'center', mb: 4 }}>
         <m.div variants={varFade().inRight}>
-          <Typography 
-            variant="h2" 
-            fontWeight="800" 
-            color={theme.palette.common.white}
-            sx={{ 
-              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-           background: 'linear-gradient(135deg, #f0f7ff 0%, #fff0f0 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
+        <Typography 
+  variant="h2" 
+  fontWeight="800" 
+  sx={{ 
+    position: 'relative',
+    background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    textShadow: '0 2px 10px rgba(255,255,255,0.3)',
+    backdropFilter: 'blur(2px)',
+    mt: 25
+  }}
+>
             Searching for solutions made simple?
           </Typography>
-          <Typography
-            variant="h4"
-            fontWeight="700"
-            color={theme.palette.common.white}
-            sx={{ 
-              mt: 2,
-              textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
-              color: '#f0f7ff'
-            }}
-          >
+         <Typography 
+  variant="h4" 
+  fontWeight="800" 
+  sx={{ 
+    position: 'relative',
+    background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    textShadow: '0 2px 10px rgba(255,255,255,0.3)',
+    backdropFilter: 'blur(2px)',
+   
+  }}
+>
             We're here to make it easy for you
           </Typography>
 
@@ -218,7 +226,7 @@ function HeroFloatCard() {
         </Grid>
         
         {/* Additional decorative element */}
-        <Box sx={{ textAlign: 'center', mt: 4 }}>
+        <Box sx={{ textAlign: 'center', mt: -3 }}>
           <Typography 
             variant="body2" 
             color="#004990"

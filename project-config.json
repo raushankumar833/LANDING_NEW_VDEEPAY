@@ -137,15 +137,15 @@
     },
     {
       "icon": "fa6-solid:bolt",
-      "title": "Express Transfer",
-      "intro": "Experience fast, dependable financial transfers with security and ease, offering instant accessibility and convenience for personal or business needs.",
+      "title": "Wallet Transfer",
+      "intro": "Experience fast, dependable wallet transfers with security and ease, offering instant accessibility and convenience for personal or business needs.",
       "link": "/auth/login",
       "bgcolor": "#EFF5FA",
       "extra": "most used"
     },
     {
       "icon": "fa6-solid:chart-line",
-      "title": "Super Transfer",
+      "title": "Fund Transfer",
       "intro": "Handle high-value transactions securely and efficiently, with trusted accuracy and safeguards for individuals and businesses needing confidence anytime.",
       "link": "/auth/login",
       "bgcolor": "#F4F5E1"
