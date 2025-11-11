@@ -29,7 +29,7 @@ const Terms = () => {
           />
         </Box>
 
-        <div>
+         <div>
           <div>
             <div>
               <p className="landing-bg_para">
@@ -40,25 +40,25 @@ const Terms = () => {
                 <strong>(“Services”)</strong>. These Terms are legally binding
                 and govern the use of our website, our mobile application, our
                 API and other properties collectively called as the
-                <strong>“PSPKA SERVICES PRIVATE LIMITED”</strong> or
+                <strong>“LINKSTECH SERVICES PRIVATE LIMITED”</strong> or
                 <strong> “Platform”</strong>
-                created by PSPKA SERVICES PRIVATE LIMITED, a
+                created by LINKSTECH SERVICES PRIVATE LIMITED s Pvt. Ltd., a
                 company incorporated under the laws of India, with its
-                registered office at  PVT No.-2, B-1, KH No.900/289Ground Floor, Shalimar Village, Delhi, North West Delhi- 110088, Delhi
-                <strong>(“PSPKA ” or “Company”)</strong>.
+                registered office at Flat No. 54-A Ground Floor, Type-II Block-5, Sector-3 DSIDC, Bawana, North West Delhi- 110039, Delhi
+                <strong>(“LINKSTECH ” or “Company”)</strong>.
               </p>
 
               <p className="landing-bg_para">
-                These Terms are a binding agreement between you and PSPKA .
+                These Terms are a binding agreement between you and LINKSTECH .
                 These Terms are in addition to and not in derogation of any
-                other terms stipulated by PSPKA  from time to time.
+                other terms stipulated by LINKSTECH SERVICES from time to time.
                 In case of any conflict between these Terms and such other
                 terms, these Terms will prevail. Throughout this document, we
                 use the terms <strong>“we”</strong> and
-                <strong>“our”</strong> to refer to PSPKA  and the
+                <strong>“our”</strong> to refer to LINKSTECH SERVICES and the
                 terms
                 <strong>“you”</strong> and <strong>“your”</strong> to refer to
-                you, the User of the Platform. Both PSPKA  and the
+                you, the User of the Platform. Both LINKSTECH SERVICES and the
                 User are collectively referred to as <strong>“Parties”</strong>{" "}
                 and singularly referred to as
                 <strong>“Party”</strong>.
@@ -98,15 +98,15 @@ const Terms = () => {
                   <abbr>ELIGIBILITY</abbr>
                 </h3>
                 <p className="landing-bg_para">
-                  PSPKA ’s services are available to anyone having a valid
+                  LINKSTECH ’s services are available to anyone having a valid
                   email address and an Indian mobile phone number.
                   The&nbsp;Platform must be accessed/used only by the persons
                   who are eligible to enter into legally binding contracts under
                   the Indian Contract Act and are ‘competent to contract’
                   according to Section 11 of the Indian Contract Act. Users who
                   have been previously suspended or removed from availing any
-                  service by PSPKA  shall not be eligible to avail
-                  services from PSPKA . Users shall not impersonate any
+                  service by LINKSTECH SERVICES shall not be eligible to avail
+                  services from LINKSTECH . Users shall not impersonate any
                   person or entity, or falsely state or otherwise misrepresent
                   identity, age or affiliation with any person or entity.
                 </p>
@@ -167,11 +167,11 @@ const Terms = () => {
                 <p className="landing-bg_para">
                   <strong>“Confidential Information”</strong> means and includes
                   the Intellectual Property and any and all business, technical
-                  and financial information of PSPKA  or of any of
+                  and financial information of LINKSTECH SERVICES or of any of
                   its affiliates that is related to any of the arrangements
                   contemplated in these Terms of Use or any other document in
                   which these Terms of Use are incorporated by reference or
-                  otherwise disclosed by PSPKA  to the User any
+                  otherwise disclosed by LINKSTECH SERVICES to the User any
                   information which relates to its financial and/or business
                   operations, including but not limited to, specifications,
                   models, merchant lists/information samples, reports,
@@ -194,15 +194,15 @@ const Terms = () => {
                   <strong>“Effective Date”</strong> or
                   <strong>“Registration Date”</strong>
                   shall mean the date of registration of account of the User on
-                  PSPKA ’s platform.
+                  LINKSTECH ’s platform.
                 </p>
 
                 <p className="landing-bg_para">
-                  <strong>“PSPKA SERVICES PRIVATE LIMITED Policies”</strong>{" "}
+                  <strong>“LINKSTECH SERVICES PRIVATE LIMITED Policies”</strong>{" "}
                   shall mean and include the Terms of Use, Privacy Policy,
                   Grievance Policy and any other such terms and
                   conditions/policies available and updated from time to time on
-                  the PSPKA SERVICES PRIVATE LIMITED.
+                  the LINKSTECH SERVICES PRIVATE LIMITED.
                 </p>
 
                 <p className="landing-bg_para">
@@ -241,8 +241,8 @@ const Terms = () => {
 
                 <p className="landing-bg_para">
                   <strong>“Services”</strong> shall mean the services provided
-                  by PSPKA  and various Service Providers to the
-                  Users utilizing the PSPKA SERVICES PRIVATE LIMITED
+                  by LINKSTECH SERVICES and various Service Providers to the
+                  Users utilizing the LINKSTECH SERVICES PRIVATE LIMITED
                   including but not limited to banking services, non-banking
                   services and other such services either by itself or through a
                   Merchant.
@@ -250,7 +250,7 @@ const Terms = () => {
 
                 <p className="landing-bg_para">
                   <strong>“Service Provider”</strong> shall mean any banking
-                  and/or non-banking entity with which PSPKA  has,
+                  and/or non-banking entity with which LINKSTECH SERVICES has,
                   directly or indirectly, executed an agreement for facilitating
                   Transactions between such entity and its customers.
                 </p>
@@ -258,8 +258,8 @@ const Terms = () => {
                 <p className="landing-bg_para">
                   <strong>“Users”</strong> shall mean individuals&nbsp;including
                   all body&nbsp;corporates, partnerships, limited liability
-                  partnerships, etc., who are availing PSPKA 
-                  services through the PSPKA SERVICES PRIVATE LIMITED.
+                  partnerships, etc., who are availing LINKSTECH SERVICES
+                  services through the LINKSTECH SERVICES PRIVATE LIMITED.
                 </p>
               </div>
 
@@ -267,57 +267,57 @@ const Terms = () => {
                 <h3 className="h5">1. GENERAL TERMS AND CONDITIONS</h3>
                 <p>
                   These General Terms and Conditions govern the User’s access to
-                  the Services provided by PSPKA :
+                  the Services provided by LINKSTECH :
                 </p>
               </div>
 
               <div className="landing-bg_para">
                 <div>
                   <u>INFORMATION SUPPLIED TO INSTANTPAY.</u> Users agree that
-                  the information provided by the Users to PSPKA  on
+                  the information provided by the Users to LINKSTECH SERVICES on
                   registration and at all other times, including payment, is
                   true, accurate, current, and complete.
                 </div>
                 <div className="landing-bg_para">
                   <u>SECURITY OF ACCOUNT.</u> Users’ mobile number and email
-                  identifies a Users’ account with PSPKA  through
-                  which PSPKA  services are dispensed (“
+                  identifies a Users’ account with LINKSTECH SERVICES through
+                  which LINKSTECH SERVICES services are dispensed (“
                   <strong>Account</strong>
-                  ”). PSPKA  encourages Users to choose a strong
+                  ”). LINKSTECH SERVICES encourages Users to choose a strong
                   password to protect their Account. It is advised that Users do
                   not share their password with anyone or write it down. Neither
-                  PSPKA nor its Service Providers, under any circumstances,
+                  LINKSTECH nor its Service Providers, under any circumstances,
                   will ever ask for a User's Account password or any other
                   confidential information. If a User has any reason to believe
                   that his Account is no longer secure, then the User shall
                   immediately change the Account password and indemnify
-                  PSPKA  from any liabilities that may arise from
+                  LINKSTECH SERVICES from any liabilities that may arise from
                   the misuse of such User’s Account.
                 </div>
 
                 <div className="landing-bg_para">
                   <u>PRIVACY POLICY.</u> All information collected from a User
-                  pursuant to provision of PSPKA ’s services, and
+                  pursuant to provision of LINKSTECH ’s services, and
                   information collected by Merchants or Digi Kendras during the
                   performance of these Terms of Use or Applicable Agreement, is
-                  subject to PSPKA ’s
+                  subject to LINKSTECH ’s
                   <a href="/privacy-policy">Privacy Policy</a>.
                 </div>
 
                 <div className="landing-bg_para">
                   <u>RECLAIMING INACTIVE ACCOUNTS.</u>. If an Account is found
                   to be overly inactive, the Account may be reclaimed by
-                  PSPKA  without providing notice to the concerned
+                  LINKSTECH SERVICES without providing notice to the concerned
                   User. An Account is considered as inactive if the concerned
                   User is not signing in and/or has not done any transactions
                   for more than 6 consecutive months.
                 </div>
 
                 <div className="landing-bg_para">
-                  <u>THIRD PARTY SITES, PRODUCTS AND SERVICES.</u> PSPKA ’s
+                  <u>THIRD PARTY SITES, PRODUCTS AND SERVICES.</u> LINKSTECH ’s
                   services and/or the Site may include links or references to
                   other web sites or services solely for the Users’ convenience
-                  (“<strong>Reference Sites</strong>”). PSPKA  does
+                  (“<strong>Reference Sites</strong>”). LINKSTECH SERVICES does
                   not endorse any such Reference Sites or the information,
                   materials, products, or services contained on or accessible
                   through Reference Sites. Correspondence or business dealings
@@ -332,20 +332,20 @@ const Terms = () => {
                   <u>COMMUNICATION POLICY.</u> The User hereby accepts that:
                   <div className="landing-bg_para">
                     <div className="landing-bg_para">
-                      PSPKA  may send transactional or
+                      LINKSTECH SERVICES may send transactional or
                       non-transactional business communication in the form of
                       SMS or Email or Push notifications as part of its efforts
                       to fulfil the User’s request or service your account. A
                       User may continue to receive transactional and
-                      critical&nbsp;communication from PSPKA  even
+                      critical&nbsp;communication from LINKSTECH SERVICES even
                       after opting out of marketing communications.
                     </div>
                     <div className="landing-bg_para">
-                      PSPKA  will make the best efforts to provide
+                      LINKSTECH SERVICES will make the best efforts to provide
                       notifications and it shall be deemed that the User shall
                       have received the information sent from the Company during
-                      the course of, or in relation to, using the PSPKA
-                      Platform or availing any Services. PSPKA 
+                      the course of, or in relation to, using the LINKSTECH
+                      Platform or availing any Services. LINKSTECH SERVICES
                       shall not be under any obligation to confirm the
                       authenticity of the person(s) receiving the alert. The
                       User cannot hold the Company liable for non-availability
@@ -358,7 +358,7 @@ const Terms = () => {
                   <u>LIMITATION OF LIABILITY.</u>
                   <div className="landing-bg_para">
                     <div className="landing-bg_para">
-                      In no event will PSPKA  or its directors,
+                      In no event will LINKSTECH SERVICES or its directors,
                       agents, officers, or employees be liable to a User for any
                       special, indirect, incidental, consequential, punitive, or
                       exemplary damages (including without limitation lost
@@ -368,16 +368,16 @@ const Terms = () => {
                       any kind arising out of or relating to.
                       <p className="mt-2">
                         a) &nbsp; this Terms of Use or any other agreement
-                        entered by a User with PSPKA ,
+                        entered by a User with LINKSTECH ,
                       </p>
                       <p>
-                        b) &nbsp; PSPKA ’s services, the Site or any
+                        b) &nbsp; LINKSTECH ’s services, the Site or any
                         Reference site, or
                       </p>
                       <p>
-                        c)&nbsp; User’s use or inability to use PSPKA ’s
+                        c)&nbsp; User’s use or inability to use LINKSTECH ’s
                         services, the Site or any Reference Sites, even if
-                        PSPKA  or a PSPKA  authorized
+                        LINKSTECH SERVICES or a LINKSTECH SERVICES authorized
                         representative has advised of the possibility of such
                         damages,
                       </p>
@@ -399,20 +399,20 @@ const Terms = () => {
                     </div>
 
                     <div className="landing-bg_para">
-                      It shall be at the sole discretion of PSPKA 
+                      It shall be at the sole discretion of LINKSTECH SERVICES
                       to reverse any transaction subject to approval of the
                       concerned Service Provider. Notwithstanding the above, if
-                      any court of law finds that PSPKA  or its
+                      any court of law finds that LINKSTECH SERVICES or its
                       directors, officers, or employees, are liable to indemnify
                       a concerned User despite the existence of this Clause 1.7,
                       such liability shall not exceed the amount paid by the
                       concerned User, if any, for using the portion of the
-                      PSPKA ’s services or the Site giving rise to the cause
+                      LINKSTECH ’s services or the Site giving rise to the cause
                       of action.
                     </div>
 
                     <div className="landing-bg_para">
-                      Users acknowledge and agree that PSPKA  has
+                      Users acknowledge and agree that LINKSTECH SERVICES has
                       offered its products and services, set its prices, and
                       entered into these Terms of Use and Applicable Agreement
                       in reliance upon the warranty, disclaimers, and the
@@ -423,15 +423,15 @@ const Terms = () => {
                       Users acknowledge that the warranty, disclaimers, and the
                       limitations of liability set forth herein reflect a
                       reasonable and fair allocation of risk between Users and
-                      PSPKA , and that the warranty, disclaimers, and the
+                      LINKSTECH , and that the warranty, disclaimers, and the
                       limitations of liability set forth herein form an
-                      essential basis of the bargain between Users and PSPKA
-                      . PSPKA  would not be able to provide the
+                      essential basis of the bargain between Users and LINKSTECH
+                      . LINKSTECH SERVICES would not be able to provide the
                       services to Users on an economically reasonable basis
                       without these limitations.
                     </div>
                     <div className="landing-bg_para">
-                      Users understand that PSPKA  or the Service
+                      Users understand that LINKSTECH SERVICES or the Service
                       Providers may reject authentication and/or authorization
                       of transaction placed by Users for any reason including
                       but not limited to insufficient funds, incorrect
@@ -448,7 +448,7 @@ const Terms = () => {
                     </div>
                     <div className="landing-bg_para">
                       User further acknowledge that as a security measure
-                      PSPKA  and/or the Service Providers may at our
+                      LINKSTECH SERVICES and/or the Service Providers may at our
                       sole discretion, permanently or temporarily, block any
                       card number, account numbers, group of cards or
                       transactions from any specific blocked or blacklisted
@@ -457,10 +457,10 @@ const Terms = () => {
                       mitigation measures it wishes to undertake.
                     </div>
                     <div className="landing-bg_para">
-                      As a risk management tool, PSPKA  and/or the
+                      As a risk management tool, LINKSTECH SERVICES and/or the
                       Service Providers reserve the right to limit or restrict
                       transaction size, amount and/or monthly volume at any
-                      time. PSPKA  will consider a variety of
+                      time. LINKSTECH SERVICES will consider a variety of
                       factors in making a decision and such determination will
                       be at our sole discretion.
                     </div>
@@ -471,10 +471,10 @@ const Terms = () => {
                   <u>FRAUDULENT TRANSACTIONS</u>
                   <div className="landing-bg_para">
                     <div className="landing-bg_para">
-                      If PSPKA  is intimated, by the bank, that a
+                      If LINKSTECH SERVICES is intimated, by the bank, that a
                       customer has reported an unauthorized debit/chargeback of
                       the customer’s Payment Instrument (“Fraudulent
-                      Transaction”), the User shall be notified by PSPKA .
+                      Transaction”), the User shall be notified by LINKSTECH .
                       The User shall be entitled to furnish documents and
                       information pertaining to the Transaction associated with
                       the Chargeback within one&nbsp;(1) day&nbsp;(or such other
@@ -489,7 +489,7 @@ const Terms = () => {
                       <p>
                         b)&nbsp; the bank is not satisfied with the Chargeback
                         documents furnished by the User, then the bank shall be
-                        entitled to order the PSPKA  to affect a
+                        entitled to order the LINKSTECH SERVICES to affect a
                         reversal of the debit of the Chargeback Amount
                         associated with the Chargeback such that the said
                         chargeback amount is credited to the customer’s Payment
@@ -497,7 +497,7 @@ const Terms = () => {
                       </p>
                     </div>
                     <div className="landing-bg_para">
-                      PSPKA  shall also be entitled to suspend the
+                      LINKSTECH SERVICES shall also be entitled to suspend the
                       settlement of the amount under dispute or hold the value
                       of transaction under dispute from following the settlement
                       of the transaction during the pendency of inquiries,
@@ -524,10 +524,10 @@ const Terms = () => {
                     </div>
                     <div className="landing-bg_para">
                       The User further agrees and acknowledges that following
-                      PSPKA  incurring the charge stipulated in
+                      LINKSTECH SERVICES incurring the charge stipulated in
                       clause 1.8(iii), if the available Transaction Amounts are
                       insufficient for deduction of the Chargeback Amount, then
-                      PSPKA  is entitled to issue a debit note
+                      LINKSTECH SERVICES is entitled to issue a debit note
                       seeking reimbursement of the Chargeback Amount from the
                       User. The User shall reimburse the Chargeback Amount
                       within three (3) working days of receipt of the debit
@@ -544,16 +544,18 @@ const Terms = () => {
                       responsibility of User.
                     </div>
                     <div className="landing-bg_para">
-                      The User hereby acknowledges and agrees that PSPKA SERVICES PRIVATE LIMITED is a facilitator for payment processing services
-                      which are requested by Users and PSPKA  shall
+                      The User hereby acknowledges and agrees that LINKSTECH
+                      SERVICES is a facilitator for payment processing services
+                      which are requested by Users and LINKSTECH SERVICES shall
                       not be responsible for any unauthorized transaction done
                       by any person including third party and amounting to
                       infringement of another’s rights or any chargebacks
                       claimed by the customers. It will be the responsibility of
                       Users to ensure due protection while transacting online or
-                      otherwise. PSPKA  will assist the Users in
+                      otherwise. LINKSTECH SERVICES will assist the Users in
                       settling any queries related to the Services that arise
-                      between the Users, and its customers. However, PSPKA SERVICES PRIVATE LIMITED shall bear no responsibility with respect to the
+                      between the Users, and its customers. However, LINKSTECH
+                      SERVICES shall bear no responsibility with respect to the
                       dispute or query related to payment made by the customers
                       to the Users.
                     </div>
@@ -586,9 +588,9 @@ const Terms = () => {
                       full end to end transaction details/information
                       collected/carried/processed as part of the message/payment
                       instructions. The User also acknowledges and agrees that
-                      the account balance maintained by the Users on PSPKA
+                      the account balance maintained by the Users on LINKSTECH
                       Platform shall be non-interest bearing and shall be
-                      forfeited by PSPKA  if found lying unused for
+                      forfeited by LINKSTECH SERVICES if found lying unused for
                       more than 365 days.
                     </div>
                   </div>
@@ -606,17 +608,17 @@ const Terms = () => {
                       and risks associated with the same.
                     </div>
                     <div className="landing-bg_para">
-                      it shall immediately intimate PSPKA  of any
+                      it shall immediately intimate LINKSTECH SERVICES of any
                       violation or potential violation of these Terms of Use or
                       of other circumstances that may cause damage to the
-                      goodwill and reputation of PSPKA ,
+                      goodwill and reputation of LINKSTECH ,
                     </div>
                     <div className="landing-bg_para">
                       it shall be responsible to obtain any and all consents and
                       approvals that are required from regulatory or
                       governmental authorities, including any consent from
                       customers required to transfer data to the User and/or the
-                      PSPKA SERVICES PRIVATE LIMITED, as the case may be, in
+                      LINKSTECH SERVICES PRIVATE LIMITED, as the case may be, in
                       accordance with Applicable Law,
                     </div>
 
@@ -635,13 +637,14 @@ const Terms = () => {
                     <div className="landing-bg_para">
                       it shall not access (or attempt to access) the website and
                       the Products by any means other than through the interface
-                      that is provided by PSPKA . It shall not use any
+                      that is provided by LINKSTECH . It shall not use any
                       deep-link, page scrape, robot, spider or other automatic
                       device, program, algorithm or methodology, or any similar
                       or equivalent manual process, to access, acquire, copy or
-                      monitor any portion of the PSPKA SERVICES PRIVATE LIMITED, or in any way reproduce or circumvent the
+                      monitor any portion of the LINKSTECH SERVICES PRIVATE
+                      LIMITED, or in any way reproduce or circumvent the
                       navigational structure or presentation of the platform,
-                      without PSPKA ’s express prior written consent.
+                      without LINKSTECH ’s express prior written consent.
                     </div>
                     <div className="landing-bg_para">
                       it shall not attempt to gain unauthorized access to any
@@ -656,7 +659,7 @@ const Terms = () => {
                       not filed by the User as per sec 139(1) of Income Tax Act,
                       1961 for the previous financial years starting from FY
                       2018-19 and undertake to indemnify and keep indemnified
-                      PSPKA  against any and all losses, claims,
+                      LINKSTECH SERVICES against any and all losses, claims,
                       liabilities, costs, taxes, interest, penalties imposed by
                       any government and regulatory authority for non-complying
                       with Section 206AB or any other provisions of Income Tax
@@ -670,17 +673,17 @@ const Terms = () => {
 
                 <div className="landing-bg_para">
                   <u>INDEMNIFICATION.</u>
-                  User agrees to indemnify, save, and hold PSPKA , its
+                  User agrees to indemnify, save, and hold LINKSTECH , its
                   affiliates, contractors, employees, officers, directors,
                   agents and its third-party suppliers, licensors, and partners
                   harmless from any and all claims, demands, actions, suits
-                  which may be threatened or brought against PSPKA , and
+                  which may be threatened or brought against LINKSTECH , and
                   also against all losses, damages, liabilities, costs, charges
                   and expenses, including without limitation, legal fees and
                   expenses arising out of or related to:
                   <div className="landing-bg_para">
                     <div className="landing-bg_para">
-                      Users’ use or misuse of PSPKA ’s services or of the
+                      Users’ use or misuse of LINKSTECH ’s services or of the
                       Site/application
                     </div>
                     <div className="landing-bg_para">
@@ -694,30 +697,30 @@ const Terms = () => {
                     </div>
                     <div className="landing-bg_para">
                       any claim or legal notice or quasi-legal proceedings to
-                      which PSPKA  may be required to become party
-                      or to which PSPKA  may be subjected by any
+                      which LINKSTECH SERVICES may be required to become party
+                      or to which LINKSTECH SERVICES may be subjected by any
                       person including any governmental authority, by reason of
                       breach of any Applicable Law,
                     </div>
                     <div className="landing-bg_para">
                       due to failure of a User to obtain any required statutory
                       or regulatory approval necessary for the performance of
-                      its obligations in the Applicable Agreement with PSPKA
+                      its obligations in the Applicable Agreement with LINKSTECH
                       ,
                     </div>
                     <div className="landing-bg_para">
                       all liability, claims, damages, costs, expenses suffered
-                      or incurred by PSPKA  as a result of any act
+                      or incurred by LINKSTECH SERVICES as a result of any act
                       or violation by User under Section 269ST of the Income Tax
                       Act, 1961 while acting as collection agent of the Company.
                     </div>
                     <div className="landing-bg_para">
-                      PSPKA  reserves the right, at User’s expense,
+                      LINKSTECH SERVICES reserves the right, at User’s expense,
                       to assume the exclusive defense and control of any matter,
                       including rights to settle, for which concerned User is
-                      required to indemnify PSPKA . The User agrees to
-                      cooperate with PSPKA ’s defense and settlement of
-                      these claims. PSPKA  will use reasonable
+                      required to indemnify LINKSTECH . The User agrees to
+                      cooperate with LINKSTECH ’s defense and settlement of
+                      these claims. LINKSTECH SERVICES will use reasonable
                       efforts to notify the User of any claim, action, or
                       proceeding brought by a third party that is subject to the
                       foregoing indemnification upon becoming aware of it.
@@ -728,33 +731,33 @@ const Terms = () => {
                 <div className="landing-bg_para">
                   <u>DISCLAIMER</u>
                   To the fullest extent permissible pursuant to Applicable Law,
-                  PSPKA  and its officers, directors, employees, and
+                  LINKSTECH SERVICES and its officers, directors, employees, and
                   agents disclaim all warranties, express or implied, including,
                   but not limited to, implied warranties of merchantability,
                   fitness for a particular purpose, and non-infringement of
                   proprietary rights. No advice or information, whether oral or
-                  written, obtained by a User from PSPKA  or through
-                  PSPKA ’s services or the Site will create any warranty not
-                  expressly stated herein. PSPKA  does not authorize
+                  written, obtained by a User from LINKSTECH SERVICES or through
+                  LINKSTECH ’s services or the Site will create any warranty not
+                  expressly stated herein. LINKSTECH SERVICES does not authorize
                   anyone to make any warranty on its behalf and Users should not
-                  rely on any such statement. Users acknowledge that PSPKA
+                  rely on any such statement. Users acknowledge that LINKSTECH
                   SERVICES is a reseller and is not liable for any third-party
                   seller’s obligations. It is User’s responsibility to evaluate
                   the accuracy, completeness and usefulness of all opinions,
                   advice, merchandise and other information provided through the
-                  Site or on the internet generally. PSPKA  does not
+                  Site or on the internet generally. LINKSTECH SERVICES does not
                   warrant that its services will be uninterrupted, or free of
                   errors, viruses or other harmful components, and that any of
-                  the foregoing defects will be corrected. PSPKA ’s services
+                  the foregoing defects will be corrected. LINKSTECH ’s services
                   and the Site and any data, information, third party software,
                   Reference Sites, or Software made available in conjunction
                   with or through its services and the Site are provided on an
                   “as is” and “as available”, “with all faults” basis and
                   without warranties or representations of any kind either
-                  express or implied. PSPKA  and its third-party
+                  express or implied. LINKSTECH SERVICES and its third-party
                   suppliers, licensors, and partners do not warrant or make any
                   representations regarding the use or the results of the use of
-                  PSPKA ’s services, the Site or any Reference Sites in
+                  LINKSTECH ’s services, the Site or any Reference Sites in
                   terms of correctness, accuracy, reliability, or otherwise.
                 </div>
 
@@ -762,26 +765,26 @@ const Terms = () => {
                   <u>INTELLECTUAL PROPERTY.</u>
                   <div className="custom-list points-alpha mt-3">
                     <div className="landing-bg_para">
-                      PSPKA ’s services and the Site are owned and operated
-                      by PSPKA  and/or third-party licensors. The
+                      LINKSTECH ’s services and the Site are owned and operated
+                      by LINKSTECH SERVICES and/or third-party licensors. The
                       visual interfaces, graphics, design, compilation,
                       information, computer code (including source code and
                       object code), products, software, services, and all other
-                      elements of PSPKA ’s services and the Site provided by
-                      PSPKA  (the <strong> “Materials”</strong>) are
-                      protected by Applicable Law. As between User and PSPKA
-                      , all Materials and PSPKA ’s Intellectual Property are
-                      the property of PSPKA  and/or third-party
+                      elements of LINKSTECH ’s services and the Site provided by
+                      LINKSTECH SERVICES (the <strong> “Materials”</strong>) are
+                      protected by Applicable Law. As between User and LINKSTECH
+                      , all Materials and LINKSTECH ’s Intellectual Property are
+                      the property of LINKSTECH SERVICES and/or third-party
                       licensors or suppliers. User agrees not to remove,
-                      obscure, or alter PSPKA  or any third party's
+                      obscure, or alter LINKSTECH SERVICES or any third party's
                       copyright, patent, trademark, or other proprietary rights
                       notices affixed to or contained within or accessed in
-                      conjunction with or through PSPKA ’s services. Except
-                      as expressly authorized by PSPKA , the User agrees not
+                      conjunction with or through LINKSTECH ’s services. Except
+                      as expressly authorized by LINKSTECH , the User agrees not
                       to sell, license, distribute, copy, modify, publicly
                       perform or display, transmit, publish, edit, adapt, create
                       derivative works from, or otherwise make unauthorized use
-                      of the Materials or PSPKA ’s Intellectual Property.
+                      of the Materials or LINKSTECH ’s Intellectual Property.
                     </div>
                     <div className="landing-bg_para">
                       Parties do not accrue any rights or interest in the other
@@ -796,11 +799,11 @@ const Terms = () => {
                       of the other’s Intellectual Property.
                     </div>
                     <div className="landing-bg_para">
-                      If Users’ have comments regarding PSPKA 's services
+                      If Users’ have comments regarding LINKSTECH 's services
                       and the Site or ideas on how to improve it, please write
                       to our 24x7 Helpdesk at help@instantpay.in. Please note
                       that by doing so, concerned User hereby irrevocably assign
-                      to PSPKA , and shall assign to PSPKA , all right,
+                      to LINKSTECH , and shall assign to LINKSTECH , all right,
                       title and interest in and to all ideas and suggestions and
                       any and all worldwide intellectual property rights
                       associated therewith. The concerned User agrees to perform
@@ -865,7 +868,7 @@ const Terms = () => {
 
                 <div className="landing-bg_para">
                   <u>MODIFICATION.</u>
-                  PSPKA  reserves the right to change, modify, add,
+                  LINKSTECH SERVICES reserves the right to change, modify, add,
                   or remove these Terms of Use, either in its entirety or a part
                   thereof (each, a<strong>“change”</strong>) at any time by
                   posting a notification to the Site or otherwise communicating
@@ -946,13 +949,14 @@ const Terms = () => {
                 <div className="landing-bg_para">
                   <u>TERMINATION</u>
                   <div className="landing-bg_para">
-                    PSPKA  reserves the right to suspend or
-                    terminate the User’s access to PSPKA SERVICES PRIVATE LIMITED and Services without prior notice and without any
+                    LINKSTECH SERVICES reserves the right to suspend or
+                    terminate the User’s access to LINKSTECH SERVICES PRIVATE
+                    LIMITED and Services without prior notice and without any
                     liability to the User or any third party, in the event,
                     <div className="landing-bg_para">
                       <p>
                         (a) the User is in a breach of these Terms of Use or any
-                        PSPKA SERVICES PRIVATE LIMITED Policies;
+                        LINKSTECH SERVICES PRIVATE LIMITED Policies;
                       </p>
                       <p>
                         (b) the User is engaged or is suspected to engage in any
@@ -960,15 +964,15 @@ const Terms = () => {
                       </p>
                       <p>
                         (b) the User provides any information which is
-                        incomplete, inaccurate or false or PSPKA 
+                        incomplete, inaccurate or false or LINKSTECH SERVICES
                         has reason to believe that such information is
                         incomplete, inaccurate or false.
                       </p>
                     </div>
                     <div className="landing-bg_para">
                       Any suspension/termination of the User’s access to
-                      PSPKA SERVICES PRIVATE LIMITED and Services shall be
-                      without prejudice to PSPKA ’s right to exercise any
+                      LINKSTECH SERVICES PRIVATE LIMITED and Services shall be
+                      without prejudice to LINKSTECH ’s right to exercise any
                       other remedy available to it under the applicable law.
                     </div>
                   </div>
@@ -984,7 +988,7 @@ const Terms = () => {
 
                 <div className="landing-bg_para">
                   <u>FORCE MAJEURE .</u>
-                  PSPKA  shall not be liable for failure to perform
+                  LINKSTECH SERVICES shall not be liable for failure to perform
                   its obligations under these Terms of Use to the extent such
                   failure is due to causes beyond its reasonable control. In the
                   event of a force majeure, the Company if unable to perform
@@ -1020,7 +1024,7 @@ const Terms = () => {
                     <div className="landing-bg_para">
                       <u>ASSIGNMENT</u>. These Terms of Use and any rights
                       granted hereunder, shall not be assignable by the User,
-                      but may be assigned by PSPKA  without
+                      but may be assigned by LINKSTECH SERVICES without
                       restriction. Any assignment attempted to be made in
                       violation of this provision shall be void and of no
                       effect.
@@ -1034,28 +1038,30 @@ const Terms = () => {
                     </div>
 
                     <div className="landing-bg_para">
-                      <u>NOTICE</u>. PSPKA  may provide Users with
+                      <u>NOTICE</u>. LINKSTECH SERVICES may provide Users with
                       notices and communications by email, regular mail, or
-                      posts on the PSPKA  website(s) or by any other
+                      posts on the LINKSTECH SERVICES website(s) or by any other
                       reasonable means. Except as otherwise set forth herein,
-                      notice to PSPKA must be sent by courier or registered
-                      post to the Legal Department, PSPKA SERVICES PRIVATE LIMITED.,  PVT No.-2, B-1, KH No.900/289Ground Floor, Shalimar Village, Delhi, North West Delhi- 110088, Delhi India.
+                      notice to LINKSTECH must be sent by courier or registered
+                      post to the Legal Department, LINKSTECH SERVICES PRIVATE
+                      LIMITED s Pvt. Ltd., 1st Floor, B1/A5, Mohan Cooperative
+                      Industrial Estate, New Delhi - 110044, India.
                     </div>
 
                     <div className="landing-bg_para">
-                      <u>WAIVER</u>. The failure of PSPKA  to
+                      <u>WAIVER</u>. The failure of LINKSTECH SERVICES to
                       exercise or enforce any right or provision of these Terms
                       of Use will not constitute a waiver of such right or
                       provision. Any waiver of any provision of these Terms of
                       Use will be effective only if in writing and signed by
-                      PSPKA .
+                      LINKSTECH .
                     </div>
 
                     <div className="landing-bg_para">
                       <u>RELATIONSHIP BETWEEN THE PARTIES</u>. The Terms of Use
                       are not intended by the Parties to constitute or create a
                       joint venture, pooling arrangement, partnership, agency or
-                      formal business organization of any kind. PSPKA
+                      formal business organization of any kind. LINKSTECH
                       SERVICES and the User shall be independent contractors
                       with each other for all purposes at all times and neither
                       Party shall act as or hold itself out as an agent or

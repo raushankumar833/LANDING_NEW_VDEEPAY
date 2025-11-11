@@ -34,7 +34,7 @@ export default function Header() {
       sx={{
         width: '100%',
         left: 0,
-        backgroundColor: '#5210c1',
+        backgroundColor: '#FE2600',
         boxShadow: 0,
         zIndex: theme.zIndex.appBar,
       }}
@@ -63,7 +63,7 @@ export default function Header() {
           }}
         >
           {/* Logo */}
-          <Logo sx={{ width: { xs: '80px', md: '100px' } }} />
+          <Logo sx={{ width: { xs: '100px', md: '130px', backgroundColor:"#fff" } }} />
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -81,15 +81,15 @@ export default function Header() {
             variant="contained"
               rel="noopener"
               //  href={PATH_AUTH.login}
-            onClick={() => window.location.href = 'https://app.p2pae.com/qrLogin'}
+            onClick={() => window.location.href = 'https://app.vdeepay.com/qrLogin'}
             sx={{
-              backgroundColor: '#731cdd',
+              backgroundColor: '#140a43',
               fontSize: isDesktop ? '14px' : '10px',
               py: isDesktop ? 1 : '4px',
               px: isDesktop ? 2 : '10px',
               color: '#fff',
               textTransform: 'none',
-              '&:hover': { backgroundColor: '#5a15b8' },
+              '&:hover': { backgroundColor: '#FE4000', border:"2px solid #140a43" },
             }}
           >
             Login Now

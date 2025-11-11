@@ -111,6 +111,7 @@ function NavSubList({ items, isDashboard, subheader, onClose }: NavSubListProps)
             item={item}
             active={isActive(item.path)}
             onClick={onClose}
+          
           />
         )
       )}

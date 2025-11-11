@@ -10,14 +10,34 @@ import { PATH_DASHBOARD } from 'src/routes/paths';
 import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
+ 
 
 const StyledRoot = styled('div')(({ theme }) => ({
   padding: theme.spacing(12, 0),
-  background: `linear-gradient(135deg, ${theme.palette.primary.light} 0%, ${theme.palette.info.light} 100%)`,
+  // ✅ New gradient style: Diagonal stripes effect
+  background: `linear-gradient(135deg, 
+    #fe2000 0%, 
+    #fe2000 25%, 
+    #ff3d1a 25%, 
+    #ff3d1a 50%, 
+    #ff5c33 50%, 
+    #ff5c33 75%, 
+    #ff7a52 75%, 
+    #ff7a52 100%)`,
+  backgroundSize: '400% 400%',
   position: 'relative',
   zIndex: 1,
+  animation: 'shimmer 8s ease-in-out infinite',
   [theme.breakpoints.down('md')]: {
     padding: theme.spacing(6, 0),
+  },
+  '@keyframes shimmer': {
+    '0%, 100%': {
+      backgroundPosition: '0% 0%',
+    },
+    '50%': {
+      backgroundPosition: '100% 100%',
+    },
   },
 }));
 
@@ -26,12 +46,13 @@ const StyledRootCard = styled(Card)(({ theme }) => ({
   left: '50%',
   top: '-20px',
   width: '70%',
-  borderRadius: '12px',
+  borderRadius: '16px',
   position: 'absolute',
   padding: theme.spacing(5),
   transform: 'translate(-50%, -50%)',
-  boxShadow: `0 12px 30px ${alpha(theme.palette.primary.main, 0.3)}`,
-  background: theme.palette.background.paper,
+  boxShadow: `0 16px 40px ${alpha(theme.palette.primary.main, 0.4)}`,
+  background: `linear-gradient(145deg, #ffffff, #f5f5f5)`,
+  border: `1px solid ${alpha(theme.palette.grey[300], 0.8)}`,
   [theme.breakpoints.down('md')]: {
     top: '0px',
     left: '0px',
@@ -51,10 +72,11 @@ const SpotLightText = styled(Typography)(({ theme }) => ({
   fontSize: '12px',
   letterSpacing: '2px',
   color: theme.palette.common.white,
-  background: theme.palette.secondary.main,
-  borderTopLeftRadius: '4px',
-  borderBottomRightRadius: '8px',
+  background: `linear-gradient(90deg, #ff3d1a, #ff7a52)`,
+  borderTopLeftRadius: '8px',
+  borderBottomRightRadius: '12px',
   fontWeight: 600,
+  boxShadow: `0 2px 8px ${alpha('#ff3d1a', 0.4)}`,
 }));
 
 const StyledDescription = styled('div')(({ theme }) => ({
@@ -64,7 +86,7 @@ const StyledDescription = styled('div')(({ theme }) => ({
     paddingLeft: theme.spacing(5),
     paddingRight: theme.spacing(5),
     marginTop: theme.spacing(15),
-    borderRight: `1px dashed ${alpha(theme.palette.grey[900], 0.3)}`,
+    borderRight: `2px dotted ${alpha(theme.palette.grey[900], 0.2)}`,
   },
 }));
 
@@ -113,11 +135,11 @@ export default function HomeBilling() {
           sx={{
             width: 360,
             height: 360,
-            opacity: 0.08,
+            opacity: 0.12,
             position: 'absolute',
             right: theme.spacing(-3),
             bottom: 0,
-            color: alpha(theme.palette.secondary.main, 0.3),
+            color: alpha('#ff7a52', 0.4),
             zIndex: -1,
           }}
         />
@@ -145,7 +167,12 @@ function BillingCardComponent() {
             }}
           >
             <Stack flexDirection={'row'} alignItems="center" spacing={2} mr={2}>
-              <Iconify icon="solar:wallet-money-bold" width={60} height={60} />
+              <Iconify 
+                icon="solar:wallet-money-bold" 
+                width={60} 
+                height={60} 
+                color="#fe2000"
+              />
               <div>
                 <Typography variant="body1" fontWeight="bold" color="#140a53">
                   {process.env.REACT_APP_PROJECT_TITLE}
@@ -161,7 +188,7 @@ function BillingCardComponent() {
                 orientation="vertical"
                 sx={{
                   height: '80px',
-                  border: `1px dashed ${alpha(theme.palette.grey[900], 0.3)}`,
+                  border: `2px dotted ${alpha(theme.palette.grey[900], 0.2)}`,
                 }}
               />
             </PermissionGaurd>
@@ -174,16 +201,21 @@ function BillingCardComponent() {
 
               <Button
                 variant="contained"
-                onClick={() => push(PATH_DASHBOARD.admin.root)}
+                     onClick={() => window.location.href = 'https://app.vdeepay.com/qrLogin'}
                 sx={{
                   width: '200px',
-                  borderRadius: '8px',
+                  borderRadius: '12px',
                   fontWeight: 600,
                   textTransform: 'none',
-                  background: `linear-gradient(135deg, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
+                  // ✅ New gradient: Radial effect
+                  background: `radial-gradient(circle at center, #ff5c33, #fe2000)`,
+                  boxShadow: `0 4px 15px ${alpha('#fe2000', 0.3)}`,
                   '&:hover': {
-                    background: `linear-gradient(135deg, ${theme.palette.secondary.dark}, ${theme.palette.primary.dark})`,
+                    background: `radial-gradient(circle at center, #fe2000, #ff3d1a)`,
+                    boxShadow: `0 6px 20px ${alpha('#fe2000', 0.4)}`,
+                    transform: 'translateY(-2px)',
                   },
+                  transition: 'all 0.3s ease',
                 }}
                 endIcon={<Iconify icon="line-md:chevron-right" />}
               >
@@ -197,8 +229,8 @@ function BillingCardComponent() {
                 sx={{
                   width: 120,
                   height: 120,
-                  opacity: 0.08,
-                  color: alpha(theme.palette.secondary.main, 0.3),
+                  opacity: 0.1,
+                  color: alpha('#ff5c33', 0.5),
                 }}
               />
             </PermissionGaurd>
@@ -216,37 +248,62 @@ function Description() {
   return (
     <StyledDescription>
       <m.div variants={varFade().inLeft}>
-        <Typography variant="h6" fontWeight="500" color="#140a53" mb={1}>
+        <Typography variant="h6" fontWeight="500" color="#fff" mb={1}>
           Simplify Payments, Maximize Growth
         </Typography>
 
-        <Typography variant="h2" fontWeight="700" color="#140a53" mb={2}>
+        <Typography variant="h2" fontWeight="700" color="#fff" mb={2}>
           {process.env.REACT_APP_PROJECT_TITLE}
         </Typography>
 
-        <Typography variant="subtitle1" fontWeight="500" color="#140a53" mb={2}>
+        <Typography variant="subtitle1" fontWeight="500" color="#fff" mb={2}>
           Combined solutions for all services
         </Typography>
 
-        <Typography variant="h6" fontWeight="400" mt={2} color="#140a53" mb={4}>
+        <Typography variant="h6" fontWeight="400" mt={2} color="#fff" mb={4}>
           Experience financial empowerment in one unified platform – where convenience meets
           comprehensive solutions, redefining your financial journey effortlessly.
         </Typography>
 
         <Button
           variant="contained"
-          onClick={() => push(PATH_DASHBOARD.admin.root)}
+                onClick={() => window.location.href = 'https://app.vdeepay.com/qrLogin'}
           sx={{
             mt: 6,
             p: 2,
             width: '220px',
-            borderRadius: '8px',
+            borderRadius: '12px',
             fontSize: '18px',
             fontWeight: 600,
             textTransform: 'none',
-            background: `linear-gradient(135deg, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
+            // ✅ New gradient: Multi-color with smooth transition
+            background: `linear-gradient(135deg, 
+              #fe2000 0%, 
+              #ff3d1a 25%, 
+              #ff5c33 50%, 
+              #ff7a52 75%, 
+              #ff9970 100%)`,
+            boxShadow: `0 6px 20px ${alpha('#fe2000', 0.4)}`,
             '&:hover': {
-              background: `linear-gradient(135deg, ${theme.palette.secondary.dark}, ${theme.palette.primary.dark})`,
+              background: `linear-gradient(135deg, 
+                #ff9970 0%, 
+                #ff7a52 25%, 
+                #ff5c33 50%, 
+                #ff3d1a 75%, 
+                #fe2000 100%)`,
+              boxShadow: `0 8px 25px ${alpha('#fe2000', 0.5)}`,
+              transform: 'translateY(-3px)',
+            },
+            transition: 'all 0.3s ease',
+            backgroundSize: '200% 200%',
+            animation: 'shimmerButton 3s ease infinite',
+            '@keyframes shimmerButton': {
+              '0%, 100%': {
+                backgroundPosition: '0% 50%',
+              },
+              '50%': {
+                backgroundPosition: '100% 50%',
+              },
             },
           }}
           endIcon={<Iconify icon="line-md:chevron-right" />}
@@ -262,8 +319,12 @@ function Statement() {
   return (
     <StyledStatement>
       <m.div variants={varFade().inRight}>
-        <Iconify icon="el:quote-alt" width={40} color="#52c" />
-        <Typography variant="h4" fontWeight="500" marginTop={2} color="#140a53">
+        <Iconify 
+          icon="el:quote-alt" 
+          width={40} 
+          sx={{ color: '#fff' }} 
+        />
+        <Typography variant="h4" fontWeight="500" marginTop={2} color="yellow">
           Whether you're a local retailer, or a thriving enterprise, our platform is tailored to
           elevate your business operations – a seamless solution for every shop size.
         </Typography>

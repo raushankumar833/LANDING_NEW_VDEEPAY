@@ -15,7 +15,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
-  backgroundImage: `url('/assets/background/overlay_4.jpg')`,
+  backgroundImage: `linear-gradient(135deg, #004990 0%, #fe2000 100%)`,
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(16, 0),
   },
@@ -35,11 +35,12 @@ export default function HomeAdvertisement() {
           sx={{
             ...bgGradient({
               direction: '135deg',
-              startColor: theme.palette.common.white,
-              endColor: theme.palette.primary.lighter,
+              startColor: '#004990',
+              endColor: '#fe2000',
             }),
             borderRadius: 1,
             p: { xs: 3, md: 3 },
+            boxShadow: '0 8px 32px rgba(0, 73, 144, 0.3)',
           }}
         >
           {isDesktop && <Content />}
@@ -70,10 +71,11 @@ function Description() {
         component={m.div}
         variants={varFade().inDown}
         sx={{
-          color: '#140a53',
+          color: '#ffffff',
           mb: 3,
           typography: isDesktop ? 'h2' : 'h4',
           fontWeight: 700,
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
         }}
       >
         Empower Your Financial Journey
@@ -84,7 +86,7 @@ function Description() {
         component={m.div}
         variants={varFade().inDown}
         sx={{
-          color: '#140a53',
+          color: '#f0f0f0',
           mb: 2,
           typography: isDesktop ? 'h4' : 'h6',
           fontWeight: 400,
@@ -100,13 +102,13 @@ function Description() {
         component={m.div}
         variants={varFade().inUp}
       >
-        <Typography variant="body1" sx={{ color: '#140a53' }}>
+        <Typography variant="body1" sx={{ color: '#ffffff' }}>
           • Fast and reliable transactions anytime, anywhere.
         </Typography>
-        <Typography variant="body1" sx={{ color: '#140a53' }}>
+        <Typography variant="body1" sx={{ color: '#ffffff' }}>
           • Advanced analytics to track your progress and growth.
         </Typography>
-        <Typography variant="body1" sx={{ color: '#140a53' }}>
+        <Typography variant="body1" sx={{ color: '#ffffff' }}>
           • Personalized dashboard to manage your business efficiently.
         </Typography>
       </Stack>
@@ -122,10 +124,15 @@ function Description() {
             color="inherit"
             size={isDesktop ? 'large' : 'medium'}
             variant="contained"
-          c
             sx={{
-              color: 'grey.100',
-              backgroundColor: '#731cdd',
+              color: '#ffffff',
+              backgroundColor: '#004990',
+              '&:hover': {
+                backgroundColor: '#003366',
+                transform: 'translateY(-2px)',
+                boxShadow: '0 4px 12px rgba(0, 73, 144, 0.4)',
+              },
+              transition: 'all 0.3s ease',
             }}
           >
             Get Started
@@ -138,9 +145,16 @@ function Description() {
             variant="outlined"
             onClick={() => push('/services')}
             sx={{
-              color: '#731cdd',
-              borderColor: '#731cdd',
-              '&:hover': { borderColor: '#5310aa', color: '#5310aa' },
+              color: '#ffffff',
+              borderColor: '#ffffff',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              '&:hover': { 
+                borderColor: '#fe2000', 
+                backgroundColor: 'rgba(254, 32, 0, 0.1)',
+                transform: 'translateY(-2px)',
+                boxShadow: '0 4px 12px rgba(254, 32, 0, 0.3)',
+              },
+              transition: 'all 0.3s ease',
             }}
           >
             Explore Services
@@ -173,7 +187,13 @@ function Content() {
           disabledEffect
           alt="financial services"
           src="/assets/images/home/person.jpg"
-          sx={{ width: 360, height: 'auto', borderRadius: 3 }}
+          sx={{ 
+            width: 360, 
+            height: 'auto', 
+            borderRadius: 3,
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+            border: '2px solid rgba(255, 255, 255, 0.1)',
+          }}
         />
       </m.div>
     </Stack>

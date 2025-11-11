@@ -51,20 +51,34 @@ const StyledDescription = styled('div')(({ theme }) => ({
   height: '100%',
 }));
 
-const StyledText = styled(m.h1)({
-  color: '#140a43', // main heading color
-  fontFamily: "'Playfair Display', serif",
-  fontSize: `${52 / 18}rem`,
+const StyledText = styled(m.h1)(({ theme }) => ({
+  background: 'linear-gradient(135deg, #004990 0%, #fe2600 100%)',
+  backgroundClip: 'text',
+WebkitBackgroundClip: 'text',
+WebkitTextFillColor: 'transparent',
+  fontFamily: "'Plus Jakarta Sans', sans-serif",
+  fontSize: `${48 / 18}rem`,
   textAlign: 'center',
-  fontWeight: 'bold',
-  lineHeight: 1,
+  fontWeight: 800,
+  lineHeight: 1.2,
   padding: 0,
   marginTop: 8,
   marginBottom: 24,
-  letterSpacing: 4,
+  letterSpacing: 1,
+  textShadow: '0 4px 8px rgba(0,0,0,0.1)',
   '@media (min-width:900px)': {
-    fontSize: `${72 / 18}rem`,
+    fontSize: `${68 / 18}rem`,
   },
+}));
+
+
+const StyledSubtitle = styled(Typography)({
+  background: 'linear-gradient(135deg, #004990 0%, #fe2600 100%)',
+  backgroundClip: 'text',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  fontWeight: 600,
+  textAlign: 'center',
 });
 
 const StyledEllipseTop = styled('div')(({ theme }) => ({
@@ -155,12 +169,12 @@ function Description() {
       </m.div>
 
       <m.div variants={varFade().in}>
-        <Typography
-          variant={isDesktop ? 'h6' : 'body2'}
-          sx={{ textAlign: 'center', px: 5, color: '#140a53' }} // slightly purple
+        <StyledSubtitle
+          variant={isDesktop ? 'h5' : 'body1'}
+          sx={{ textAlign: 'center', px: 5, mb: 3 }}
         >
           {HERO_DESCRIPTION}
-        </Typography>
+        </StyledSubtitle>
       </m.div>
 
       <m.div variants={varFade().in}>
@@ -173,9 +187,14 @@ function Description() {
                 variant="contained"
                 startIcon={<Iconify icon="eva:flash-fill" width={24} />}
                 sx={{
-                  bgcolor: '#140a43',
+                  background: '#140a43',
                   color: '#ffffff',
-                  '&:hover': { bgcolor: '#140a43' },
+                  fontWeight: 600,
+                  boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%)',
+                    boxShadow: '0 6px 20px rgba(102, 126, 234, 0.6)',
+                  },
                 }}
               >
                 DOWNLOAD APP
@@ -188,7 +207,13 @@ function Description() {
               target="_blank"
               rel="noopener"
               href={PATH_PAGE.contact}
-              sx={{ textDecoration: 'underline', display: 'inline-flex', alignItems: 'center' }}
+              sx={{ 
+                textDecoration: 'underline', 
+                display: 'inline-flex', 
+                alignItems: 'center',
+                fontWeight: 500,
+                color: '#667eea',
+              }}
             >
               <Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />
               Contact Us!
@@ -200,17 +225,25 @@ function Description() {
             size="large"
             variant="outlined"
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
-            onClick={() => (window.location.href = 'https://p2pae.com/login')}
-            sx={{ borderColor: '#140a43', color: '#140a43' }}
+            onClick={() => (window.location.href = 'https://vdeepay.com/login')}
+            sx={{ 
+              borderColor: '#667eea', 
+              color: '#667eea',
+              fontWeight: 600,
+              '&:hover': {
+                borderColor: '#5a6fd8',
+                backgroundColor: 'rgba(102, 126, 234, 0.04)',
+              },
+            }}
           >
             GET STARTED FOR FREE
           </Button>
         </Stack>
       </m.div>
 
-      <Stack spacing={3} sx={{ textAlign: 'center', opacity: 0.4 }}>
+      <Stack spacing={3} sx={{ textAlign: 'center', opacity: 0.6 }}>
         <m.div variants={varFade().in}>
-          <Typography variant="overline" sx={{ color: '#140a43' }}>
+          <Typography variant="overline" sx={{ color: '#667eea', fontWeight: 600 }}>
             Available For
           </Typography>
         </m.div>

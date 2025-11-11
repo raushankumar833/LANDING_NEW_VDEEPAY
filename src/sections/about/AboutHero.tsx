@@ -9,7 +9,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/about/hero1.jpeg)',
+  backgroundImage: 'url(/assets/background/overlay_2.svg), url(/assets/images/about/hero1.webp)',
   padding: theme.spacing(1, 0),
   [theme.breakpoints.up('md')]: {
     height: 560,

@@ -1,5 +1,5 @@
 import { styled, useTheme } from '@mui/material/styles';
-import { Typography, Card, Box, Divider, Grid, Link, Avatar } from '@mui/material';
+import { Typography, Card, Box, Divider, Grid, Link, Avatar, Button } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -17,7 +17,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: ' url(/assets/images/contact/hero.jpeg)',
+  backgroundImage: 'url(/assets/images/contact/hero1.jpg)',
   padding: theme.spacing(2, 1, 0, 1),
   height: 'auto',
   [theme.breakpoints.up('md')]: {
@@ -33,11 +33,11 @@ const StyledRoot = styled('div')(({ theme }) => ({
 const StyledContent = styled(Box)(({ theme }) => ({
   zIndex: 2,
   width: '100%',
-  borderRadius: '2px',
+  borderRadius: '12px',
   [theme.breakpoints.down('md')]: { padding: theme.spacing(1), margin: theme.spacing(0, 0, 4, 0) },
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(3),
-    width: '80%',
+    width: '85%',
     position: 'absolute',
     transform: `translate(-50%, -25%)`,
     left: '50%',
@@ -46,22 +46,22 @@ const StyledContent = styled(Box)(({ theme }) => ({
 }));
 
 const StyledCard = styled(Card)(({ theme }) => ({
-  borderRadius: '2px',
+  borderRadius: '12px',
   padding: theme.spacing(2),
-  background: `${theme.palette.grey[200]}`,
+  background: `linear-gradient(135deg, ${theme.palette.common.white} 0%, #f8f9fa 100%)`,
   border: `0px`,
-  boxShadow: 'none',
+  boxShadow: '0 8px 32px rgba(0, 73, 144, 0.15)',
   [theme.breakpoints.up('md')]: {
-    border: `1px solid ${theme.palette.grey[400]}`,
+    border: `1px solid #e0e0e0`,
     padding: theme.spacing(4, 3),
   },
 }));
 
 // ---------------- Category Map ----------------
 const categoryMap = {
-  mobile: { color: '#ff6f61', icon: <PhoneIcon fontSize="large" /> },
-  email: { color: '#42a5f5', icon: <EmailIcon fontSize="large" /> },
-  address: { color: '#7e57c2', icon: <LocationOnIcon fontSize="large" /> },
+  mobile: { color: '#004990', icon: <PhoneIcon fontSize="large" /> },
+  email: { color: '#004990', icon: <EmailIcon fontSize="large" /> },
+  address: { color: '#004990', icon: <LocationOnIcon fontSize="large" /> },
 };
 
 const getCategoryKey = (cat) => {
@@ -100,47 +100,81 @@ function HeroFloatCard() {
 
   return (
     <StyledContent>
-      <Box sx={{ textAlign: 'center' }}>
+      <Box sx={{ textAlign: 'center', mb: 4 }}>
         <m.div variants={varFade().inRight}>
-          <Typography variant="h2" fontWeight="800" color={theme.palette.common.white}>
+          <Typography 
+            variant="h2" 
+            fontWeight="800" 
+            color={theme.palette.common.white}
+            sx={{ 
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+           background: 'linear-gradient(135deg, #f0f7ff 0%, #fff0f0 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
             Searching for solutions made simple?
           </Typography>
           <Typography
             variant="h4"
-            fontWeight="800"
+            fontWeight="700"
             color={theme.palette.common.white}
-            sx={{ mt: 2 }}
+            sx={{ 
+              mt: 2,
+              textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+              color: '#f0f7ff'
+            }}
           >
             We're here to make it easy for you
           </Typography>
 
           <Divider
             sx={{
-              border: `1px solid ${theme.palette.info.main}`,
-              width: '100px',
+              border: `2px solid #fe2000`,
+              width: '120px',
               margin: '0 auto',
-              mt: 2,
+              mt: 3,
+              borderRadius: '2px',
             }}
           />
         </m.div>
       </Box>
 
-      <StyledCard sx={{ marginTop: 12 }}>
-        <Grid container spacing={4} justifyContent="center">
+      <StyledCard sx={{ marginTop: 10 }}>
+        <Grid container spacing={3} justifyContent="center">
           {displayedHero.map((item, index) => {
             const key = getCategoryKey(item.category);
             const catData = categoryMap[key] || {};
             return (
               <Grid key={index} item xs={12} sm={6} md={4}>
-                <StyledCard sx={{ textAlign: 'center', py: 3, height: '100%' }}>
+                <StyledCard 
+                  sx={{ 
+                    textAlign: 'center', 
+                    py: 3, 
+                    height: '100%',
+                    background: 'white',
+                    border: `2px solid transparent`,
+                    backgroundImage: 'linear-gradient(white, white), linear-gradient(135deg, #004990 0%, #fe2000 100%)',
+                    backgroundOrigin: 'border-box',
+                    backgroundClip: 'padding-box, border-box',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-5px)',
+                      boxShadow: '0 12px 40px rgba(254, 32, 0, 0.15)',
+                    }
+                  }}
+                >
                   <Avatar
                     sx={{
-                      bgcolor: catData.color || '#999',
-                      width: 60,
-                      height: 60,
+                      bgcolor: 'white',
+                      width: 70,
+                      height: 70,
                       margin: '0 auto',
                       mb: 2,
-                      color: '#fff',
+                      color: '#004990',
+                      border: `2px solid #fe2000`,
+                      boxShadow: '0 4px 12px rgba(0, 73, 144, 0.2)',
                     }}
                   >
                     {catData.icon || null}
@@ -151,25 +185,48 @@ function HeroFloatCard() {
                     fontWeight="bold"
                     fontFamily="'Roboto Slab', serif"
                     marginBottom={isMobile ? 1 : 2}
-                    color={'#140a53'}
+                    color={'#004990'}
+                    sx={{ fontSize: '1.1rem' }}
                   >
                     {item.description}
                   </Typography>
 
-                  <Link
+                  <Button
+                    component={Link}
                     href={renderLink(item)}
                     underline="none"
-                    color={`${theme.palette.primary.dark}`}
-                    sx={{ fontWeight: 'bold' }}
+                    sx={{ 
+                      fontWeight: 'bold',
+                      color: '#fe2000',
+                      fontSize: '1rem',
+                      textTransform: 'none',
+                      padding: '4px 8px',
+                      borderRadius: '4px',
+                      '&:hover': {
+                        backgroundColor: 'rgba(254, 32, 0, 0.08)',
+                        color: '#d81b00',
+                      }
+                    }}
                     target="_blank"
                   >
                     {item.link}
-                  </Link>
+                  </Button>
                 </StyledCard>
               </Grid>
             );
           })}
         </Grid>
+        
+        {/* Additional decorative element */}
+        <Box sx={{ textAlign: 'center', mt: 4 }}>
+          <Typography 
+            variant="body2" 
+            color="#004990"
+            sx={{ fontStyle: 'italic' }}
+          >
+            Get in touch with us today
+          </Typography>
+        </Box>
       </StyledCard>
     </StyledContent>
   );

@@ -1,152 +1,131 @@
 import { m } from 'framer-motion';
-import { styled, useTheme } from '@mui/material/styles';
-import { Box, Typography, Stack, Container, Grid, GridDirection } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Box, Typography, Container, Grid, Card, alpha } from '@mui/material';
 import { MotionViewport, varFade } from '../../components/animate';
-
 import Image from '../../components/image';
 import project_data from 'project-config.json';
-import { ListType } from 'src/pages/our-partners';
 import HomeCount from '../home/HomeCount';
 
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
-  padding: theme.spacing(4, 0),
-  position: 'relative',
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(8, 0),
+  padding: theme.spacing(10, 0),
+  background: '#ffffff',
+}));
+
+const FeatureCard = styled(Card)(({ theme }) => ({
+  padding: theme.spacing(4),
+  margin: theme.spacing(2, 0),
+  background: `linear-gradient(135deg, ${alpha('#004990', 0.02)} 0%, ${alpha('#fe2600', 0.02)} 100%)`,
+  border: `1px solid ${alpha('#004990', 0.1)}`,
+  borderRadius: '16px',
+  transition: 'all 0.3s ease',
+  '&:hover': {
+    borderColor: '#004990',
+    transform: 'scale(1.02)',
   },
 }));
 
-const StyledContent = styled('div')(({ theme }) => ({
-  padding: theme.spacing(1.5, 0),
-  borderRadius: Number(theme.shape.borderRadius) * 2,
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(2, 0),
-  },
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(2.5),
-  },
+const IconWrapper = styled(Box)(({ theme }) => ({
+  width: '80px',
+  height: '80px',
+  borderRadius: '20px',
+  background: 'linear-gradient(135deg, #004990, #0066cc)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginBottom: theme.spacing(3),
+  boxShadow: '0 8px 25px rgba(0, 73, 144, 0.3)',
 }));
-
-const StyledDescription = styled('div')(({ theme }) => ({
-  textAlign: 'center',
-  [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
-    paddingLeft: theme.spacing(5),
-    paddingTop: theme.spacing(15),
-  },
-}));
-
-// ----------------------------------------------------------------------
 
 export default function WhyPartner() {
   const {
     ourpartner: { why_partner },
   } = project_data;
-  const theme = useTheme();
+
   return (
     <StyledRoot>
-      {why_partner?.length > 0 &&
-        why_partner.map((why_partner, index) => (
-          <>
-            <Box component={MotionViewport}>
-              <Stack
-                spacing={1}
-                sx={{
-                  m: '0 auto',
-                  width: { md: 700 },
-                  textAlign: 'center',
-                }}
-              >
-                <m.div variants={varFade().inRight}>
-                  <Typography variant="h2" fontWeight="600" color="#140a53">
-                    {why_partner?.title}
+      <Container>
+        {why_partner?.length > 0 &&
+          why_partner.map((section, sectionIndex) => (
+            <Box key={sectionIndex} component={MotionViewport}>
+              {/* Header */}
+              <Box textAlign="center" mb={8}>
+                <m.div variants={varFade().inDown}>
+                  <Typography
+                    variant="h2"
+                    fontWeight="700"
+                    color="#004990"
+                    gutterBottom
+                  >
+                    {section.title}
                   </Typography>
                 </m.div>
-              </Stack>
-            </Box>
+                <m.div variants={varFade().inUp}>
+                  <Box
+                    sx={{
+                      width: '100px',
+                      height: '4px',
+                      background: 'linear-gradient(90deg, #004990, #fe2600)',
+                      borderRadius: '2px',
+                      margin: '0 auto',
+                    }}
+                  />
+                </m.div>
+              </Box>
 
-            {/* WHY POINTS MAPPING */}
-            <Container component={MotionViewport}>
-              {why_partner.list.length > 0 &&
-                why_partner.list.map((list, index) => (
-                  <Grid
-                    key={index}
-                    direction={{ xs: 'column', md: list?.grid_direction as GridDirection }}
-                    container
-                    spacing={4}
-                    mt={2}
-                  >
-                    <Grid item xs={12} md={5}>
-                      <Description list={list} />
-                    </Grid>
-
-                    <Grid item xs={12} md={7}>
-                      <Content list={list} />
-                    </Grid>
+              {/* Features Grid */}
+              <Grid container spacing={4}>
+                {section.list.map((item, itemIndex) => (
+                  <Grid item xs={12} key={itemIndex}>
+                    <m.div variants={varFade().inUp}>
+                      <FeatureCard>
+                        <Grid container spacing={4} alignItems="center">
+                          <Grid item xs={12} md={6}>
+                            <Box>
+                              <Typography
+                                variant="h4"
+                                fontWeight="600"
+                                color="#004990"
+                                gutterBottom
+                              >
+                                {item.title}
+                              </Typography>
+                              <Typography
+                                variant="body1"
+                                color="#004990"
+                                sx={{ opacity: 0.8, lineHeight: 1.7 }}
+                              >
+                                {item.intro}
+                              </Typography>
+                            </Box>
+                          </Grid>
+                          <Grid item xs={12} md={6}>
+                            <Box display="flex" justifyContent="center">
+                              <Image
+                                src={item.icon}
+                                alt={item.title}
+                                sx={{
+                                  borderRadius: '12px',
+                                  width: '100%',
+                                  maxWidth: '400px',
+                                  height: 'auto',
+                                  boxShadow: '0 10px 30px rgba(0, 73, 144, 0.1)',
+                                }}
+                              />
+                            </Box>
+                          </Grid>
+                        </Grid>
+                      </FeatureCard>
+                    </m.div>
                   </Grid>
                 ))}
-            </Container>
-          </>
-        ))}
+              </Grid>
+            </Box>
+          ))}
+      </Container>
 
       <HomeCount />
     </StyledRoot>
-  );
-}
-
-function Description({ list }: { list: ListType }) {
-  return (
-    <StyledDescription>
-      <ParaHeading title={list?.title} />
-
-      <m.div variants={varFade().inRight}>
-        <Typography
-          mt={4}
-          variant="h6"
-          fontWeight="600"
-          color="#140a53"
-          lineHeight={'2rem'}
-          letterSpacing={'0.005rem'}
-        >
-          {list?.intro}
-        </Typography>
-      </m.div>
-    </StyledDescription>
-  );
-}
-
-// ----------------------------------------------------------------------
-
-function Content({ list }: { list: ListType }) {
-  return (
-    <StyledContent>
-      <m.div variants={varFade().inLeft}>
-        <Image src={list.icon} alt="services" sx={{
-    width: {
-      xs: '100%',
-      sm: '100%',
-      md: '80%',
-    },
-    height: {
-      xs: 'auto',
-      sm: 'auto',
-      md: '65%',
-    },
-  }}/>
-      </m.div>
-    </StyledContent>
-  );
-}
-
-function ParaHeading({ title = `${process.env.REACT_APP_PROJECT_TITLE} for Retails` }) {
-  const theme = useTheme();
-  return (
-    <m.div variants={varFade().inRight}>
-      <Typography variant="h3" fontWeight="600" color="#140a53">
-        {title}
-      </Typography>
-    </m.div>
   );
 }

@@ -15,9 +15,10 @@ const StyledRoot = styled('section')(({ theme }) => ({
   overflow: 'hidden',
   padding: theme.spacing(10, 0),
   ...bgGradient({
-    color: alpha('#5210c1', 0.95),
+    color: alpha('#ffffff', 0.9), // Light background
     imgUrl: '/assets/background/overlay_2.jpg',
   }),
+  backgroundImage: `linear-gradient(135deg, ${alpha('#004990', 0.1)} 0%, ${alpha('#fe2600', 0.1)} 100%)`, // Light gradient
 }));
 
 const CounterCard = styled(Card)(({ theme }) => ({
@@ -39,8 +40,6 @@ const CounterCard = styled(Card)(({ theme }) => ({
     boxShadow: '0 18px 40px rgba(20, 10, 83, 0.45)',
   },
 }));
-
-
 
 const COUNTERS = [
   { count: 50, unit: 'K+', sub: 'Merchants' },
@@ -76,7 +75,7 @@ export default function HomeCount() {
                 variant="h2"
                 fontWeight="bold"
                 sx={{
-                  color: '#fff',
+                  color: '#140a53', // Changed to dark color for better contrast on light background
                   mb: 6,
                 }}
               >
@@ -142,15 +141,15 @@ export default function HomeCount() {
                     backdropFilter: 'blur(18px)',
                     borderRadius: 3,
                     color: '#140a53',
-                    textAlign:"justity",
+                    textAlign:"justify",
                    
                     boxShadow: '0 12px 24px rgba(0,0,0,0.4)',
                   }}
                 >
                   <Typography variant="h6" sx={{ fontWeight: 500 ,}}>
-                    “Since embracing our neo banking platform, our financial
+                    "Since embracing our neo banking platform, our financial
                     management has soared, witnessing an impressive 80% boost in
-                    productivity over the past year.”
+                    productivity over the past year."
                   </Typography>
                 </Card>
               </Box>

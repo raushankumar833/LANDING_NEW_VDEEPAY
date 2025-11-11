@@ -67,7 +67,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   borderRadius: theme.shape.borderRadius * 2,
   padding: theme.spacing(6, 4),
   textAlign: 'center',
-  color: '#140A53',
+  color: '#004990',
   transition: 'all 0.4s ease',
   display: 'flex',
   flexDirection: 'column',
@@ -80,7 +80,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
   '&:hover': {
     transform: 'translateY(-10px) scale(1.05)',
-    boxShadow: `0 20px 45px ${alpha(theme.palette.common.black, 0.2)}`,
+    boxShadow: `0 20px 45px ${alpha('#004990', 0.2)}`,
   },
 }));
 
@@ -93,8 +93,8 @@ const IconWrapper = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '50%',
-  background: `linear-gradient(135deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-  boxShadow: `0 10px 25px rgba(0,0,0,0.15)`,
+  background: `linear-gradient(135deg, #004990, #fe4000)`,
+  boxShadow: `0 10px 25px ${alpha('#004990', 0.3)}`,
   transition: 'all 0.4s ease',
   position: 'relative',
 
@@ -103,7 +103,7 @@ const IconWrapper = styled('div')(({ theme }) => ({
     position: 'absolute',
     inset: -6,
     borderRadius: '50%',
-    background: `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.secondary.light})`,
+    background: `linear-gradient(135deg, #004990, #fe4000)`,
     opacity: 0.4,
     filter: 'blur(12px)',
     zIndex: 0,
@@ -112,7 +112,7 @@ const IconWrapper = styled('div')(({ theme }) => ({
 
   '&:hover': {
     transform: 'scale(1.15)',
-    boxShadow: `0 15px 35px rgba(0,0,0,0.25)`,
+    boxShadow: `0 15px 35px ${alpha('#004990', 0.4)}`,
 
     '&:before': {
       opacity: 0.7,
@@ -180,7 +180,7 @@ export default function CoreValues() {
                 <Typography
                   variant="h5"
                   fontWeight="bold"
-                  sx={{ mb: 1, color: '#140A53' }}
+                  sx={{ mb: 1, color: '#004990' }}
                 >
                   {card.title}
                 </Typography>
@@ -188,7 +188,7 @@ export default function CoreValues() {
                   variant="body1"
                   sx={{
                     lineHeight: 1.8,
-                    color: '#140A53',
+                    color: '#004990',
                     textAlign:"justify",
                   }}
                 >

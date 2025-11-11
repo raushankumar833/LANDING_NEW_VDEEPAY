@@ -21,7 +21,7 @@ type LinkItem = {
 
 const LINKS: { headline: string; children: LinkItem[] }[] = [
   {
-    headline: `P2PAE`,
+    headline: `VDEEPAY`,
    children: [
   { name: 'About us', href: PATH_PAGE.about },
   { name: 'Contact us', href: PATH_PAGE.contact },
@@ -42,13 +42,13 @@ const LINKS: { headline: string; children: LinkItem[] }[] = [
     headline: 'Contact ',
   
     children: [
-          { name: 'PSPKA SERVICES PRIVATE LIMITED', href: '/about-us/' },
+          // { name: 'LINKSTECH SERVICES PRIVATE LIMITED', href: '/about-us/' },
 
-      { name: 'Email: Support@p2pae.com', href: 'mailto:Support@p2pae.com' },
-  { name: 'Mobile: 9211226132', href: 'tel:9211226132' },
+      { name: 'Email: linkstechservices@gmail.com', href: 'mailto:linkstechservices@gmail.com' },
+  { name: 'Mobile: 9354364381', href: 'tel:9354364381' },
 
 
-      { name: 'PVT No.-2, B-1, KH No.900/289Ground Floor, Shalimar Village, Delhi, North West Delhi- 110088, Delhi', href: '#' },
+      { name: 'Flat No. 54-A Ground Floor, Type-II Block-5, Sector-3 DSIDC, Bawana, North West Delhi- 110039, Delhi', href: '#' },
     ],
   },
 ];
@@ -174,7 +174,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <Typography variant="caption" component="div" sx={{color:"#140a53", mt: 2, textAlign: { xs: 'center', md: 'left' }, fontSize: '0.95rem' }}>
-         PSPKA SERVICES PRIVATE LIMITED
+         LINKSTECH SERVICES PRIVATE LIMITED
           © {date}. All rights reserved
         </Typography>
       </Container>

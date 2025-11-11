@@ -6,18 +6,16 @@ import Iconify from 'src/components/iconify';
 import useResponsive from 'src/hooks/useResponsive';
 import project_data from 'project-config.json';
 
-
-
-
 const MainRoot = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     height: 'max-content',
   },
 }));
+
 const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
   padding: theme.spacing(2, 1, 2, 1),
-  background: `linear-gradient(135deg, #e0c3fc 0%, #ffd8a8 100%)`, // light purple to light orange
+  background: `linear-gradient(135deg, #004990 0%, #fe2000 100%)`, // Changed to #004990 and #fe2000
   overflow: 'hidden',
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(8, 0, 8, 0),
@@ -44,10 +42,6 @@ const StyledRoot = styled('div')(({ theme }) => ({
   },
 }));
 
-
-
-
-
 const StyledContent = styled(Box)(({ theme }) => ({
   zIndex: 2,
   width: '100%',
@@ -71,6 +65,7 @@ export default function ServicesHero() {
     </MainRoot>
   );
 }
+
 function HeroFloatCard() {
   const theme = useTheme();
   const {
@@ -84,7 +79,7 @@ function HeroFloatCard() {
         <Typography
           variant={isMobile ? 'h6' : 'h4'}
           fontWeight={isMobile ? 'normal' : 'bold'}
-          color="#140a53"
+          color="#ffffff" // Changed to white for better contrast
           sx={{
             mb: 1,
             textTransform: 'uppercase',
@@ -95,14 +90,14 @@ function HeroFloatCard() {
         <Typography
           variant={isMobile ? 'h3' : 'h2'}
           fontWeight="bold"
-        color="#140a53"
+          color="#ffffff" // Changed to white for better contrast
         >
           {hero?.title}
         </Typography>
         <Typography
           variant={isMobile ? 'caption' : 'h6'}
           fontWeight="normal"
-          color="#140a53"
+          color="#ffffff" // Changed to white for better contrast
           sx={{
             width: { xs: '100%', md: '60%' },
             margin: '32px auto',
@@ -114,7 +109,7 @@ function HeroFloatCard() {
         </Typography>
         <Divider
           sx={{
-            border: `1px solid ${theme.palette.info.main}`,
+            border: `1px solid ${theme.palette.common.white}`, // Changed to white
             display: 'block',
             width: '100px',
             margin: '0 auto',
@@ -126,7 +121,6 @@ function HeroFloatCard() {
         flexDirection={isMobile ? 'row' : 'row'}
         alignItems="center"
         justifyContent="center"
-        // spacing={isMobile ? 2 : 0}
         mt={isMobile ? 2 : 4}
       >
         <Stack>{loginbutton}</Stack>
@@ -142,8 +136,13 @@ const contactusbutton = (
       size="large"
       variant="outlined"
       sx={{
-        color: (theme) => theme.palette.common.black,
+        color: '#ffffff', // Changed to white
+        borderColor: '#ffffff', // Added white border
         borderRadius: '2px',
+        '&:hover': {
+          borderColor: '#ffffff',
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        },
       }}
       endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
     >
@@ -151,18 +150,20 @@ const contactusbutton = (
     </Button>
   </m.div>
 );
+
 const loginbutton = (
   <m.div variants={varFade().inUp}>
     <Button
       size="large"
       variant="contained"
       rel="noopener"
-              //  href={PATH_AUTH.login}
-            onClick={() => window.location.href = 'https://app.p2pae.com/qrLogin'}
+      onClick={() => window.location.href = 'https://app.VDEEPAY.com/qrLogin'}
       sx={{
-        backgroundColor: '#731cdd',
-        // backgroundColor: (theme) => theme.palette.common.black,
+        backgroundColor: '#0f083f', // Changed to #004990
         borderRadius: '2px',
+        '&:hover': {
+          backgroundColor: '#003366', // Darker shade for hover
+        },
       }}
       endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
     >
